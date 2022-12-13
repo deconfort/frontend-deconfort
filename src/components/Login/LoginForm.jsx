@@ -5,6 +5,7 @@ export default function LoginForm() {
   return (
     <>
       <div className="containerLogin">
+        <h3>Login</h3>
         <form className="formLogin">
           <label className="labelLogin">
             Mail

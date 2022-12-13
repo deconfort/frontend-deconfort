@@ -1,11 +1,10 @@
 import React from 'react'
-import './footer.css'
-import FooterContact from './FooterContact'
-import FooterMaps from './FooterMaps'
-import FooterNetwork from './FooterNetwork'
-import FooterPays from './FooterPays'
-import Navigation from './Navigation'
-import SubFooter from './SubFooter'
+import Navigation from '../components/footer/Navigation'
+import FooterNetwork from '../components/footer/FooterNetwork'
+import FooterContact from '../components/footer/FooterContact'
+import FooterPays from '../components/footer/FooterPays'
+import FooterMaps from '../components/footer/FooterMaps'
+import SubFooter from '../components/footer/SubFooter'
 
 export default function Footer() {
   return (
