@@ -1,0 +1,58 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+.imgBannerContact{
+    width: 80%;
+}
+.textContact{
+    padding: 3rem;
+    text-align: center;
+    width: 80%;
+}
+.formContact{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding-bottom: 1rem;
+    border-radius: 10px;
+    width: 40%;
+    box-shadow: 5px 5px 5px 5px #c1b8ae; 
+}
+.labelContact{
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    padding-bottom: 0.8rem;
+    padding-top: 0.5rem;
+}
+.inputContact{
+    width: 100%;
+    height: 30px;
+    margin-top: 0.5rem;
+}
+.inputContact::placeholder{
+    color: #52646a;
+    padding: 0.5rem;
+}
+.containerContact{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 4rem;
+}
+.buttonContactForm{
+    padding: 0.5rem;
+    border-radius: 9px;
+    background-color:  #5c195d;
+    font-size: medium;
+    color: #f9f9f9;
+    border: none;
+}
+.buttonContactForm:hover{
+    background-color:  #c3acbe;
+}
