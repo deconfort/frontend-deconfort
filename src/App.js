@@ -1,8 +1,11 @@
 import './style.css'
+import Header from './layouts/Header'
 
 function App() {
   return (
-    <h1>Hello React</h1>
+    <>
+    <Header></Header>
+    </>
   );
 }
 
