@@ -14,7 +14,7 @@ function App() {
     <>
 
     <Header></Header>
-      <h1>Hello React</h1>
+      {/* <h1>Hello React</h1> */}
       <Contact></Contact>
       <LoginLayout></LoginLayout>
       {/* <Contact></Contact> */}
