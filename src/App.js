@@ -1,8 +1,12 @@
 import './style.css'
+import "@fontsource/abhaya-libre"
+import HomePage from './layouts/HomePage/HomePage';
 
 function App() {
   return (
-    <h1>Hello React</h1>
+    <div className='app'>
+      <HomePage/>
+    </div>
   );
 }
 
