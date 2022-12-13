@@ -4,7 +4,7 @@ import Header from './layouts/Header'
 import "./style.css";
 import Footer from './layouts/Footer';
 import Register from './layouts/Register';
-/* import Contact from './layouts/Contact'; */
+import Contact from './layouts/Contact';
 
 
 function App() {
@@ -12,8 +12,8 @@ function App() {
     <>
 
     <Header></Header>
-      {/* <Contact></Contact> */}
-      <Register></Register>
+      <Contact></Contact>
+      {/* <Register></Register> */}
       <Footer></Footer>
     </>
   );
