@@ -13,7 +13,6 @@ function NavbarHambur(props) {
     <Navbar bg="light" expand="lg" className="Ul-Navbar">
       <Container>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
-        
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
             <Nav.Link href="#link" className="Li-Navbar">{title1}</Nav.Link>
@@ -32,7 +31,6 @@ function NavbarHambur(props) {
 
           </Nav>        
         </Navbar.Collapse>
-
       </Container>
     </Navbar>
   );
