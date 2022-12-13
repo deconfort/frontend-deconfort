@@ -1,0 +1,91 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+.imgSocialFooter {
+    height: 113px;
+    width: 86px;
+    padding-bottom: 1.2rem;
+}
+.imgSocialFooterPng{
+    width: 81px;
+    height: 119px;
+    padding-bottom: 2rem;
+}
+.imgSocialFooterFace{
+    width: 98px;
+    margin-bottom: 1.4rem;
+    height: 84px;
+}
+.imgContact {
+  width: 40px;
+  height: 40px;
+  padding: 5px;
+}
+.imgPays {
+  width: 70px;
+  height: 50px;
+  padding: 8px;
+}
+.footerContainer {
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: 1.3rem;
+  justify-content: space-evenly;
+  background-color: #c1b8ae;
+  min-height: 25vh;
+}
+.tittleFooter {
+  text-align: center;
+}
+.containerContactFooter {
+  display: flex;
+  align-items: center;
+}
+.links {
+  text-decoration: none;
+  color: black;
+}
+.links:hover {
+  color: white;
+}
+.subttitleNavigation{
+    padding-top: 7px;
+}
+.subttitleNavigation:hover{
+    color: white;
+}
+.maps{
+    margin-bottom: 1rem;
+    border-radius: 9px;
+}
+.subFooterLinkedin{
+    min-height: 6vh;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.subtittleLinkedin{
+    padding: 3px;
+}
+.linkLinkedin{
+    padding: 5px;
+    text-decoration: none;
+    color: black;
+}
+.linkLinkedin:hover{
+    color: #52646a
+}
+.containerSubFooter{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.copyrigth{
+    font-size: x-small;
+}
