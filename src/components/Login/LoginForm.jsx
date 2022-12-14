@@ -1,6 +1,6 @@
 import React from "react";
 import "./LoginForm.css";
-// import { Link as NavLink } from "react-router-dom";
+import { Link as NavLink } from "react-router-dom";
 import { useRef } from "react";
 import Swal from "sweetalert2";
 import { useNavigate } from 'react-router-dom';
@@ -79,7 +79,9 @@ export default function LoginForm() {
               Sign In
             </button>
             <p className="text-center">Don't you have an account yet?</p>
+            <NavLink to="/register" className="linkNav">
             <button className="buttonLoginForm">Sign Up</button>
+            </NavLink>
           </div>
         </form>
       </div>

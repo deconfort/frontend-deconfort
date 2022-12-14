@@ -7,7 +7,9 @@ import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
 
+
 function NavbarHambur(props) {
+ 
   let { title1, title3, title4, title5, title6, title7 } = props;
   return (
     <Navbar bg="light" expand="lg" className="Ul-Navbar">
@@ -55,6 +57,7 @@ function NavbarHambur(props) {
               <Link className='linkNav' to={"/contact"}>{title7}</Link>
             </Nav.Link>
           </Nav>
+        
         </Navbar.Collapse>
       </Container>
     </Navbar>

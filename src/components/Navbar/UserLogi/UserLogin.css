@@ -18,3 +18,47 @@
   .linkNav:hover{
     color: rgb(101,76,59);
   }
+  
+  .flex{
+    display: flex;
+  }
+  .column{
+    flex-direction: column;
+  }
+  .align-center{
+    align-items: center;
+    align-content: center;
+  }
+  .bt-nav{
+    color: white;
+    font-size: 15px;
+  }
+  
+.g-5 {
+  gap: 5px;
+}
+.photo-user{
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+ 
+}
+.p-absolute {
+  position: absolute;
+}
+
+.btnDespl {
+  background-color: white;
+  opacity: 0.9;
+  border-radius: 6px;
+}
+.justify-center{
+  justify-content: center;
+}
+.gap-0-5{
+  gap: 0.5;
+}
+.text-black{
+  color: black;
+}
