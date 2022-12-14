@@ -9,7 +9,7 @@ import LocalsBanner from "../../image/LocalsBanner.png";
 export default function Locals() {
   return (
     <div className="locals-main">
-      <img src={LocalsBanner} alt="LocalsBanner" />
+      <img className="localsBanner" src={LocalsBanner} alt="LocalsBanner" />
       <div className="container-locals">
         <div className="texto-locals">
           <h2 className="Name-Local">Mall of America</h2>

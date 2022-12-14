@@ -3,9 +3,9 @@
     padding: 0;
     box-sizing: border-box;
   }
-/* .imgBannerContact{
-    width: 80%;
-} */
+.imgBannerContact{
+    width: 100%;
+}
 .textContact{
     padding-top: 3rem;
     padding-left: 3rem;
