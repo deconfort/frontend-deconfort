@@ -18,22 +18,22 @@ import EditProduct from "./layouts/EditProduct";
 function App() {
   return (
     <>
-    <Header></Header>
+ {/*    <Header></Header>
     <Faqs></Faqs>
       <Locals></Locals>
       <Contact></Contact>
       <LoginLayout></LoginLayout>
-      <Header></Header>
+      <Header></Header> */}
       {/* <Contact></Contact> */}
       {/* <LoginLayout></LoginLayout> */}
       {/* <Register></Register>  */}
-      <CreateProduct></CreateProduct>
+     {/*  <CreateProduct></CreateProduct>
       <EditProduct></EditProduct>
-      <Forum />
-     {/* <div className='app'>
+      <Forum /> */}
+      <div className='app'>
       <HomePage/>
-    </div> */}
-      <Footer></Footer>
+    </div> 
+     {/*  <Footer></Footer> */}
     </>
 
   );
