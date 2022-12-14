@@ -1,5 +1,7 @@
+import productReducer from "./productReducer";
 
 const rootReducer = {
+    products: productReducer,
 
 };
 
