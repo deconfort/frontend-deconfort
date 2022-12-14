@@ -21,7 +21,7 @@ export default function CardChangeColor(props) {
       </div>
       <div className="info">
         <div className="watch-name">
-          <h1 className='title'>{name.slice(0,18)}</h1>
+          <h1 className='title-name'>{name.slice(0,18)}</h1>
             <h3 className='h3-color'>$ {price}</h3>        
         </div>
         <div className="color-container">
