@@ -46,7 +46,7 @@ function App() {
       <Route path="/register" element={<Register/>}/>
       <Route path="/profile" element={<Profile/>}/>
       <Route path="/createproduct" element={<CreateProduct/>}/>
-      <Route path="/editproduct" element={<EditProduct/>}/>
+      <Route path="/editproduct/:id" element={<EditProduct/>}/>
      </Routes>
     <Footer></Footer>
     </>
