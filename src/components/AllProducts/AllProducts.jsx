@@ -42,7 +42,8 @@ export default function AllProducts() {
                 photo={item.photo[0]}
                 category={item.category}
                 price={item.price}
-
+                id={item._id}
+                key={item._id}
               />
             );
           })}
