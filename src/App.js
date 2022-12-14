@@ -1,4 +1,5 @@
 
+import { Route, Routes } from "react-router-dom";
 import './style.css'
 import "@fontsource/abhaya-libre"
 import HomePage from './layouts/HomePage/HomePage';
@@ -18,22 +19,21 @@ import EditProduct from "./layouts/EditProduct";
 function App() {
   return (
     <>
- {/*    <Header></Header>
-    <Faqs></Faqs>
-      <Locals></Locals>
-      <Contact></Contact>
-      <LoginLayout></LoginLayout>
-      <Header></Header> */}
-      {/* <Contact></Contact> */}
-      {/* <LoginLayout></LoginLayout> */}
-      {/* <Register></Register>  */}
-     {/*  <CreateProduct></CreateProduct>
-      <EditProduct></EditProduct>
-      <Forum /> */}
-      <div className='app'>
+ <Header></Header>
+<Routes>
+      <Route path="/faqs" element={<Faqs/>}/>
+      <Route path="/locals" element={<Locals/>}/>
+      <Route path="/contact" element={<Contact/>}/>
+      <Route path="/forum" element={<Forum/>}/>
+      <Route path="/login" element={<LoginLayout/>}/>
+      <Route path="/register" element={<Register/>}/>
+      <Route path="/createproduct" element={<CreateProduct/>}/>
+      <Route path="/editproduct" element={<EditProduct/>}/>
+      {/* <div className='app'>
       <HomePage/>
-    </div> 
-     {/*  <Footer></Footer> */}
+    </div>  */}
+     </Routes>
+    <Footer></Footer>
     </>
 
   );
