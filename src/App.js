@@ -12,10 +12,24 @@ import Locals from "./components/Locals/Locals";
 import Faqs from "./components/faqs/Faqs";
 import CreateProduct from "./layouts/CreateProduct";
 import EditProduct from "./layouts/EditProduct";
+import { useDispatch, useSelector } from 'react-redux';
+import usersActions from './redux/actions/usersActions';
+import { useEffect } from 'react';
 
 
    
 function App() {
+  let user = useSelector((store) => store.user);
+  let dispatch = useDispatch();
+  let { reEnter } = usersActions;
+
+  useEffect(() => {
+    let token = JSON.parse(localStorage.getItem("token"));
+    if (token) {
+      dispatch(reEnter(token.token.user));
+    }
+    // eslint-disable-next-line
+  }, []);
   return (
     <>
  {/*    <Header></Header>
