@@ -1,0 +1,12 @@
+.text-carousel{
+    /* background-color: #52646a; */
+    background-color: #27373e;
+    width: 100%;
+    color: white;
+    padding: 10px 0px;
+    margin-top: 200px;
+}
+
+.text-carousel > p {
+    margin-left: 20px;
+}
