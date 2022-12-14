@@ -10,7 +10,7 @@ export default function CommentForum() {
             <label className='labelCommentForum'>Comment
                 <input className='inputForum' type="text" name="" placeholder='Enter your comment'/>
             </label>
-            <button type="submit">Send comment</button>
+            <button className='ButtonCommentForm' type="submit">Send comment</button>
         </form>
   )
 }

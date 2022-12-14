@@ -82,16 +82,37 @@
 .formForum{
     display: flex;
     flex-direction: column;
-    width: 40%;
-    margin-top: 1.5rem;
-    justify-content: center;
-    align-items: center;
-    border: 2px solid #5c195d;
+    border-radius: 9px;
+    text-align: center;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-bottom: 1rem;
+    padding-top: 1rem;
+    box-shadow: 5px 5px 5px 5px #c1b8ae;
+
 }
 .labelCommentForum{
     display: flex;
     flex-direction: column;
+    margin-bottom: 1rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
+    
 }
 .inputForum{
-    width: 80%;
+    width: 100%;
+    height: 4rem;
+    border-radius: 9px;
+}
+
+.ButtonCommentForm{
+    width: 100%;
+    height: 2rem;
+    border-radius: 9px;
+    background-color:  #5c195d;
+    font-size: medium;
+    color: #f9f9f9;
+    border: none;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
 }
