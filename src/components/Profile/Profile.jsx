@@ -16,11 +16,11 @@ export default function Profile() {
             <p>Buenos Aires, Argentina</p>
             <div className="footer">
               <div>
-                <p className="num">10</p>
+                <p className="num">🤍</p>
                 <p>My Favorites</p>
               </div>
               <div>
-                <p className="num">logo editar</p>
+                <p className="num">📝</p>
                 <p>Edit Profile</p>
               </div>
             </div>
