@@ -10,9 +10,7 @@ export default function Header() {
     <div>
       <div>
         <div className="UserContainer">
-          <div className="LogoHeader">
             <Logo></Logo>
-          </div>
           <UserLogin></UserLogin>
         </div>
       </div>

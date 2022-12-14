@@ -4,8 +4,9 @@ import productAction from "../actions/productAction";
 const { getProducts, getProductsFilter } = productAction;
 
 const initialState = {
-  product: [],
+  products: [],
   value: "",
+  category: "",
   categories: [],
   checks: []
 };
@@ -17,7 +18,7 @@ const productsReducer = createReducer(initialState, (builder) => {
       let categoriesCategoryFilter = [...new Set(categoriesCategory)];
       return {
         ...state,
-        cities: action.payload,
+        products: action.payload,
         categories: categoriesCategoryFilter,
       };
     })
