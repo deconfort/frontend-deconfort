@@ -1,11 +1,13 @@
 import "./style.css";
 import Header from "./layouts/Header";
-import "./style.css";
 import LoginLayout from "./layouts/LoginLayout";
 import Footer from "./layouts/Footer";
 import Register from "./layouts/Register";
 import Contact from "./layouts/Contact";
 import Forum from "./components/foro/Forum";
+import CreateProduct from "./layouts/CreateProduct";
+import EditProduct from "./layouts/EditProduct";
+
 
 function App() {
   return (
@@ -13,7 +15,9 @@ function App() {
       <Header></Header>
       {/* <Contact></Contact> */}
       {/* <LoginLayout></LoginLayout> */}
-      {/* <Register></Register> */}
+      {/* <Register></Register>  */}
+      {/* <CreateProduct></CreateProduct> */}
+      {/* <EditProduct></EditProduct> */}
       <Forum />
       <Footer></Footer>
     </>
