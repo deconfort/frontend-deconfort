@@ -24,7 +24,9 @@ function NavbarHambur(props) {
               className="Li-Navbar"
             >
               <NavDropdown.Item href="#link" className="Li-Navbar">
-                CHAIRS
+                <Link to={`productCategory`}>
+                desk
+                </Link>
               </NavDropdown.Item>
               <NavDropdown.Item href="#link" className="Li-Navbar">
                 ARMCHAIRS

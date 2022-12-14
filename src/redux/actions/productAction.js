@@ -15,17 +15,16 @@ const getProducts = createAsyncThunk("getProducts", async () => {
 });
 const getProductsFilter = createAsyncThunk(
   "getProductsFilter",
-  async ({ category, value, checks }) => {
-    let url = `${apiUrl}api/products?${category}&name=${value}`;
+  async ({  value, order }) => {
+    let url = `${apiUrl}api/products?name=${value}&order=${order}`;
 
     try {
       const res = await axios.get(url);
       console.log(res.data.response);
       return {
         products: res.data.response,
-        category,
         value,
-        checks,
+        order
       };
     } catch (error) {
       console.log(error);
