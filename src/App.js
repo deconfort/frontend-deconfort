@@ -18,6 +18,7 @@ import Faqs from "./components/faqs/Faqs";
 import CreateProduct from "./layouts/CreateProduct";
 import EditProduct from "./layouts/EditProduct";
 import Profile from './components/Profile/Profile';
+import Payments from './components/Payments/Payments';
 
 
    
@@ -47,6 +48,7 @@ function App() {
       <Route path="/profile" element={<Profile/>}/>
       <Route path="/createproduct" element={<CreateProduct/>}/>
       <Route path="/editproduct" element={<EditProduct/>}/>
+      <Route path="/payments" element={<Payments/>}/>
      </Routes>
     <Footer></Footer>
     </>
