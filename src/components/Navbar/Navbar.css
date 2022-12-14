@@ -14,11 +14,13 @@
   display: flex;
   justify-content: space-between;
   margin: 1px;
-    
+  flex-wrap: wrap;
 }
 
 .registerStyle{
   margin: 10px;
+  padding: 0.3rem;
+  text-decoration: none;
 }
 
 .LogoHeader{
@@ -55,13 +57,12 @@ margin-right: 1rem;
   .Li-Navbar {
     float: left;
     list-style-type: none;
-    /* padding: 1px; */
     font-family: Helvetica;
     font-size: 14px;
     border-left: none;
     border-right: none;
-    width: 100px;
     text-align: center;
+    text-decoration: none;
   }
 
   li:hover, .Li-Navbar:hover {
@@ -69,3 +70,7 @@ margin-right: 1rem;
     border-radius: 6mm;
     cursor: pointer;
   }
+  a {
+    color: black;
+    text-decoration: none;
+}

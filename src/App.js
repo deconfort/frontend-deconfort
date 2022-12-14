@@ -1,4 +1,3 @@
-
 import './style.css'
 import "@fontsource/abhaya-libre"
 import HomePage from './layouts/HomePage/HomePage';
@@ -12,9 +11,6 @@ import Locals from "./components/Locals/Locals";
 import Faqs from "./components/faqs/Faqs";
 import CreateProduct from "./layouts/CreateProduct";
 import EditProduct from "./layouts/EditProduct";
-import { useDispatch, useSelector } from 'react-redux';
-import usersActions from './redux/actions/usersActions';
-import { useEffect } from 'react';
 
 
    
@@ -31,25 +27,9 @@ function App() {
     // eslint-disable-next-line
   }, []);
   return (
-    <>
- {/*    <Header></Header>
-    <Faqs></Faqs>
-      <Locals></Locals>
-      <Contact></Contact>
-      <LoginLayout></LoginLayout>
-      <Header></Header> */}
-      {/* <Contact></Contact> */}
-      {/* <LoginLayout></LoginLayout> */}
-      {/* <Register></Register>  */}
-     {/*  <CreateProduct></CreateProduct>
-      <EditProduct></EditProduct>
-      <Forum /> */}
-      <div className='app'>
-      <HomePage/>
-    </div> 
-     {/*  <Footer></Footer> */}
-    </>
-
+    <div className='app'>
+      <HomePage />
+    </div>
   );
 }
 
