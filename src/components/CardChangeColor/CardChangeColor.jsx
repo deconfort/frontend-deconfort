@@ -3,11 +3,6 @@ import './cardChangeColor.css'
 
 export default function CardChangeColor(props) {
   let { name, photo, price, category } = props
-  // let colors = ''
-  function changeColor() {
-    // colors.forEach(c => c.classList.remove)
-    this.classList.add('active')
-  }
 
   return (
     <div className='card-change-color'>
@@ -23,8 +18,6 @@ export default function CardChangeColor(props) {
           <img src='https://www.pngitem.com/pimgs/m/408-4088931_hollow-star-icon-favorite-png-transparent-png.png' alt='fav icon' className='share' />
         </a>
         <img src={photo} alt='watch' className='watch-img show' />
-        {/* <img src='./images/watch-pink.png' alt='watch' className='watch-img '/>
-        <img src='./images/watch-brown.png' alt='watch' className='watch-img '/> */}
       </div>
       <div className="info">
         <div className="watch-name">
