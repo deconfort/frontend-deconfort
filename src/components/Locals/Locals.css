@@ -18,11 +18,9 @@
     flex-direction: row;
     flex-wrap: wrap;
     margin: 5px;
-    padding-left: 6rem;
-    padding-right: 6rem;
 }
 .img-locals{
-    width: 600px;
+    width: 100%;
     height: 300px;
     box-shadow: 5px 5px 5px 5px #c1b8ae;
     border-radius: 10px;
@@ -32,6 +30,7 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    margin-top: 1rem;
 }
 .Name-Local{
     font-size: 30px;
@@ -41,4 +40,7 @@
 }
 .LocalsBanner{
     max-width: 100%;
+}
+.localsBanner{
+    width: 100%;
 }

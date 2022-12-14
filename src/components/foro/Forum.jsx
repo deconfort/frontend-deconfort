@@ -6,7 +6,7 @@ import ForumBanner from "../../image/ForumBanner.png";
 export default function () {
   return (
     <div className="containerAllForum">
-      <img src={ForumBanner} alt="" />
+      <img className="forumBanner" src={ForumBanner} alt="Forum banner" />
         <div className="containerAllCards">
       <div className="containerCardsComments">
         <p className="dateForum">Date: 13/12/2022</p>

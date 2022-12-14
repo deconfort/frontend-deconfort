@@ -60,6 +60,7 @@
     display: flex;
     gap: 2rem;
     flex-wrap: wrap;
+    justify-content: center;
 }
 .buttonForum{
     padding: 0.5rem;
@@ -89,7 +90,7 @@
     padding-bottom: 1rem;
     padding-top: 1rem;
     box-shadow: 5px 5px 5px 5px #c1b8ae;
-
+    margin-top: 1.5rem;
 }
 .labelCommentForum{
     display: flex;
@@ -101,7 +102,7 @@
 }
 .inputForum{
     width: 100%;
-    height: 4rem;
+    height: 2rem;
     border-radius: 9px;
 }
 
@@ -115,4 +116,15 @@
     border: none;
     margin-top: 1rem;
     margin-bottom: 1rem;
+}
+.ButtonCommentForm:hover{
+    background-color:  #a770b2;
+}
+.forumBanner{
+    width: 100%;
+}
+@media screen and (max-width: 650px) {
+  .containerCardsComments{
+      width: 55%;
+  }
 }
