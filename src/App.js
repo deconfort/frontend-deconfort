@@ -19,6 +19,7 @@ import CreateProduct from "./layouts/CreateProduct";
 import EditProduct from "./layouts/EditProduct";
 import ProductCategory from './components/ProductCategory/ProductCategory';
 import Profile from './components/Profile/Profile';
+import Payments from './components/Payments/Payments';
 
 
 
@@ -49,6 +50,7 @@ function App() {
       <Route path="/profile" element={<Profile/>}/>
       <Route path="/createproduct" element={<CreateProduct/>}/>
       <Route path="/editproduct" element={<EditProduct/>}/>
+      <Route path="/payments" element={<Payments/>}/>
       <Route path="/productCategory" element={<ProductCategory/>}/>
       <Route path="/editproduct/:id" element={<EditProduct/>}/>
      </Routes>
