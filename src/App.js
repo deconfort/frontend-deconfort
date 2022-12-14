@@ -25,11 +25,9 @@ function App() {
       <Contact></Contact>
       <LoginLayout></LoginLayout>
       <Header></Header>
-      {/* <Contact></Contact> */}
-      {/* <LoginLayout></LoginLayout> */}
-      {/* <Register></Register>  */}
-      {/* <CreateProduct></CreateProduct> */}
-      {/* <EditProduct></EditProduct> */}
+      <Register></Register> 
+      <CreateProduct></CreateProduct>
+      <EditProduct></EditProduct>
       <Forum />
       <Footer></Footer>
     </>
