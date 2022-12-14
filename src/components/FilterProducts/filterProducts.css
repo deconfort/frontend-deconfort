@@ -1,0 +1,19 @@
+.container-filters{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.filter-products{
+    width: 88%;
+    padding: 22px 16px;
+    border-top:1px solid rgb(101,76,59);
+    border-bottom:1px solid rgb(101,76,59);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px 0px;
+}
+
+.selects-products{
+    width: 190px;
+}

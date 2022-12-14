@@ -1,0 +1,80 @@
+.footer-banner{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    z-index: 2;
+    margin-top: -100px;
+}
+
+.button-catalogue{
+    padding: 20px;
+    border: 1.5px solid white;
+    border-radius: 6mm;
+    box-shadow: #303030;
+    margin-left: 40px;
+    background-color: #0c0c0c48;
+    color: white;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.column{
+    display: flex;
+    flex-direction: column;
+    margin-right: 40px;
+    text-transform: uppercase;
+}
+
+.column > h2{
+    font-size: 28px;
+    color: white;
+    text-shadow: 2px 2px 2px #000000;
+}
+
+.column > p{
+    font-size: 16px;
+    color: white;
+    text-shadow: 2px 2px 6px #000000;
+}
+
+@media screen and (max-width:760px){
+    .column h2{
+        font-size: 20px;    
+    }
+    .column p{
+        font-size: 14px;
+    }
+    .button-catalogue{
+        padding: 10px;
+    }
+}
+
+@media screen and (max-width:684px){
+    .footer-banner{
+        margin-top: -50px;    
+    }
+    .button-catalogue{
+        margin-left: 10px;
+    }
+    .column{
+        margin-right: 10px;
+    }
+}
+
+@media screen and (max-width:586px) {
+    .column h2{
+        font-size: 16px;    
+    }
+    .column p{
+        font-size: 12px;
+    }
+    .button-catalogue{
+        padding: 6px;
+    }
+}
+
+@media screen and (max-width:514px){
+    .footer-banner{
+        display: none;
+    }
+}

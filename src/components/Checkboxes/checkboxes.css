@@ -1,0 +1,25 @@
+.contain-filter-checkboxs{
+    display: flex;
+    flex-direction: column;
+    margin: 20px 0px;
+    margin-left: 7%;
+    gap: 2rem;
+    margin-right: 80px;
+}
+.checkboxs-categories-product{
+    display: flex;
+    flex-direction: column;
+    width: 120px;
+}
+.list-categories{
+    list-style: none;
+}
+
+.categories-products > h4{
+    margin-bottom: 10px;
+}
+
+.checkboxs-categories-product > h4{
+    margin-bottom: 10px;
+}
+

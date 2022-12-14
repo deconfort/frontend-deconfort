@@ -1,0 +1,85 @@
+.container-services{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    margin-top: 30px;   
+}
+
+.service{
+    display: flex;
+    gap: 6rem;
+}
+
+.services-text{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding-right: 60px;
+    border-right: 1px solid black;
+}
+.services-text h6{
+    font-size: 22px;
+}
+.services-text p{
+    font-size: 16px;
+}
+
+.left{
+    margin-left: 15px;
+}
+
+.right{
+    margin-right: 15px;
+}
+
+@media screen and (max-width:884px){
+    .service{
+        gap: 4rem;
+    }
+    .services-text{
+        padding-right: 40px;
+    }
+    .services-text h6{
+        font-size: 18px;
+    }
+    .services-text p{
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width:680px){
+    .service{
+        gap: 2rem;
+    }
+    .services-text{
+        padding-right: 40px;
+    }
+    .services-text h6{
+        font-size: 18px;
+    }
+    .services-text p{
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width:576px){
+    .service{
+        gap: 1.5rem;
+    }
+    .services-text{
+        padding-right: 20px;
+    }
+    .services-text h6{
+        font-size: 14px;
+    }
+    .services-text p{
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width:375px){
+    .mid{
+        display: none;
+    }
+}
