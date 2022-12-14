@@ -23,7 +23,7 @@ export default function Header() {
           title3="LOCALS"
           title4="ABOUT US"
           title5="FAQS"
-          title6="FORO"
+          title6="FORUM"
           title7="CONTACT US"
         ></NavbarHambur>
       </div>

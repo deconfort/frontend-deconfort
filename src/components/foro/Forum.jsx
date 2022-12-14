@@ -1,10 +1,12 @@
 import React from "react";
 import CommentForum from "./CommentForum";
 import "./forum.css";
+import ForumBanner from "../../image/ForumBanner.png";
 
 export default function () {
   return (
     <div className="containerAllForum">
+      <img src={ForumBanner} alt="" />
         <div className="containerAllCards">
       <div className="containerCardsComments">
         <p className="dateForum">Date: 13/12/2022</p>

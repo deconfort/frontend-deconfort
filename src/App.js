@@ -5,13 +5,25 @@ import Footer from "./layouts/Footer";
 import Register from "./layouts/Register";
 import Contact from "./layouts/Contact";
 import Forum from "./components/foro/Forum";
+import Locals from "./components/Locals/Locals";
+import Faqs from "./components/faqs/Faqs";
 import CreateProduct from "./layouts/CreateProduct";
 import EditProduct from "./layouts/EditProduct";
+
+
+
+
+
 
 
 function App() {
   return (
     <>
+    <Header></Header>
+    <Faqs></Faqs>
+      <Locals></Locals>
+      <Contact></Contact>
+      <LoginLayout></LoginLayout>
       <Header></Header>
       {/* <Contact></Contact> */}
       {/* <LoginLayout></LoginLayout> */}

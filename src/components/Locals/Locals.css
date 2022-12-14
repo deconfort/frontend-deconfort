@@ -1,0 +1,44 @@
+.locals-main{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+.container-title{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+.container-locals{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 5px;
+    padding-left: 6rem;
+    padding-right: 6rem;
+}
+.img-locals{
+    width: 600px;
+    height: 300px;
+    box-shadow: 5px 5px 5px 5px #c1b8ae;
+    border-radius: 10px;
+}
+.texto-locals{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.Name-Local{
+    font-size: 30px;
+    font-weight: bold;
+    color: #8f837d;
+
+}
+.LocalsBanner{
+    max-width: 100%;
+}
