@@ -8,11 +8,11 @@ import apiUrl from "../../url";
 
 export default function AllProducts() {
     let [products, setProducts] = useState([]);
-    
+
     useEffect(() => {
         axios
-        .get(`${apiUrl}api/products/`)
-        .then((res) => setProducts(res.data.response));
+            .get(`${apiUrl}api/products/`)
+            .then((res) => setProducts(res.data.response));
     }, [])
 
     console.log(products);
@@ -22,17 +22,15 @@ export default function AllProducts() {
         <div className='check-filter-cards'>
             <Checkboxes />
             <div className='cards-all-products'>
-            {products.map((item) => {
-                return(
-                <CardChangeColor
-                name={item.name}
-                photo={item.photo[0]}
-                category={item.category}
-                price={item.price}
-
-                />  
-            )
-            })}
+                {products.map((item) => {
+                    return (
+                        <CardChangeColor
+                            name={item.name}
+                            photo={item.photo[0]}
+                            category={item.category}
+                            price={item.price} />
+                    )
+                })}
             </div>
         </div>
     )
