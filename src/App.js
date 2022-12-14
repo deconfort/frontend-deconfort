@@ -28,8 +28,8 @@ function App() {
       {/* <Contact></Contact> */}
       {/* <LoginLayout></LoginLayout> */}
       {/* <Register></Register>  */}
-      {/* <CreateProduct></CreateProduct> */}
-      {/* <EditProduct></EditProduct> */}
+      <CreateProduct></CreateProduct>
+      <EditProduct></EditProduct>
       <Forum />
       <Footer></Footer>
     </>
