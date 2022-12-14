@@ -29,6 +29,7 @@ function App() {
       <Route path="/register" element={<Register/>}/>
       <Route path="/createproduct" element={<CreateProduct/>}/>
       <Route path="/editproduct" element={<EditProduct/>}/>
+      {/* App con todas las rutas */}
       {/* <div className='app'>
       <HomePage/>
     </div>  */}
