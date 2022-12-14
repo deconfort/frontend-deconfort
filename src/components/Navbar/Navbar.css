@@ -1,0 +1,71 @@
+.ContainerNavbar{
+    display: flex;
+    /* justify-content: center;
+    align-items: center; */
+    flex-direction: column;
+}
+.Navbar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+.UserContainer{
+  display: flex;
+  justify-content: space-between;
+  margin: 1px;
+    
+}
+
+.registerStyle{
+  margin: 10px;
+}
+
+.LogoHeader{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.SearchInput{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 25px;
+}
+
+
+.Li-Navbar{
+margin-left: 1rem;
+margin-right: 1rem;
+}
+
+.TitleHeader{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Ul-Navbar, .registerStyle {
+    border-radius: 6mm;
+    background: none;
+    border: 1px solid #eee;
+    box-shadow: 0 0 2px black;
+  }
+  .Li-Navbar {
+    float: left;
+    list-style-type: none;
+    /* padding: 1px; */
+    font-family: Helvetica;
+    font-size: 14px;
+    border-left: none;
+    border-right: none;
+    width: 100px;
+    text-align: center;
+  }
+
+  li:hover, .Li-Navbar:hover {
+    background: #eee;
+    border-radius: 6mm;
+    cursor: pointer;
+  }
