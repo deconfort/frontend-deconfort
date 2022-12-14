@@ -18,7 +18,7 @@ import Faqs from "./components/faqs/Faqs";
 import CreateProduct from "./layouts/CreateProduct";
 import EditProduct from "./layouts/EditProduct";
 import Profile from './components/Profile/Profile';
-
+import EditProfile from './components/Profile/EditProfile';
 
    
 function App() {
@@ -45,6 +45,7 @@ function App() {
       <Route path="/login" element={<LoginLayout/>}/>
       <Route path="/register" element={<Register/>}/>
       <Route path="/profile" element={<Profile/>}/>
+      <Route path="/editprofile" element={<EditProfile/>}/>
       <Route path="/createproduct" element={<CreateProduct/>}/>
       <Route path="/editproduct" element={<EditProduct/>}/>
      </Routes>
