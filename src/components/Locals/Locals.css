@@ -46,3 +46,17 @@
 .localsBanner{
     width: 100%;
 }
+@media screen and (max-width: 850px) {
+    .texto-locals{
+        width: 58%;
+    }
+    .container-locals{
+        flex-direction: column;
+    }
+  }
+  @media screen and (max-width: 600px) {
+    .img-locals{
+        height: 250px;
+        width: 80%;
+    }
+  }
