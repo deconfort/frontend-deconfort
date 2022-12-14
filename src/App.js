@@ -36,6 +36,7 @@ function App() {
     <>
  <Header></Header>
 <Routes>
+      <Route path="/" element={<HomePage/>}/>
       <Route path="/faqs" element={<Faqs/>}/>
       <Route path="/locals" element={<Locals/>}/>
       <Route path="/contact" element={<Contact/>}/>
@@ -44,10 +45,6 @@ function App() {
       <Route path="/register" element={<Register/>}/>
       <Route path="/createproduct" element={<CreateProduct/>}/>
       <Route path="/editproduct" element={<EditProduct/>}/>
-      {/* App con todas las rutas */}
-      {/* <div className='app'>
-      <HomePage/>
-    </div>  */}
      </Routes>
     <Footer></Footer>
     </>
