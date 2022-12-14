@@ -19,6 +19,7 @@
     flex-wrap: wrap;
     margin: 5px;
     width: 99%;
+    margin-bottom: 2rem;
 }
 .img-locals{
     width: 100%;
@@ -46,3 +47,17 @@
 .localsBanner{
     width: 100%;
 }
+@media screen and (max-width: 850px) {
+    .texto-locals{
+        width: 58%;
+    }
+    .container-locals{
+        flex-direction: column;
+    }
+  }
+  @media screen and (max-width: 600px) {
+    .img-locals{
+        height: 250px;
+        width: 80%;
+    }
+  }
