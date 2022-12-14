@@ -11,3 +11,10 @@
         width: 99%;
     }
   }
+  .linkNav{
+    text-decoration: none;
+    color: #000000b3;
+  }
+  .linkNav:hover{
+    color: rgb(101,76,59);
+  }

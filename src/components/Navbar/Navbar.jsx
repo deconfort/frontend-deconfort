@@ -16,7 +16,7 @@ function NavbarHambur(props) {
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
             <Nav.Link href="" className="Li-Navbar">
-              <Link to={"/"}>{title1}</Link>
+              <Link className='linkNav' to={"/"}>{title1}</Link>
             </Nav.Link>
             <NavDropdown
               title="PRODUCTS"
@@ -38,19 +38,19 @@ function NavbarHambur(props) {
               </NavDropdown.Item>
             </NavDropdown>
             <Nav.Link href="" className="Li-Navbar">
-              <Link to={"/locals"}>{title3}</Link>
+              <Link className='linkNav' to={"/locals"}>{title3}</Link>
             </Nav.Link>
             <Nav.Link href="" className="Li-Navbar">
               {title4}
             </Nav.Link>
             <Nav.Link href="" className="Li-Navbar">
-              <Link to={"/faqs"}>{title5}</Link>
+              <Link className='linkNav' to={"/faqs"}>{title5}</Link>
             </Nav.Link>
             <Nav.Link href="" className="Li-Navbar">
-              <Link to={"/forum"}>{title6}</Link>             
+              <Link className='linkNav' to={"/forum"}>{title6}</Link>             
             </Nav.Link>
             <Nav.Link href="" className="Li-Navbar">
-              <Link to={"/contact"}>{title7}</Link>
+              <Link className='linkNav' to={"/contact"}>{title7}</Link>
             </Nav.Link>
           </Nav>
         </Navbar.Collapse>
