@@ -18,9 +18,6 @@ import EditProduct from "./layouts/EditProduct";
 function App() {
   return (
     <>
-     <div className='app'>
-      <HomePage/>
-    </div>
     <Header></Header>
     <Faqs></Faqs>
       <Locals></Locals>
@@ -33,6 +30,9 @@ function App() {
       <CreateProduct></CreateProduct>
       <EditProduct></EditProduct>
       <Forum />
+     {/* <div className='app'>
+      <HomePage/>
+    </div> */}
       <Footer></Footer>
     </>
 
