@@ -1,4 +1,4 @@
-.card-change-color{
+.card-change-color {
     position: relative;
     width: 320px;
     height: 480px;
@@ -7,7 +7,7 @@
     box-shadow: 0 5px 15px rgba(50, 50, 50, 0.438);
 }
 
-.gradient{
+.gradient {
     position: absolute;
     width: 100%;
     height: 100%;
@@ -17,30 +17,30 @@
     z-index: -2;
 }
 
-.gradient[color='blue']{
+.gradient[color='blue'] {
     background: #31394e;
 }
 
-.gradient[color='pink']{
+.gradient[color='pink'] {
     background: pink;
 }
 
-.gradient[color='brown']{
-    background: rgb(101,76,59);
-    
+.gradient[color='brown'] {
+    background: rgb(101, 76, 59);
+
 }
 
-.gradient[color='claro']{
+.gradient[color='claro'] {
     background: #c1b8ae;
     z-index: 1;
 }
 
-.bg-watch{
+.bg-watch {
     position: relative;
     height: 320px;
 }
 
-.watch{
+.watch {
     position: absolute;
     top: 200px;
     left: -80px;
@@ -50,7 +50,7 @@
     transform: rotate(-70deg);
 }
 
-.share{
+.share {
     position: absolute;
     text-decoration: none;
     width: 40px;
@@ -68,11 +68,11 @@
     z-index: 2;
 }
 
-.share:hover{
+.share:hover {
     transform: scale(1.1);
 }
 
-.watch-img{
+.watch-img {
     max-width: 100%;
     position: absolute;
     width: 250px;
@@ -82,26 +82,27 @@
     border-radius: 10% 0% 50% 70%;
 }
 
-.watch-img.show{
+.watch-img.show {
     opacity: 1;
 }
 
-.info{
+.info {
     position: relative;
-    padding: 35px 40px;
+    padding: 15px 20px;
+    z-index: 3;
 }
 
-.watch-name{
+.watch-name {
     padding: 0 0 10px 0;
 }
 
-.title{
+.title-name {
     margin-bottom: 6px;
     font-size: 1.8rem;
     color: #303030;
 }
 
-.watch-name .new{
+.watch-name .new {
     padding: 3px 10px;
     background: #31394e;
     color: #fff;
@@ -109,22 +110,53 @@
     cursor: pointer;
 }
 
-.h3-color{
+.h3-color {
     font-size: 1.5;
     font-weight: 600;
     text-transform: uppercase;
     color: #333;
 }
 
-.color-container{
+.color-container {
     display: flex;
     justify-content: space-between;
 }
 
-.more-and-buy{
-    padding: 3px 10px;
+.more-and-buy {
+    padding: 12px 20px;
     background: #31394e;
     color: #fff;
     border-radius: 6mm;
     cursor: pointer;
+}
+
+.icon-cart {
+    display: flex;
+    align-items: center;
+}
+
+@media screen and (max-width:1197px) {
+    .card-change-color {
+        width: 300px;
+        height: 480px;
+    }
+}
+
+@media screen and (max-width:526px) {
+    .card-change-color {
+        width: 100%;
+    }
+
+    .watch-img {
+        max-width: 100%;
+        position: absolute;
+        width: 320px;
+        left: 100px;
+        border-radius: 10% 0% 50% 70%;
+    }
+
+    .gradient {
+        clip-path: circle(150px at 80% 30%);
+        top: 0;
+    }
 }

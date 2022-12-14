@@ -23,3 +23,39 @@
     margin-bottom: 10px;
 }
 
+@media screen and (max-width:1356px) {
+    .contain-filter-checkboxs{
+        margin-left: 1%;
+    }
+}
+
+@media screen and (max-width:1271px) {
+    .contain-filter-checkboxs{
+        margin-right: 30px;
+    }
+}
+
+@media screen and (max-width:1192px) {
+    .contain-filter-checkboxs{
+        flex-direction: row;
+    }
+}
+
+@media screen and (max-width:949px) {
+    .contain-filter-checkboxs{
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width:842px) {
+    .contain-filter-checkboxs{
+        margin-right: 12px;
+    }
+}
+
+@media screen and (max-width:528px){
+    .contain-filter-checkboxs{
+        display: none;
+    }
+}
+
