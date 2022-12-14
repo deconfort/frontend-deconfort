@@ -1,0 +1,30 @@
+.div-see-all{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.button-see-all{
+    background-color: #c1b8ae;
+    width: 280px;
+    text-align: center;
+    height: 50px;
+    padding: 9px 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    cursor: pointer;
+}
+.button-see-all:hover{
+    background-color:rgb(101,76,59);
+    color: #ebe9e7;
+}
+
+
+@media screen and (max-width:468px){
+    .button-see-all{
+        width: 240px;
+        font-size: 20px;
+    }
+}
