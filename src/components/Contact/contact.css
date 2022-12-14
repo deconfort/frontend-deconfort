@@ -3,9 +3,9 @@
     padding: 0;
     box-sizing: border-box;
   }
-.imgBannerContact{
+/* .imgBannerContact{
     width: 80%;
-}
+} */
 .textContact{
     padding-top: 3rem;
     padding-left: 3rem;
@@ -47,6 +47,7 @@
     flex-direction: column;
     align-items: center;
     margin-bottom: 2rem;
+    margin-top: 1.5rem;
 }
 .buttonContactForm{
     padding: 0.5rem;
