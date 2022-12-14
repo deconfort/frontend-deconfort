@@ -41,20 +41,14 @@ export default function AllProducts() {
                 name={item.name}
                 photo={item.photo[0]}
                 category={item.category}
+                price={item.price}
 
               />
             );
           })}
-
-                price={item.price}
-
-                />  
-            )
-            })}
             </div>
 
         </div>
       </div>
-    </div>
   );
 }
