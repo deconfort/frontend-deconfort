@@ -17,6 +17,7 @@ import Locals from "./components/Locals/Locals";
 import Faqs from "./components/faqs/Faqs";
 import CreateProduct from "./layouts/CreateProduct";
 import EditProduct from "./layouts/EditProduct";
+import Profile from './components/Profile/Profile';
 
 
    
@@ -43,6 +44,7 @@ function App() {
       <Route path="/forum" element={<Forum/>}/>
       <Route path="/login" element={<LoginLayout/>}/>
       <Route path="/register" element={<Register/>}/>
+      <Route path="/profile" element={<Profile/>}/>
       <Route path="/createproduct" element={<CreateProduct/>}/>
       <Route path="/editproduct" element={<EditProduct/>}/>
      </Routes>
