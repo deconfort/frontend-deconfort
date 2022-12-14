@@ -5,7 +5,7 @@ import FaqsBanner from "../../image/FaqsBanner.png";
 export default function Faqs() {
   return (
     <div className="Container-Faqs">
-      <img src={FaqsBanner} alt="FaqsBanner" />
+      <img className="faqsBanner" src={FaqsBanner} alt="FaqsBanner" />
       <div className="text-and-img-faqs">
         <h2 className="Titles-color-faqs">Your online furniture and decoration store</h2>
         <p>

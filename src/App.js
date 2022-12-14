@@ -1,4 +1,7 @@
-import "./style.css";
+
+import './style.css'
+import "@fontsource/abhaya-libre"
+import HomePage from './layouts/HomePage/HomePage';
 import Header from "./layouts/Header";
 import LoginLayout from "./layouts/LoginLayout";
 import Footer from "./layouts/Footer";
@@ -11,11 +14,7 @@ import CreateProduct from "./layouts/CreateProduct";
 import EditProduct from "./layouts/EditProduct";
 
 
-
-
-
-
-
+   
 function App() {
   return (
     <>
@@ -26,11 +25,18 @@ function App() {
       <LoginLayout></LoginLayout>
       <Header></Header>
       <Register></Register> 
+      {/* <Contact></Contact> */}
+      {/* <LoginLayout></LoginLayout> */}
+      {/* <Register></Register>  */}
       <CreateProduct></CreateProduct>
       <EditProduct></EditProduct>
       <Forum />
+     {/* <div className='app'>
+      <HomePage/>
+    </div> */}
       <Footer></Footer>
     </>
+
   );
 }
 

@@ -1,0 +1,28 @@
+.check-filter-cards {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.cards-all-products {
+    width: 70%;
+}
+
+@media screen and (max-width:949px) {
+    .cards-all-products {
+        width: 65%;
+    }
+}
+
+@media screen and (max-width:791px) {
+    .cards-all-products {
+        width: 60%;
+    }
+}
+
+@media screen and (max-width:661px) {
+    .cards-all-products {
+        width: 50%;
+        flex-direction: column;
+    }
+}
