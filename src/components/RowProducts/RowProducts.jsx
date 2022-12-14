@@ -11,7 +11,7 @@ export default function RowProducts() {
             <h3>Cups</h3>
         </div>
         <div className='container-item right-item'>
-            <h3>Premium products</h3>
+            <h3>Outdoor living</h3>
         </div>
     </div>
   )
