@@ -8,12 +8,14 @@
 
 .button-catalogue{
     padding: 20px;
-    border: 1px solid white;
+    border: 1.5px solid white;
     border-radius: 6mm;
     box-shadow: #303030;
     margin-left: 40px;
-    background-color: #30303048;
+    background-color: #0c0c0c48;
     color: white;
+    cursor: pointer;
+    font-weight: 600;
 }
 
 .column{
@@ -23,16 +25,16 @@
     text-transform: uppercase;
 }
 
-.column h2{
+.column > h2{
     font-size: 28px;
     color: white;
-    text-shadow: 2px 2px 2px #303030;
+    text-shadow: 2px 2px 2px #000000;
 }
 
-.column p{
+.column > p{
     font-size: 16px;
     color: white;
-    text-shadow: 2px 2px 6px #303030;
+    text-shadow: 2px 2px 6px #000000;
 }
 
 @media screen and (max-width:760px){
