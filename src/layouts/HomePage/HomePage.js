@@ -17,7 +17,6 @@ function HomePage() {
       <ButtonSeeAll/>
       <TextCarousel/>
       <ShopProducts/>
-      {/* <FilterProducts/> */}
       <AllProducts/>
     </div>
   );
