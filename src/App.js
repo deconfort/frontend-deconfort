@@ -3,23 +3,27 @@ import "@fontsource/abhaya-libre"
 import { useDispatch, useSelector } from 'react-redux';
 import { useEffect } from 'react';
 import usersActions from './redux/actions/usersActions';
-import { Route, Routes } from "react-router-dom";
+// import { Route, Routes } from "react-router-dom";
 import './style.css'
-import "@fontsource/abhaya-libre"
-import HomePage from './layouts/HomePage/HomePage';
-import Header from "./layouts/Header";
-import LoginLayout from "./layouts/LoginLayout";
+// import "@fontsource/abhaya-libre"
+// import HomePage from './layouts/HomePage/HomePage';
+// import Header from "./layouts/Header";
+// import LoginLayout from "./layouts/LoginLayout";
 import Footer from "./layouts/Footer";
-import Register from "./layouts/Register";
-import Contact from "./layouts/Contact";
-import Forum from "./components/foro/Forum";
-import Locals from "./components/Locals/Locals";
-import Faqs from "./components/faqs/Faqs";
+// import Register from "./layouts/Register";
+// import Contact from "./layouts/Contact";
+// import Forum from "./components/foro/Forum";
+// import Locals from "./components/Locals/Locals";
+// import Faqs from "./components/faqs/Faqs";
 import CreateProduct from "./layouts/CreateProduct";
+
+// import EditProduct from "./layouts/EditProduct";
+
 import EditProduct from "./layouts/EditProduct";
 import ProductCategory from './components/ProductCategory/ProductCategory';
 import Profile from './components/Profile/Profile';
 import Payments from './components/Payments/Payments';
+
 
 
 
@@ -38,8 +42,27 @@ function App() {
   }, []);
   return (
     <>
- <Header></Header>
-<Routes>
+
+    {/* <Header></Header> */}
+    {/* <Faqs></Faqs>
+      <Locals></Locals>
+      <Contact></Contact>
+      <LoginLayout></LoginLayout>
+      <Header></Header>
+      <Register></Register>  */}
+      {/* <Contact></Contact> */}
+      {/* <LoginLayout></LoginLayout> */}
+      {/* <Register></Register>  */}
+      <CreateProduct></CreateProduct>
+      {/* <EditProduct></EditProduct> */}
+      {/* <Forum /> */}
+     {/* <div className='app'>
+      <HomePage/>
+    </div> */}
+      <Footer></Footer>
+
+ {/* <Header></Header> */}
+{/* <Routes>
       <Route path="/" element={<HomePage/>}/>
       <Route path="/faqs" element={<Faqs/>}/>
       <Route path="/locals" element={<Locals/>}/>
@@ -53,8 +76,9 @@ function App() {
       <Route path="/payments" element={<Payments/>}/>
       <Route path="/productCategory" element={<ProductCategory/>}/>
       <Route path="/editproduct/:id" element={<EditProduct/>}/>
-     </Routes>
+     </Routes> */}
     <Footer></Footer>
+
     </>
     )
 }
