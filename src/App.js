@@ -22,6 +22,7 @@ import Profile from './components/Profile/Profile';
 import EditProfile from "./components/Profile/EditProfile"
 import Payments from './components/Payments/Payments';
 import Detail from './layouts/Detail/Detail';
+import AllProducts from './components/AllProducts/AllProducts';
 
    
 function App() {
@@ -42,6 +43,7 @@ function App() {
  <Header></Header>
     <Routes>
       <Route path="/" element={<HomePage/>}/>
+      <Route path="/allproducts" element={<AllProducts/>}/>
       <Route path="/faqs" element={<Faqs/>}/>
       <Route path="/locals" element={<Locals/>}/>
       <Route path="/contact" element={<Contact/>}/>
