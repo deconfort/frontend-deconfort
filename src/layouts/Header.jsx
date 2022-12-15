@@ -25,9 +25,6 @@ export default function Header() {
           title7="CONTACT US"
         ></NavbarHambur>
       </div>
-      {/* <div className="SearchInput">
-        <Search></Search>
-        </div> */}
     </div>
   );
 }
