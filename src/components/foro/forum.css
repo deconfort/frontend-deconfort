@@ -17,15 +17,16 @@
   margin-bottom: 1rem;
   padding: 1rem;
 }
-.containerAllCards{
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
+.containerAllCards {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 .imgForum {
   width: 90%;
-  height: 250px;
-  border-radius: 50rem;
+  height: 200px;
+  border-radius: 1rem;
+  object-fit: cover;
 }
 .textForum {
   width: 80%;
@@ -35,7 +36,8 @@
 .imgAvatar {
   width: 50px;
   height: 50px;
-  border-radius: 1rem;
+  object-fit: cover;
+  border-radius: 50%;
 }
 .userForum {
   display: flex;
@@ -55,76 +57,76 @@
   flex-direction: column;
   align-items: center;
 }
-.containerButtonForum{
-    padding: 1rem;
-    display: flex;
-    gap: 2rem;
-    flex-wrap: wrap;
-    justify-content: center;
+.containerButtonForum {
+  padding: 1rem;
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  justify-content: center;
 }
-.buttonForum{
-    padding: 0.5rem;
-    border-radius: 9px;
-    background-color:  #5c195d;
-    font-size: medium;
-    color: #f9f9f9;
-    border: none;
-    height: 35px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.buttonForum {
+  padding: 0.5rem;
+  border-radius: 9px;
+  background-color: #5c195d;
+  font-size: 13px;
+  color: #f9f9f9;
+  border: none;
+  height: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.buttonForum:hover{
-    background-color:  #a770b2;
+.buttonForum:hover {
+  background-color: #a770b2;
 }
-.dateForum{
-    color: #817f7e;
+.dateForum {
+  color: #817f7e;
 }
-.formForum{
-    display: flex;
-    flex-direction: column;
-    border-radius: 9px;
-    text-align: center;
-    padding-left: 1rem;
-    padding-right: 1rem;
-    padding-bottom: 1rem;
-    padding-top: 1rem;
-    box-shadow: 5px 5px 5px 5px #c1b8ae;
-    margin-top: 1.5rem;
+.formForum {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  border-radius: 9px;
+  text-align: center;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-bottom: 1rem;
+  padding-top: 1rem;
+  box-shadow: 5px 5px 5px 5px #c1b8ae;
+  margin-top: 1.5rem;
 }
-.labelCommentForum{
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 1rem;
-    margin-left: 2rem;
-    margin-right: 2rem;
-    
+.labelCommentForum {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+  margin-left: 2rem;
+  margin-right: 2rem;
 }
-.inputForum{
-    width: 100%;
-    height: 2rem;
-    border-radius: 9px;
+.inputForum {
+  width: 100%;
+  height: 2rem;
+  border-radius: 9px;
 }
 
-.ButtonCommentForm{
-    width: 100%;
-    height: 2rem;
-    border-radius: 9px;
-    background-color:  #5c195d;
-    font-size: medium;
-    color: #f9f9f9;
-    border: none;
-    margin-top: 1rem;
-    margin-bottom: 1rem;
+.ButtonCommentForm {
+  width: 100%;
+  height: 2rem;
+  border-radius: 9px;
+  background-color: #5c195d;
+  font-size: medium;
+  color: #f9f9f9;
+  border: none;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 }
-.ButtonCommentForm:hover{
-    background-color:  #a770b2;
+.ButtonCommentForm:hover {
+  background-color: #a770b2;
 }
-.forumBanner{
-    width: 100%;
+.forumBanner {
+  width: 100%;
 }
 @media screen and (max-width: 800px) {
-  .containerCardsComments{
-      width: 55%;
+  .containerCardsComments {
+    width: 55%;
   }
 }
