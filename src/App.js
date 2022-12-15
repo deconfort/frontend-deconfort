@@ -38,6 +38,7 @@ function App() {
   }, []);
   return (
     <>
+    {/* Este es el commit que si funciona, funciona de verdad */}
  <Header></Header>
     <Routes>
       <Route path="/" element={<HomePage/>}/>
