@@ -19,8 +19,8 @@ import CreateProduct from "./layouts/CreateProduct";
 import EditProduct from "./layouts/EditProduct";
 import ProductCategory from './components/ProductCategory/ProductCategory';
 import Profile from './components/Profile/Profile';
-
-
+import Payments from "./components/Payments/Payments"
+import EditProfile from "./components/Profile/EditProfile"
    
 function App() {
   let user = useSelector((store) => store.user);
