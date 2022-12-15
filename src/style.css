@@ -4,10 +4,6 @@
     box-sizing: border-box;
 }
 
-body {
-    font-family: "Abhaya Libre", serif;
-}
-
 .app{
     width: 100%;
     min-height: 90vh;

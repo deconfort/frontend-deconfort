@@ -1,15 +1,11 @@
-.check-filter-cards {
+
+
+.cards-all-products {
     width: 100%;
     display: flex;
     flex-wrap: wrap;
-}
-
-.cards-all-products {
-    width: 75%;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 2rem;
-    margin-bottom: 3rem;
+    gap: 1.8rem;
+    
 }
 @media screen and (max-width:1356px){
     .cards-all-products{

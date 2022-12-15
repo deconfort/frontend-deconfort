@@ -1,4 +1,4 @@
-import React from "react";
+import React  from "react";
 import { Link } from "react-router-dom";
 import "./Navbar.css";
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -8,9 +8,12 @@ import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
 
 
+
 function NavbarHambur(props) {
+  let { title1, title3, title4, title5, title6, title7, desk } = props;
+
+
  
-  let { title1, title3, title4, title5, title6, title7 } = props;
   return (
     <Navbar bg="light" expand="lg" className="Ul-Navbar">
       <Container>
@@ -25,20 +28,46 @@ function NavbarHambur(props) {
               id="basic-nav-dropdown"
               className="Li-Navbar"
             >
-              <NavDropdown.Item href="#link" className="Li-Navbar">
+              <NavDropdown.Item href="" className="Li-Navbar">
                 <Link to={`productCategory`}>
-                desk
+                DESK
                 </Link>
               </NavDropdown.Item>
-              <NavDropdown.Item href="#link" className="Li-Navbar">
-                ARMCHAIRS
+              <NavDropdown.Item href="" className="Li-Navbar">
+              <Link to={`productTables`}>
+                TABLES
+                </Link>
               </NavDropdown.Item>
-              <NavDropdown.Item href="#link" className="Li-Navbar">
-                FURNITURE
+              <NavDropdown.Item href="" className="Li-Navbar">
+              <Link to={`productVases`}>
+                VASES
+                </Link>
               </NavDropdown.Item>
               <NavDropdown.Divider />
-              <NavDropdown.Item href="#link" className="Li-Navbar">
-                DECORATION
+              <NavDropdown.Item href="" className="Li-Navbar">
+              <Link to={`productFrames`}>
+                FRAMES
+                </Link>
+              </NavDropdown.Item>
+              <NavDropdown.Item href="" className="Li-Navbar">
+              <Link to={`productCushions`}>
+                CUSHIONS
+                </Link>
+              </NavDropdown.Item>
+              <NavDropdown.Item href="" className="Li-Navbar">
+              <Link to={`productDiffuser`}>
+                DIFFUSER
+                </Link>
+              </NavDropdown.Item>
+              <NavDropdown.Item href="" className="Li-Navbar">
+              <Link to={`productMirrors`}>
+                MIRRORS
+                </Link>
+              </NavDropdown.Item>
+              <NavDropdown.Item href="" className="Li-Navbar">
+              <Link to={`productBlankets`}>
+                BLANKETS
+                </Link>
               </NavDropdown.Item>
             </NavDropdown>
             <Nav.Link href="" className="Li-Navbar">

@@ -1,7 +1,7 @@
 .card-change-color {
-    position: relative;
+    /* position: relative; */
     width: 320px;
-    height: 480px;
+    height: 520px;
     background: #fff;
     overflow: hidden;
     box-shadow: 0 5px 15px rgba(50, 50, 50, 0.438);
@@ -88,7 +88,7 @@
 
 .info {
     position: relative;
-    padding: 1px 20px;
+    padding: 15px 20px;
     z-index: 3;
 }
 
@@ -98,7 +98,7 @@
 
 .title-name {
     margin-bottom: 6px;
-    font-size: 23px;
+    font-size: 1.8rem;
     color: #303030;
 }
 
@@ -111,7 +111,7 @@
 }
 
 .h3-color {
-    /* font-size: 1.5; */
+    font-size: 1.5;
     font-weight: 600;
     text-transform: uppercase;
     color: #333;
@@ -123,7 +123,7 @@
 }
 
 .more-and-buy {
-    padding: 10px 10px;
+    padding: 12px 20px;
     background: #31394e;
     color: #fff;
     border-radius: 6mm;
