@@ -1,0 +1,30 @@
+@media screen and (max-width: 1875px){
+    .body-payments {
+        font-family: "Poppins", sans-serif;
+        height: 110vh;
+        width: 70%;
+        margin: 0px auto;
+        padding: 50px 0px 0px;
+        color: #4E5150;
+        }
+}
+@media screen and (max-width: 768px){
+    .body-payments {
+        font-family: "Poppins", sans-serif;
+        height: 210vh;
+        width: 70%;
+        margin: 0px auto;
+        padding: 50px 0px 0px;
+        color: #4E5150;
+        }
+}
+@media screen and (max-width: 570px){
+    .body-payments {
+        font-family: "Poppins", sans-serif;
+        height: 195vh;
+        width: 70%;
+        margin: 0px auto;
+        padding: 50px 0px 0px;
+        color: #4E5150;
+        }
+}

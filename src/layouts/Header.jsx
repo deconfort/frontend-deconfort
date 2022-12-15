@@ -10,9 +10,7 @@ export default function Header() {
     <div>
       <div>
         <div className="UserContainer">
-          <div className="LogoHeader">
             <Logo></Logo>
-          </div>
           <UserLogin></UserLogin>
         </div>
       </div>
@@ -27,9 +25,9 @@ export default function Header() {
           title7="CONTACT US"
         ></NavbarHambur>
       </div>
-      <div className="SearchInput">
+      {/* <div className="SearchInput">
         <Search></Search>
-        </div>
+        </div> */}
     </div>
   );
 }

@@ -1,4 +1,9 @@
-
+import './style.css'
+import "@fontsource/abhaya-libre"
+import { useDispatch, useSelector } from 'react-redux';
+import { useEffect } from 'react';
+import usersActions from './redux/actions/usersActions';
+// import { Route, Routes } from "react-router-dom";
 import './style.css'
 // import "@fontsource/abhaya-libre"
 // import HomePage from './layouts/HomePage/HomePage';
@@ -11,13 +16,33 @@ import Footer from "./layouts/Footer";
 // import Locals from "./components/Locals/Locals";
 // import Faqs from "./components/faqs/Faqs";
 import CreateProduct from "./layouts/CreateProduct";
+
 // import EditProduct from "./layouts/EditProduct";
+
+import EditProduct from "./layouts/EditProduct";
+import ProductCategory from './components/ProductCategory/ProductCategory';
+import Profile from './components/Profile/Profile';
+import Payments from './components/Payments/Payments';
+
+
 
 
    
 function App() {
+  let user = useSelector((store) => store.user);
+  let dispatch = useDispatch();
+  let { reEnter } = usersActions;
+
+  useEffect(() => {
+    let token = JSON.parse(localStorage.getItem("token"));
+    if (token) {
+      dispatch(reEnter(token.token.user));
+    }
+    // eslint-disable-next-line
+  }, []);
   return (
     <>
+
     {/* <Header></Header> */}
     {/* <Faqs></Faqs>
       <Locals></Locals>
@@ -35,9 +60,27 @@ function App() {
       <HomePage/>
     </div> */}
       <Footer></Footer>
-    </>
 
-  );
+ {/* <Header></Header> */}
+{/* <Routes>
+      <Route path="/" element={<HomePage/>}/>
+      <Route path="/faqs" element={<Faqs/>}/>
+      <Route path="/locals" element={<Locals/>}/>
+      <Route path="/contact" element={<Contact/>}/>
+      <Route path="/forum" element={<Forum/>}/>
+      <Route path="/login" element={<LoginLayout/>}/>
+      <Route path="/register" element={<Register/>}/>
+      <Route path="/profile" element={<Profile/>}/>
+      <Route path="/createproduct" element={<CreateProduct/>}/>
+      <Route path="/editproduct" element={<EditProduct/>}/>
+      <Route path="/payments" element={<Payments/>}/>
+      <Route path="/productCategory" element={<ProductCategory/>}/>
+      <Route path="/editproduct/:id" element={<EditProduct/>}/>
+     </Routes> */}
+    <Footer></Footer>
+
+    </>
+    )
 }
 
 export default App;
