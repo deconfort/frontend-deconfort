@@ -8,7 +8,6 @@ const initialState = {
   value: "",
   order: "",
   oneProduct: {}
-
 };
 
 const productsReducer = createReducer(initialState, (builder) => {
