@@ -15,7 +15,6 @@ const getProducts = createAsyncThunk("getProducts", async () => {
 });
 
 const getOneProduct = createAsyncThunk("getOneProduct", async (id) => {
-  console.log(id)
   try {
     const res = await axios.get(`${apiUrl}api/products/${id}`);
     return(res.data.response);
@@ -46,7 +45,6 @@ const getProductsFilter = createAsyncThunk(
 
     try {
       const res = await axios.get(url);
-      console.log(res.data.response);
       return {
         products: res.data.response,
         value,

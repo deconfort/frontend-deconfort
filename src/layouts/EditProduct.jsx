@@ -33,7 +33,7 @@ console.log(id)
 
   return (
     <>
-      <CardChangeColor name={oneProduct.name} photo={oneProduct.photo[count]} category={oneProduct.category} price={oneProduct.price} id={oneProduct._id} key={oneProduct._id} />
+      <CardChangeColor name={oneProduct?.name} photo={oneProduct?.photo[count]} category={oneProduct?.category} price={oneProduct.price} id={oneProduct._id} key={oneProduct._id} />
       <div className='containerForm'>
             <h3>Edit Product</h3>
             <form className='formRegister'>
