@@ -22,10 +22,8 @@ import CreateProduct from "./layouts/CreateProduct";
 import EditProduct from "./layouts/EditProduct";
 import ProductCategory from './components/ProductCategory/ProductCategory';
 import Profile from './components/Profile/Profile';
+import EditProfile from "./components/Profile/EditProfile"
 import Payments from './components/Payments/Payments';
-
-
-
 
    
 function App() {
@@ -42,27 +40,8 @@ function App() {
   }, []);
   return (
     <>
-
-    {/* <Header></Header> */}
-    {/* <Faqs></Faqs>
-      <Locals></Locals>
-      <Contact></Contact>
-      <LoginLayout></LoginLayout>
-      <Header></Header>
-      <Register></Register>  */}
-      {/* <Contact></Contact> */}
-      {/* <LoginLayout></LoginLayout> */}
-      {/* <Register></Register>  */}
-      <CreateProduct></CreateProduct>
-      {/* <EditProduct></EditProduct> */}
-      {/* <Forum /> */}
-     {/* <div className='app'>
-      <HomePage/>
-    </div> */}
-      <Footer></Footer>
-
- {/* <Header></Header> */}
-{/* <Routes>
+ <Header></Header>
+    <Routes>
       <Route path="/" element={<HomePage/>}/>
       <Route path="/faqs" element={<Faqs/>}/>
       <Route path="/locals" element={<Locals/>}/>
@@ -71,14 +50,14 @@ function App() {
       <Route path="/login" element={<LoginLayout/>}/>
       <Route path="/register" element={<Register/>}/>
       <Route path="/profile" element={<Profile/>}/>
+      <Route path="/editprofile" element={<EditProfile/>}/>
       <Route path="/createproduct" element={<CreateProduct/>}/>
       <Route path="/editproduct" element={<EditProduct/>}/>
       <Route path="/payments" element={<Payments/>}/>
       <Route path="/productCategory" element={<ProductCategory/>}/>
       <Route path="/editproduct/:id" element={<EditProduct/>}/>
-     </Routes> */}
+     </Routes>
     <Footer></Footer>
-
     </>
     )
 }
