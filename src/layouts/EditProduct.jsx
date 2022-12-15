@@ -5,12 +5,11 @@ import { useSelector, useDispatch } from 'react-redux'
 import productAction from '../redux/actions/productAction'
 import '../components/Editproduct/EditProductForm'
 import Swal from 'sweetalert2'
-import axios from 'axios'
+
 
 
 export default function EditProduct() {
     const dispatch = useDispatch()
-    // const { oneProduct } = useSelector((state) => state.products)
     const [oneProduct, setOneProduct] = useState({})
     const {token} = useSelector((state) => state.user)
     const { getOneProduct, editProduct } = productAction
@@ -83,7 +82,6 @@ export default function EditProduct() {
         }
     }
 
-
     return (
         <>
             <div className='containerForm'>
@@ -116,4 +114,5 @@ export default function EditProduct() {
             </div>
         </>
     )
+
 }

@@ -18,10 +18,18 @@ import CreateProduct from "./layouts/CreateProduct";
 import EditProduct from "./layouts/EditProduct";
 import ProductCategory from './components/ProductCategory/ProductCategory';
 import Profile from './components/Profile/Profile';
+import ProductTables from "./components/ProductTables/ProductTables";
+import ProductVases from "./components/ProductVases/ProductVases";
+import ProductFrames from "./components/ProductFrames/ProductFrames";
+import ProductCushions from "./components/ProductCushions/ProductCushions";
+import ProductDiffuser from "./components/ProductDiffuser/ProductDiffuser";
+import ProductMirrors from "./components/ProductsMirrors/ProductMirrors";
+import ProductBlankets from './components/ProductBlankets/ProductBlankets';
 import EditProfile from "./components/Profile/EditProfile"
 import Payments from './components/Payments/Payments';
 import Detail from './layouts/Detail/Detail';
 import AllProducts from './components/AllProducts/AllProducts';
+
 
    
 function App() {
@@ -55,6 +63,13 @@ function App() {
       <Route path="/payments" element={<Payments/>}/>
       <Route path="/productCategory" element={<ProductCategory/>}/>
       <Route path="/editproduct/:id" element={<EditProduct/>}/>
+      <Route path="/productTables" element={<ProductTables/>}/>
+      <Route path="/productVases" element={<ProductVases/>}/>
+      <Route path="/productFrames" element={<ProductFrames/>}/>
+      <Route path="/productCushions" element={<ProductCushions/>}/>
+      <Route path="/productDiffuser" element={<ProductDiffuser/>}/>
+      <Route path="/productMirrors" element={<ProductMirrors/>}/>
+      <Route path="/productBlankets" element={<ProductBlankets/>}/>
       <Route path="/detail" element={<Detail/>}/>
      </Routes>
     <Footer></Footer>
