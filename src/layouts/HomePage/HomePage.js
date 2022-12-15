@@ -1,23 +1,17 @@
-import './homePage.css'
-import BackgroundSlider from '../../components/Banner/BackgroundSlider';
-import Services from '../../components/Services/Services';
-import RowProducts from '../../components/RowProducts/RowProducts';
-import ButtonSeeAll from '../../components/ButtonSeeAll/ButtonSeeAll';
-import TextCarousel from '../../components/TextCarousel/TextCarousel';
-import ShopProducts from '../../components/ShopProducts/ShopProducts';
-import FilterProducts from '../../components/FilterProducts/FilterProducts';
-import AllProducts from '../../components/AllProducts/AllProducts';
+import "./homePage.css";
+import Services from "../../components/Services/Services";
+import RowProducts from "../../components/RowProducts/RowProducts";
+import ButtonSeeAll from "../../components/ButtonSeeAll/ButtonSeeAll";
+
 
 function HomePage() {
   return (
-    <div className='container-homepage'>
-      <BackgroundSlider/>
-      <Services/>
-      <RowProducts/>
-      <ButtonSeeAll/>
-      <TextCarousel/>
-      <ShopProducts/>
-      <AllProducts/>
+    <div className="main-home-page">
+      <div className="container-homepage">
+        <Services />
+        <RowProducts />
+        <ButtonSeeAll />
+      </div>
     </div>
   );
 }

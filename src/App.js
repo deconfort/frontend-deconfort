@@ -26,6 +26,11 @@ import ProductCushions from "./components/ProductCushions/ProductCushions";
 import ProductDiffuser from "./components/ProductDiffuser/ProductDiffuser";
 import ProductMirrors from "./components/ProductsMirrors/ProductMirrors";
 import ProductBlankets from './components/ProductBlankets/ProductBlankets';
+import EditProfile from "./components/Profile/EditProfile"
+import Payments from './components/Payments/Payments';
+import Detail from './layouts/Detail/Detail';
+import AllProducts from './components/AllProducts/AllProducts';
+
 
    
 function App() {
@@ -43,8 +48,9 @@ function App() {
   return (
     <>
  <Header></Header>
-<Routes>
+    <Routes>
       <Route path="/" element={<HomePage/>}/>
+      <Route path="/allproducts" element={<AllProducts/>}/>
       <Route path="/faqs" element={<Faqs/>}/>
       <Route path="/locals" element={<Locals/>}/>
       <Route path="/contact" element={<Contact/>}/>
@@ -52,8 +58,10 @@ function App() {
       <Route path="/login" element={<LoginLayout/>}/>
       <Route path="/register" element={<Register/>}/>
       <Route path="/profile" element={<Profile/>}/>
+      <Route path="/editprofile" element={<EditProfile/>}/>
       <Route path="/createproduct" element={<CreateProduct/>}/>
       <Route path="/editproduct" element={<EditProduct/>}/>
+      <Route path="/payments" element={<Payments/>}/>
       <Route path="/productCategory" element={<ProductCategory/>}/>
       <Route path="/editproduct/:id" element={<EditProduct/>}/>
       <Route path="/productTables" element={<ProductTables/>}/>
@@ -63,6 +71,7 @@ function App() {
       <Route path="/productDiffuser" element={<ProductDiffuser/>}/>
       <Route path="/productMirrors" element={<ProductMirrors/>}/>
       <Route path="/productBlankets" element={<ProductBlankets/>}/>
+      <Route path="/detail" element={<Detail/>}/>
      </Routes>
     <Footer></Footer>
     </>

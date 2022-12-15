@@ -17,7 +17,11 @@ const getProducts = createAsyncThunk("getProducts", async () => {
 const getOneProduct = createAsyncThunk("getOneProduct", async (id) => {
   try {
     const res = await axios.get(`${apiUrl}api/products/${id}`);
-    return(res.data.response);
+    return{
+      response: res.data.response,
+      success: res.data.success,
+      message: res.data.message,
+    }
   } catch (error) {
     console.log(error);
     return {
@@ -26,10 +30,15 @@ const getOneProduct = createAsyncThunk("getOneProduct", async (id) => {
   }
 });
 
-const editProduct = createAsyncThunk("editProduct", async (id) => {
+const editProduct = createAsyncThunk("editProduct", async (data) => {
+  let headers = { headers: { Authorization: `Bearer ${data.token}` } };
   try {
-    const res = await axios.get(`${apiUrl}api/products/${id}`);
-    return(res.data.response);
+    const res = await axios.put(`${apiUrl}api/products/${data.id}`, data.productEdited, headers);
+    return {
+      response: res.data.response,
+      success: res.data.success,
+      message: res.data.message,
+    }
   } catch (error) {
     console.log(error);
     return {
