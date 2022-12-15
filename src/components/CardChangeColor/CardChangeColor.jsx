@@ -3,6 +3,8 @@ import './cardChangeColor.css'
 import {NavLink } from 'react-router-dom'
 import { useSelector } from 'react-redux'
 
+import FilterProducts from "../FilterProducts/FilterProducts";
+
 export default function CardChangeColor(props) {
   let { name, photo, price, category, id } = props
   const {role} = useSelector((state) => state.user)
