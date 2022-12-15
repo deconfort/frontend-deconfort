@@ -12,12 +12,6 @@ export default function CardChangeColor(props) {
   return (
     <div className='card-change-color'>
       <div className='bg-watch'>
-        <div className='gradients'>
-          <div className='gradient' color='blue'></div>
-          <div className='gradient' color='pink'></div>
-          <div className='gradient' color='brown'></div>
-          <div className='gradient' color='claro'></div>
-        </div>
         <h1 className='watch'>{category}</h1>
         <a href='w'>
           <img src='https://www.pngitem.com/pimgs/m/408-4088931_hollow-star-icon-favorite-png-transparent-png.png' alt='fav icon' className='share' />

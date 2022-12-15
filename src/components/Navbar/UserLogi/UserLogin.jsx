@@ -47,7 +47,7 @@ export default function UserLogin() {
     },
   ];
   return (
-    <div>
+    <div className="containerUserLogin">
       {(user.role === "admin" || user.role === "user") && (
         <h3
           className="bt-nav flex column justify-center align-center g-5 text-black"

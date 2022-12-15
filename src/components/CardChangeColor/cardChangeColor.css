@@ -84,6 +84,8 @@
 
 .watch-img.show {
     opacity: 1;
+    height: 90%;
+    width: 90%;
 }
 
 .info {
