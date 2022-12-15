@@ -1,1 +1,4 @@
-//acá va a ir nuestra url del back
+
+let apiUrl = "https://back-deconfort.onrender.com/"
+
+module.exports = apiUrl
