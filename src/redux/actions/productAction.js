@@ -54,7 +54,6 @@ const getProductsFilter = createAsyncThunk(
 
     try {
       const res = await axios.get(url);
-      console.log(res.data.response);
       return {
         products: res.data.response,
         value,
