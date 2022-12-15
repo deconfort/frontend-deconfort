@@ -75,10 +75,10 @@ export default function UserLogin() {
           <div className="userLoginNav flex column justify-center align-center p-absolute btnDespl">
             {(user.role === "admin" || user.role === "user") && (
               <>
-                <NavLink to="/profile" className="linkNav">
-                  <h3 className="registerStyle Li-Navbar ">My Profile</h3>
+                <NavLink to="/profile" className="linkNav style-profile-center">
+                  <h3 className="registerStyle Li-Navbar">My Profile</h3>
                 </NavLink>
-                <div to="/login" className="linkNav">
+                <div to="/login" className="linkNav style-profile-center">
                   <h3 className="registerStyle Li-Navbar" onClick={signout}>
                     Sign Off
                   </h3>

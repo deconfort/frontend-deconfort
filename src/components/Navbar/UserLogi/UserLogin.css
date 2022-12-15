@@ -44,9 +44,6 @@
   object-fit: cover;
  
 }
-.p-absolute {
-  position: absolute;
-}
 
 .btnDespl {
   background-color: white;
@@ -62,3 +59,7 @@
 .text-black{
   color: black;
 }
+/* .style-profile-center{
+  border: solid 1px black;
+  
+} */
