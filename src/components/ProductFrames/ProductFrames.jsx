@@ -2,17 +2,16 @@ import React, { useRef, useEffect, useState } from "react";
 import CardChangeColor from "../CardChangeColor/CardChangeColor";
 import axios from "axios";
 import apiUrl from "../../url";
-import "./ProductCategory.css"
-import { useParams } from "react-router-dom";
+import "../ProductCategory/ProductCategory"
+
 
 export default function ProductCategory() {
-    let { category } = useParams();
   let [products, setProducts] = useState([]);
-  console.log(category);
+
 
   useEffect(() => {
     axios
-      .get(`${apiUrl}api/products?category=desks`)
+      .get(`${apiUrl}api/products?category=frames`)
       .then((res) => setProducts(res.data.response));
   }, []);
 
