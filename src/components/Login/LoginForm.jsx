@@ -33,7 +33,7 @@ export default function LoginForm() {
           confirmButtonColor: "#5c195d",
         }).then((result) => {
           if (result.isConfirmed) {
-            navegation(`/index/`);
+            navegation(`/`);
           }
         });
       }else{
