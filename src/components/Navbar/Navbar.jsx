@@ -29,43 +29,43 @@ function NavbarHambur(props) {
               className="Li-Navbar"
             >
               <NavDropdown.Item href="" className="Li-Navbar">
-                <Link to={`productCategory`}>
+                <Link to={`productCategory`} className="list-style-none">
                 DESK
                 </Link>
               </NavDropdown.Item>
               <NavDropdown.Item href="" className="Li-Navbar">
-              <Link to={`productTables`}>
+              <Link to={`productTables`} className="list-style-none">
                 TABLES
                 </Link>
               </NavDropdown.Item>
               <NavDropdown.Item href="" className="Li-Navbar">
-              <Link to={`productVases`}>
+              <Link to={`productVases`} className="list-style-none">
                 VASES
                 </Link>
               </NavDropdown.Item>
               <NavDropdown.Divider />
               <NavDropdown.Item href="" className="Li-Navbar">
-              <Link to={`productFrames`}>
+              <Link to={`productFrames`} className="list-style-none">
                 FRAMES
                 </Link>
               </NavDropdown.Item>
               <NavDropdown.Item href="" className="Li-Navbar">
-              <Link to={`productCushions`}>
+              <Link to={`productCushions`} className="list-style-none">
                 CUSHIONS
                 </Link>
               </NavDropdown.Item>
               <NavDropdown.Item href="" className="Li-Navbar">
-              <Link to={`productDiffuser`}>
+              <Link to={`productDiffuser`} className="list-style-none">
                 DIFFUSER
                 </Link>
               </NavDropdown.Item>
               <NavDropdown.Item href="" className="Li-Navbar">
-              <Link to={`productMirrors`}>
+              <Link to={`productMirrors`} className="list-style-none">
                 MIRRORS
                 </Link>
               </NavDropdown.Item>
               <NavDropdown.Item href="" className="Li-Navbar">
-              <Link to={`productBlankets`}>
+              <Link to={`productBlankets`} className="list-style-none">
                 BLANKETS
                 </Link>
               </NavDropdown.Item>
