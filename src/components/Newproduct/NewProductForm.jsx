@@ -1,14 +1,14 @@
 import React,{ useState } from 'react'
 import './NewProductForm.css'
 import axios from "axios";
-// import { useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import Swal from 'sweetalert2'
-import apiUrl from "../../api/url";
+import apiUrl from "../../url";
 
 
 export default function NewProductForm() {
 
-  // let navigate = useNavigate();
+  let navigate = useNavigate();
   const [category, setCategory] = useState("");
   const [name, setName] = useState("");
   const [photo, setPhoto] = useState("");
@@ -16,6 +16,7 @@ export default function NewProductForm() {
   const [date, setDate] = useState("");
   const [stock, setStock] = useState("");
   const [price, setPrice] = useState("");
+  const [user, setUser] = useState("");
   
   
 
@@ -28,7 +29,7 @@ export default function NewProductForm() {
     date: "",
     stock:"",
     price: "",
-    // user:"",
+    user:"",
   };
 
   const handlerClickForm = (e) => {
@@ -43,7 +44,7 @@ export default function NewProductForm() {
       date: date,
       stock: stock,
       price: price,
-      // userId: user,
+      userId: user,
     };
 
     axios({
@@ -57,7 +58,7 @@ export default function NewProductForm() {
         setCategory("");
         if (res.data.success) {
           Swal.fire("creado");
-          // return navigate("/");
+          return navigate("/");
         } else {
           Swal.fire(res.data.message.join("  -    -   -    -   -"));
         }
@@ -68,8 +69,9 @@ export default function NewProductForm() {
 
   return (
     <div className='containerForm'>
-        <h3>Create Product</h3>
+        
         <form className='formRegister' onSubmit={handlerClickForm} >
+        <h3>Create Product</h3>
             <label className='labelRegister'> Category
                 <input
                  className='inputRegister' type="text" onChange={(e) => setCategory(e.target.value)} placeholder='Category' name='' />
@@ -93,7 +95,12 @@ export default function NewProductForm() {
                 <input className='inputRegister' type="number" onChange={(e) => setPrice(e.target.value)} placeholder='Price' name="" />
             </label>
 
+            <label className='labelRegister'>User Id
+                <input className='inputRegister' type="text" onChange={(e) => setUser(e.target.value)} placeholder='User Id' name="" />
+            </label>
+
             <button className="buttonRegister" type="submit"  >Create</button>
+
 
         </form>
 
