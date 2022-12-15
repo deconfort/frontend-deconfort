@@ -9,6 +9,7 @@ import apiUrl from "../../url";
 export default function NewProductForm() {
 
   let navigate = useNavigate();
+  // const {token} = useSelector((state) => state.user)
   const [category, setCategory] = useState("");
   const [name, setName] = useState("");
   const [photo, setPhoto] = useState("");
