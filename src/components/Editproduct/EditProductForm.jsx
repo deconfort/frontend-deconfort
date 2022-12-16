@@ -7,7 +7,7 @@ export default function EditProductForm() {
     return (
         <div className='containerForm'>
             <h3>Edit Product</h3>
-            <form className='formRegister'>
+            <form className='formEditProduct'>
                 <label className='labelRegister'>Category
                     <input className='inputRegister' type="text" placeholder='Category' name='' />
                 </label>

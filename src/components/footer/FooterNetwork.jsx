@@ -11,7 +11,7 @@ export default function FooterNtework() {
         <h3 className="tittleFooter">Social Networks</h3>
         <img className='imgSocialFooter' src={logoinst} alt="Instagram" />
         <img className='imgSocialFooterFace' src={logoFace} alt="Facebook" />
-        <img className='imgSocialFooterPng' src={logoWap} alt="Whatsapp" />
+        <a href="https://api.whatsapp.com/send?phone=3516532134" target="_blank" rel="noopener noreferrer"><img className='imgSocialFooterPng' src={logoWap} alt="Whatsapp" /></a>
     </div>
   )
 }

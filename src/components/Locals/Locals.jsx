@@ -13,8 +13,8 @@ export default function Locals() {
       <div className="container-locals">
         <div className="texto-locals">
           <h2 className="Name-Local">Mall of America</h2>
-          <p>60 E Broadway, Bloomington, MN 55425, Estados Unidos</p>
-          <p>Phone: 3516532314</p>
+          <a className="linksLocals" href="https://goo.gl/maps/UDf79zFBQGqVARW67" target="_blank" rel="noopener noreferrer">60 E Broadway, Bloomington, MN 55425, Estados Unidos</a>
+          <a className="linksLocals" href="tel:+3516532134">3516532134</a>
           <div className="container-locals">
             <img className="img-locals" src={local1} alt="" />
           </div>
@@ -31,8 +31,8 @@ export default function Locals() {
       <div className="container-locals">
         <div className="texto-locals">
           <h2 className="Name-Local">The Galleria at Fort Lauderdale</h2>
-          <p>2414 E Sunrise Blvd, Fort Lauderdale, FL 33304, Estados Unidos</p>
-          <p>Phone: 3516532314</p>
+          <a className="linksLocals" href="https://goo.gl/maps/mRaMUqmyspUUNphZ9" target="_blank" rel="noopener noreferrer">2414 E Sunrise Blvd, Fort Lauderdale, FL 33304, Estados Unidos</a>
+          <a className="linksLocals" href="tel:+3516532134">3516532134</a>
           <div className="container-locals">
             <img className="img-locals" src={Local3} alt="" />
           </div>
