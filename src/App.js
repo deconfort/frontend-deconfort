@@ -72,7 +72,7 @@ function App() {
       <Route path="/productDiffuser" element={<ProductDiffuser/>}/>
       <Route path="/productMirrors" element={<ProductMirrors/>}/>
       <Route path="/productBlankets" element={<ProductBlankets/>}/>
-      <Route path="/detail" element={<Detail/>}/>
+      <Route path="/products/:id" element={<Detail/>}/>
      </Routes>
     <Footer></Footer>
     </>
