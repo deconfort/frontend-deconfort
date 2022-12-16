@@ -74,6 +74,7 @@ function App() {
       <Route path="/productDiffuser" element={<ProductDiffuser/>}/>
       <Route path="/productMirrors" element={<ProductMirrors/>}/>
       <Route path="/productBlankets" element={<ProductBlankets/>}/>
+      <Route path="/products/:id" element={<Detail/>}/>
       <Route path="/detail" element={<Detail/>}/>
       <Route path="/myfavs" element={<MyFavs/>}/>
      </Routes>

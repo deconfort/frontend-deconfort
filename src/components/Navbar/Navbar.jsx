@@ -85,6 +85,9 @@ function NavbarHambur(props) {
             <Nav.Link href="" className="Li-Navbar">
               <Link className='linkNav' to={"/contact"}>{title7}</Link>
             </Nav.Link>
+            <Nav.Link href="" className="Li-Navbar">
+              <Link className='linkNav' to={"/payments"}>Carrito</Link>
+            </Nav.Link>
           </Nav>
         
         </Navbar.Collapse>
