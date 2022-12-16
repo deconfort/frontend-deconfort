@@ -86,7 +86,7 @@ export default function EditProduct() {
         <>
             <div className='containerForm'>
                 <CardEdit name={oneProduct.name} photo={oneProduct.photo} category={oneProduct.category} price={oneProduct.price} key={oneProduct._id} description={oneProduct.description} />
-                <form className='formRegister' ref={form}>
+                <form className='formEditProduct' ref={form}>
                     <h3>Edit Product</h3>
                     <label className='labelRegister'>Category
                         <input className='inputRegister' defaultValue={oneProduct.category} type="text" placeholder='Category' name='' ref={category} />

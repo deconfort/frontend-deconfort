@@ -9,12 +9,13 @@
     justify-content: center;
     align-items: center;
     gap: 2rem;
+    margin-bottom: 2.5rem;
 }
 .UserContainer{
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  padding-right: 5rem;
+  padding-right: 4.5rem;
 }
 
 .registerStyle{
@@ -68,6 +69,12 @@ margin-right: 1rem;
   li:hover, .Li-Navbar:hover {
     background: #eee;
     border-radius: 6mm;
+    cursor: pointer;
+  }
+  .desplegable-navbar:hover{
+    background: #eee;
+    border-radius: 6mm;
+    width: 110px;
     cursor: pointer;
   }
   a {

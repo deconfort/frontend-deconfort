@@ -69,8 +69,13 @@ export default function NewProductForm() {
 
 
   return (
+
     <div className='containerForm'>
         
+
+    <div className='containerFormCreateProduct'>
+        <h3 className='tittleCreate'>Create Product</h3>
+
         <form className='formRegister' onSubmit={handlerClickForm} >
         <h3>Create Product</h3>
             <label className='labelRegister'> Category
@@ -105,6 +110,7 @@ export default function NewProductForm() {
 
         </form>
 
+    </div>
     </div>
   )
 }

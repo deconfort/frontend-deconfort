@@ -5,14 +5,8 @@ export default function CardChangeColor(props) {
   let { name, photo, price, category, description } = props
 
   return (
-    <div className='card-change-color'>
+    <div className='card-change-color-edit'>
       <div className='bg-watch'>
-        <div className='gradients'>
-          <div className='gradient' color='blue'></div>
-          <div className='gradient' color='pink'></div>
-          <div className='gradient' color='brown'></div>
-          <div className='gradient' color='claro'></div>
-        </div>
         <h1 className='watch'>{category}</h1>
         <img src={photo} alt='watch' className='watch-img show' />
       </div>

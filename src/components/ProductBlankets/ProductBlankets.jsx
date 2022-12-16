@@ -1,9 +1,9 @@
-import React, { useRef, useEffect, useState } from "react";
+import React, {  useEffect, useState } from "react";
 import CardChangeColor from "../CardChangeColor/CardChangeColor";
 import axios from "axios";
 import apiUrl from "../../url";
 import "../ProductCategory/ProductCategory"
-import { useParams } from "react-router-dom";
+
 
 export default function ProductCategory() {
   let [products, setProducts] = useState([]);

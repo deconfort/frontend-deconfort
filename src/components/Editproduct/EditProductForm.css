@@ -4,7 +4,7 @@
   box-sizing: border-box;
 }
 
-.formRegister{
+.formEditProduct{
   display: flex;
   flex-direction: column;
   border-radius: 10px;
@@ -22,6 +22,7 @@
   align-items: center;
   margin-bottom: 3rem;
   margin-top: 1.5rem;
+  justify-content: space-evenly;
 }
 .labelRegister{
   display: flex;
@@ -59,4 +60,13 @@
 }
 .buttonRegister:hover{
   background-color:  #c3acbe;
+}
+@media screen and (max-width:750px) {
+  .containerForm {
+      flex-direction: column;
+      gap: 2rem;
+  }
+  .formEditProduct{
+    width: 70%;
+  }
 }
