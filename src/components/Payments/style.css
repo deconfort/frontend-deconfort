@@ -112,7 +112,7 @@ main .checkout-details .checkout-details-inner .checkout-lists .card {
             align-items: center;
             padding: 1rem;
                 width: 100%;
-    /* display: flex; */
+    
     column-gap: 15px;
 }
 main .checkout-details .checkout-details-inner .checkout-lists .card .card-image {
