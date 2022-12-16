@@ -16,7 +16,6 @@
     align-items: center;
     text-align: center;
     padding-right: 60px;
-    border-right: 1px solid black;
 }
 .services-text h6{
     font-size: 22px;
@@ -27,8 +26,11 @@
 
 .left{
     margin-left: 15px;
+    border-right: 1px solid #303030;
 }
-
+.mid{
+    border-right: 1px solid #303030;
+}
 .right{
     margin-right: 15px;
 }
