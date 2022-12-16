@@ -1,6 +1,13 @@
-.LogoCarrito{
-    width: 50px;
-    height: 50px;
+.logoCart{
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  margin-top: 1.4rem;
+}
+.containerLoginCartandUser{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
 }
 
 @media screen and (max-width: 735px) {
@@ -44,9 +51,6 @@
   object-fit: cover;
  
 }
-.p-absolute {
-  position: absolute;
-}
 
 .btnDespl {
   background-color: white;
@@ -61,4 +65,20 @@
 }
 .text-black{
   color: black;
+}
+/* .style-profile-center{
+  border: solid 1px black;
+  
+} */
+.containerUserLogin{
+margin-top: 2rem;
+}
+@media screen and (max-width: 585px){
+  .containerUserLogin{
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    width: 100%;
+    padding-left: 4rem;
+  }
 }

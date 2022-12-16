@@ -29,6 +29,7 @@
     margin: 0 auto;
     text-align: center;
     box-shadow: 5px 5px 5px 5px hsl(32, 13%, 72%);
+    width: 45%;
 }
 
 .wrapper {
@@ -95,3 +96,8 @@
 .buttonRegister{
 margin-top: 25px;
 }
+@media screen and (max-width:750px) {
+    .containerProfile{
+      width: 70%;
+    }
+  }

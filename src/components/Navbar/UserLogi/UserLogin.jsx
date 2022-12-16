@@ -5,6 +5,9 @@ import { useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import usersActions from "../../../redux/actions/usersActions";
 import Swal from "sweetalert2";
+import { useNavigate } from 'react-router-dom';
+import cart from '../../../image/logoCarrito.png'
+import { Link } from 'react-router-dom'
 
 export default function UserLogin() {
   let [mostrarOcultar, setMostrarOcultar] = useState(false);
@@ -13,6 +16,7 @@ export default function UserLogin() {
   const { signOff } = usersActions;
   const { photo, name, token } = useSelector((state) => state.user);
   let user = useSelector((store) => store.user);
+  let navegation = useNavigate()
 
   let cualquierNombre = () => {
     setMostrar(!mostrar);
@@ -31,6 +35,7 @@ export default function UserLogin() {
       showCancelButton: true,
     }).then((result) => {
       if (result.isConfirmed) {
+        navegation(`/`);
         dispatch(signOff(token));
       }
     });
@@ -47,7 +52,11 @@ export default function UserLogin() {
     },
   ];
   return (
-    <div>
+    <div className='containerLoginCartandUser'>
+    <Link to='/payments'>
+        <img className="logoCart" src={cart} alt="logo cart" />
+      </Link>
+    <div className="containerUserLogin">
       {(user.role === "admin" || user.role === "user") && (
         <h3
           className="bt-nav flex column justify-center align-center g-5 text-black"
@@ -75,10 +84,10 @@ export default function UserLogin() {
           <div className="userLoginNav flex column justify-center align-center p-absolute btnDespl">
             {(user.role === "admin" || user.role === "user") && (
               <>
-                <NavLink to="/profile" className="linkNav">
-                  <h3 className="registerStyle Li-Navbar ">My Profile</h3>
+                <NavLink to="/profile" className="linkNav style-profile-center">
+                  <h3 className="registerStyle Li-Navbar">My Profile</h3>
                 </NavLink>
-                <div to="/login" className="linkNav">
+                <div to="/login" className="linkNav style-profile-center">
                   <h3 className="registerStyle Li-Navbar" onClick={signout}>
                     Sign Off
                   </h3>
@@ -97,6 +106,7 @@ export default function UserLogin() {
       ) : (
         <></>
       )}
+    </div>
     </div>
   );
 }

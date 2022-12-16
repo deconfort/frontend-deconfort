@@ -127,6 +127,9 @@
 }
 @media screen and (max-width: 800px) {
   .containerCardsComments {
+    width: 70%;
+  }
+  .formForum{
     width: 55%;
   }
 }

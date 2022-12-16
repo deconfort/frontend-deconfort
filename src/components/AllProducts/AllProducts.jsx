@@ -62,7 +62,7 @@ export default function AllProducts() {
         </div>
       </div>
       <div className="check-filter-cards">
-        <Checkboxes />
+        {/* <Checkboxes /> */}
         <div className="cards-all-products">
           {products?.map((item) => {
             async function addToCart() {

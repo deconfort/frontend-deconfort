@@ -6,6 +6,10 @@ import apiUrl from "../../api/url";
 import { useDispatch, useSelector } from "react-redux";
 import cartActions from "../../redux/actions/cartActions";
 import userActions from "../../redux/actions/usersActions"
+import Footer from "../../layouts/Footer";
+import paymentBanner from '../../image/PaymentsBanner.png'
+
+
 export default function Payments() {
   const { changeAmount } = cartActions;
   const {getUser}= userActions
@@ -14,7 +18,7 @@ export default function Payments() {
 
   const { idUser, token, user } = useSelector((state) => state.user);
   let dispatch = useDispatch();
-  // console.log(token);
+
   useEffect(() => {
     getProducts();
     dispatch(getUser(idUser));
@@ -91,6 +95,8 @@ export default function Payments() {
   }
 
   return (
+    <div className="containerPaymentsAll">
+      <img className="paymentsBanner" src={paymentBanner} alt="payments banner" />
     <div className="body-payments">
       <main>
         <section class="checkout-form">

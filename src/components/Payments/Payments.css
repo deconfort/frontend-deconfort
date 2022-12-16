@@ -1,7 +1,12 @@
+
+.paymentsBanner{
+    width: 100%;
+    margin-bottom: 1.5rem;
+}
 @media screen and (max-width: 1875px){
     .body-payments {
         font-family: "Poppins", sans-serif;
-        height: 110vh;
+        height: 133vh;
         width: 70%;
         margin: 0px auto;
         padding: 50px 0px 0px;
@@ -11,7 +16,7 @@
 @media screen and (max-width: 768px){
     .body-payments {
         font-family: "Poppins", sans-serif;
-        height: 210vh;
+        height: 293vh;
         width: 70%;
         margin: 0px auto;
         padding: 50px 0px 0px;
@@ -21,7 +26,6 @@
 @media screen and (max-width: 570px){
     .body-payments {
         font-family: "Poppins", sans-serif;
-        height: 195vh;
         width: 70%;
         margin: 0px auto;
         padding: 50px 0px 0px;
