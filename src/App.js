@@ -31,7 +31,7 @@ import EditProfile from "./components/Profile/EditProfile"
 import Payments from './components/Payments/Payments';
 import Detail from './layouts/Detail/Detail';
 import AllProducts from './components/AllProducts/AllProducts';
-
+import MyFavs from './layouts/MyFavs';
 
    
 function App() {
@@ -51,7 +51,6 @@ function App() {
     {/* Este es el commit que si funciona, funciona de verdad */}
  <Header></Header>
  <AutoToTop></AutoToTop>
- <BackToTop/>
     <Routes>
       <Route path="/" element={<HomePage/>}/>
       <Route path="/allproducts" element={<AllProducts/>}/>
