@@ -1,8 +1,9 @@
 import React from 'react'
 import './CardEdit.css'
+import { Link } from 'react-router-dom'
 
 export default function CardMyFavs(props) {
-  let { product } = props
+  let { product, onClick, name, id } = props
   return (
     <div className='card-change-color'>
       <div className='bg-watch'>
@@ -12,12 +13,15 @@ export default function CardMyFavs(props) {
           <div className='gradient' color='brown'></div>
           <div className='gradient' color='claro'></div>
         </div>
-        <img src={product.photo} alt='watch' className='watch-img show' />
+          <img src={product.photo} alt='watch' className='watch-img show' />
       </div>
       <div className="info">
         <div className="watch-name">
-          <h1 className='title-name'>{product.name}</h1>      
+        <Link to={`/`} className='link'>
+          <h1 className='title-name'>{product.name}</h1>
+        </Link>
         </div>
+        <button name={name} id={id} onClick={onClick}>Delete</button>
       </div>
     </div>
   )
