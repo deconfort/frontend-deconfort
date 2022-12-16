@@ -8,3 +8,28 @@
     width: 100%;
     min-height: 90vh;
 }
+
+.buttonScrollToTop {
+    position: fixed;
+    bottom: 100px;
+    right: 5%;
+    height: 48px;
+    width: 48px;
+    background-image: url(./image/caret-up-circle-solid-48.png);
+    border-radius: none;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 19rem;
+  }
+  .btn-wsp{
+    position: fixed;
+    bottom: 40px;
+    right: 5%;
+    height: 48px;
+    width: 48px;
+    background-image: url(https://www.unipile.com/wp-content/uploads/2022/02/icone-logo-whatsapp-vert.png);
+    border: none;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 19rem;
+}

@@ -6,6 +6,7 @@ import usersActions from './redux/actions/usersActions';
 import { Route, Routes } from "react-router-dom";
 import './style.css'
 import "@fontsource/abhaya-libre"
+import AutoToTop from './components/AutoToTop';
 import HomePage from './layouts/HomePage/HomePage';
 import Header from "./layouts/Header";
 import LoginLayout from "./layouts/LoginLayout";
@@ -30,7 +31,7 @@ import EditProfile from "./components/Profile/EditProfile"
 import Payments from './components/Payments/Payments';
 import Detail from './layouts/Detail/Detail';
 import AllProducts from './components/AllProducts/AllProducts';
-
+import BackToTop from './components/BackToTopButton';
 
    
 function App() {
@@ -49,6 +50,8 @@ function App() {
     <>
     {/* Este es el commit que si funciona, funciona de verdad */}
  <Header></Header>
+ <AutoToTop></AutoToTop>
+ <BackToTop/>
     <Routes>
       <Route path="/" element={<HomePage/>}/>
       <Route path="/allproducts" element={<AllProducts/>}/>
