@@ -1,6 +1,5 @@
 import React, { useRef } from "react";
 import "./profile.css";
-import local1 from "../../image/local1.jpg";
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import usersAction from "../../redux/actions/usersActions";

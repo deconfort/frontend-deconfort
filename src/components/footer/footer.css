@@ -40,6 +40,8 @@
 }
 .tittleFooter {
   text-align: center;
+    font-size: 27px;
+    font-family: auto;
 }
 .containerContactFooter {
   display: flex;
@@ -48,12 +50,16 @@
 .links {
   text-decoration: none;
   color: black;
+  font-family: auto;
+    font-size: 17px;
 }
 .links:hover {
   color: white;
 }
 .subttitleNavigation{
     padding-top: 7px;
+    font-family: auto;
+    font-size: 17px;
 }
 .subttitleNavigation:hover{
     color: white;

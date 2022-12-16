@@ -12,8 +12,18 @@
     justify-content: space-between;
     align-items: center;
     margin: 20px 0px;
+    flex-wrap: wrap;
 }
 
 .selects-products{
     width: 190px;
+}
+@media screen and (max-width: 600px) {
+    .filter-products{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+    }
+    
 }

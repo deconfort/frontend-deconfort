@@ -1,6 +1,7 @@
 .contain-details{
-    width: 100%;
-    height: 50vh;
+    min-width: 100%;
+    min-height: 50vh;
+    padding: 30px;
 }
 .nametitle-andsvg{
     width: 100%;
@@ -19,10 +20,12 @@
     align-items: center;
     width: 100%;
     gap: 1.5rem;
+    flex-wrap: wrap;
 }
 
 .foto-detail{
-    width: 400px;
+    height: 350px;
+    object-fit: cover;
     margin-right: 5%;
 }
 
@@ -32,6 +35,11 @@
 
 .addcart-detail{
     width: 160px;
+    padding: 0.2rem;
+    border-radius: 6mm;
+    margin-top: 0.5rem;
+    background-color: #c1b8ae;
+    border: none;
 }
 
 
