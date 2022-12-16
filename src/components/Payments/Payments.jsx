@@ -266,7 +266,7 @@ export default function Payments() {
                           deleteProduct(item._id);
                         }}
                       >
-                        borrar
+                       Delete
                       </button>
                     </div>
                   </div>
@@ -280,6 +280,7 @@ export default function Payments() {
           </div>
         </section>
       </main>
+    </div>
     </div>
   );
 }
