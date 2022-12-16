@@ -11,7 +11,7 @@ const rootReducer = {
     products: productReducer,
     reactions: reactionsReducers,
     comment: commentsReducers,
-    cart:cartReducer
+    cart:cartReducer,
     favorites: favoriteReducers,
 };
 

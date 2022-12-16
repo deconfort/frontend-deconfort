@@ -32,6 +32,7 @@ import Payments from './components/Payments/Payments';
 import Detail from './layouts/Detail/Detail';
 import AllProducts from './components/AllProducts/AllProducts';
 import MyFavs from './layouts/MyFavs';
+import BackToTop from './components/BackToTopButton';
 
    
 function App() {
@@ -51,6 +52,7 @@ function App() {
     {/* Este es el commit que si funciona, funciona de verdad */}
  <Header></Header>
  <AutoToTop></AutoToTop>
+ <BackToTop></BackToTop>
     <Routes>
       <Route path="/" element={<HomePage/>}/>
       <Route path="/allproducts" element={<AllProducts/>}/>
