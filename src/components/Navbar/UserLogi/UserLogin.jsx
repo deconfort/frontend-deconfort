@@ -53,7 +53,9 @@ export default function UserLogin() {
   ];
   return (
     <div className='containerLoginCartandUser'>
-    <img className="logoCart" src={cart} alt="logo cart" />
+    <Link to='/payments'>
+        <img className="logoCart" src={cart} alt="logo cart" />
+      </Link>
     <div className="containerUserLogin">
       {(user.role === "admin" || user.role === "user") && (
         <h3
