@@ -184,7 +184,7 @@ export default function Payments() {
                 </div>
               </div>
             </div>
-            <div class="form-control-btn"></div>
+            <div class="form-control-btn">
             <button
               onClick={async () => {
                 const preference = {
@@ -215,6 +215,7 @@ export default function Payments() {
             >
               Continue
             </button>
+            </div>
           </form>
         </section>
 
