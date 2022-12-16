@@ -17,8 +17,8 @@ export default function CardMyFavs(props) {
       </div>
       <div className="info">
         <div className="watch-name">
-        <Link to={`/`} className='link'>
-          <h1 className='title-name'>{product.name}</h1>
+        <Link to={`/products/${product._id}`} className='link'>
+          <h1 className='title-name'>{product.name}🤢</h1>
         </Link>
         </div>
         <button name={name} id={id} onClick={onClick}>Delete</button>

@@ -44,7 +44,8 @@ export default function EditProduct() {
     }
 
     return (
-        <>
+        <>  
+            <h1>My Favorits (🚧 in progress! 🤷‍♀️🤦‍♂️🚧)</h1>
             { favorite.map(favorite => {
                 return <CardMyFavs product={favorite.productId} key={favorite._id} name={favorite.name} id={favorite._id} onClick={pullReaction}/>
             })
