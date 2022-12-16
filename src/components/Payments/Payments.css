@@ -3,10 +3,18 @@
     width: 100%;
     margin-bottom: 1.5rem;
 }
+.buttonDeletePayments{
+    padding: 0.2rem;
+    border-radius: 6mm;
+    margin-top: 0.5rem;
+    background-color: #c1b8ae;
+    border: none;
+    width: 80%;
+}
 @media screen and (max-width: 1875px){
     .body-payments {
         font-family: "Poppins", sans-serif;
-        height: 133vh;
+        height: 137vh;
         width: 70%;
         margin: 0px auto;
         padding: 50px 0px 0px;

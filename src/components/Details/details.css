@@ -20,6 +20,7 @@
     align-items: center;
     width: 100%;
     gap: 1.5rem;
+    flex-wrap: wrap;
 }
 
 .foto-detail{
@@ -34,6 +35,11 @@
 
 .addcart-detail{
     width: 160px;
+    padding: 0.2rem;
+    border-radius: 6mm;
+    margin-top: 0.5rem;
+    background-color: #c1b8ae;
+    border: none;
 }
 
 
