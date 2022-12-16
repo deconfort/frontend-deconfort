@@ -262,7 +262,7 @@ export default function Payments() {
                           +
                         </button>
                       </div>
-                      <button
+                      <button className="buttonDeletePayments"
                         onClick={() => {
                           deleteProduct(item._id);
                         }}

@@ -111,6 +111,9 @@ main .checkout-details .checkout-details-inner .checkout-lists .card {
             justify-content: center;
             align-items: center;
             padding: 1rem;
+                width: 100%;
+    /* display: flex; */
+    column-gap: 15px;
 }
 main .checkout-details .checkout-details-inner .checkout-lists .card .card-image {
   width: 35%;
@@ -124,13 +127,14 @@ main .checkout-details .checkout-details-inner .checkout-lists .card .card-image
 main .checkout-details .checkout-details-inner .checkout-lists .card .card-details {
   display: flex;
   flex-direction: column;
+  align-items: center
 }
 main .checkout-details .checkout-details-inner .checkout-lists .card .card-details .card-name {
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 500;
 }
 main .checkout-details .checkout-details-inner .checkout-lists .card .card-details .card-price {
-  font-size: 10px;
+  font-size: 12px;
   font-weight: 500;
   color: #F2994A;
   margin-top: 5px;
