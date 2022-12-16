@@ -18,10 +18,10 @@ const getFav = createAsyncThunk("getFav", async (id) => {
     }
 });
 
-const getUserReactions = createAsyncThunk("getUserReactions", async (id, token) => {
-    let headers = { headers: { Authorization: `Bearer ${token}` } };
+const getUserFavs = createAsyncThunk("getUserFavs", async (id) => {
     try{
-    const response = await axios.get(`${apiUrl}api/favs?userId=${id}`, headers);
+        console.log(id)
+    const response = await axios.get(`${apiUrl}api/favs?userId=${id}`);
     return {
         success: true,
         response: response.data.data,
@@ -48,10 +48,10 @@ const updateFavorite = createAsyncThunk("updateFavorite", async ( data ) => {
     }
 });
 
-const deleteReaction = createAsyncThunk("deleteReaction", async ( {id, token }) => {
+const deleteFavs = createAsyncThunk("deleteFavs", async ( {id, token }) => {
     let headers = { headers: { Authorization: `Bearer ${token}` } };
     try {
-        const response = await axios.put(`${apiUrl}api/reactions/${id}`, null, headers);
+        const response = await axios.put(`${apiUrl}api/favs/${id}`, null, headers);
         return response.data.response;
     }
     catch (error) {
@@ -64,9 +64,9 @@ const deleteReaction = createAsyncThunk("deleteReaction", async ( {id, token }) 
 
 const favoriteActions = {
     getFav,
-    getUserReactions,
+    getUserFavs,
     updateFavorite,
-    deleteReaction
+    deleteFavs
 }
 
 export default favoriteActions;
