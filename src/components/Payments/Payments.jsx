@@ -2,10 +2,12 @@ import React from "react";
 import "./style.css";
 import "./Payments.css";
 import Footer from "../../layouts/Footer";
+import paymentBanner from '../../image/PaymentsBanner.png'
 
 export default function Payments() {
   return (
-    <div>
+    <div className="containerPaymentsAll">
+      <img className="paymentsBanner" src={paymentBanner} alt="payments banner" />
     <div className="body-payments">
       <main>
         <section class="checkout-form">

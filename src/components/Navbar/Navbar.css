@@ -9,6 +9,7 @@
     justify-content: center;
     align-items: center;
     gap: 2rem;
+    margin-bottom: 2.5rem;
 }
 .UserContainer{
   display: flex;

@@ -1,6 +1,13 @@
-.LogoCarrito{
-    width: 50px;
-    height: 50px;
+.logoCart{
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  margin-top: 1.4rem;
+}
+.containerLoginCartandUser{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
 }
 
 @media screen and (max-width: 735px) {

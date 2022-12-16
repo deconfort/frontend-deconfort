@@ -13,9 +13,11 @@
   justify-content: center;
   align-items: center;
   padding: 1rem;
-
 }
-.containerForm{
+.tittleCreate{
+  margin: 1rem;
+}
+.containerFormCreateProduct{
   display: flex;
   justify-content: center;
   align-items: center;
@@ -59,4 +61,9 @@
 }
 .buttonRegister:hover{
   background-color:  #c3acbe;
+}
+@media screen and (max-width:750px) {
+  .formRegister{
+    width: 70%;
+  }
 }

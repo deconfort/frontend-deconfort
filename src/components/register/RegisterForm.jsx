@@ -5,6 +5,7 @@ import { useRef } from "react";
 import Swal from "sweetalert2";
 import axios from "axios";
 import apiUrl from "../../url";
+import bannerRegister from '../../image/banerRegister.png'
 
 export default function RegisterForm(props) {
   let { role } = props;
@@ -58,8 +59,9 @@ export default function RegisterForm(props) {
   }
 
   return (
-    <div className="containerForm">
-      <h3>Create Account</h3>
+    <div className="containerFormRegister">
+      <img className="registerBanner" src={bannerRegister} alt="Banner Register" />
+      <h3 className="tittleRegisterForm">Create Account</h3>
       <form className="formRegister" onSubmit={newUser} ref={form}>
         <label className="labelRegister">
           {" "}
@@ -132,13 +134,13 @@ export default function RegisterForm(props) {
             ref={password}
           />
         </label>
-        <button className="buttonRegister" type="submit">
+        <button className="buttonRegisterForm" type="submit">
           Create
         </button>
         <p className="registerP">If you already registered</p>
 
         <NavLink to="/login" className="linkNav">
-          <button className="buttonRegister" type="submit">
+          <button className="buttonRegisterForm" type="submit">
             Sign In
           </button>
         </NavLink>
