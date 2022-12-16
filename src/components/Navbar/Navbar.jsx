@@ -28,43 +28,43 @@ function NavbarHambur(props) {
               id="basic-nav-dropdown"
               className="Li-Navbar"
             >
-              <NavDropdown.Item href="" className="Li-Navbar">
+              <NavDropdown.Item href="" className="Li-Navbar desplegable-navbar">
                 <Link to={`productCategory`} className="list-style-none">
                 DESK
                 </Link>
               </NavDropdown.Item>
-              <NavDropdown.Item href="" className="Li-Navbar">
+              <NavDropdown.Item href="" className="Li-Navbar desplegable-navbar">
               <Link to={`productTables`} className="list-style-none">
                 TABLES
                 </Link>
               </NavDropdown.Item>
-              <NavDropdown.Item href="" className="Li-Navbar">
+              <NavDropdown.Item href="" className="Li-Navbar desplegable-navbar">
               <Link to={`productVases`} className="list-style-none">
                 VASES
                 </Link>
               </NavDropdown.Item>
               <NavDropdown.Divider />
-              <NavDropdown.Item href="" className="Li-Navbar">
+              <NavDropdown.Item href="" className="Li-Navbar desplegable-navbar">
               <Link to={`productFrames`} className="list-style-none">
                 FRAMES
                 </Link>
               </NavDropdown.Item>
-              <NavDropdown.Item href="" className="Li-Navbar">
+              <NavDropdown.Item href="" className="Li-Navbar desplegable-navbar">
               <Link to={`productCushions`} className="list-style-none">
                 CUSHIONS
                 </Link>
               </NavDropdown.Item>
-              <NavDropdown.Item href="" className="Li-Navbar">
+              <NavDropdown.Item href="" className="Li-Navbar desplegable-navbar">
               <Link to={`productDiffuser`} className="list-style-none">
                 DIFFUSER
                 </Link>
               </NavDropdown.Item>
-              <NavDropdown.Item href="" className="Li-Navbar">
+              <NavDropdown.Item href="" className="Li-Navbar desplegable-navbar">
               <Link to={`productMirrors`} className="list-style-none">
                 MIRRORS
                 </Link>
               </NavDropdown.Item>
-              <NavDropdown.Item href="" className="Li-Navbar">
+              <NavDropdown.Item href="" className="Li-Navbar desplegable-navbar">
               <Link to={`productBlankets`} className="list-style-none">
                 BLANKETS
                 </Link>

@@ -71,6 +71,12 @@ margin-right: 1rem;
     border-radius: 6mm;
     cursor: pointer;
   }
+  .desplegable-navbar:hover{
+    background: #eee;
+    border-radius: 6mm;
+    width: 110px;
+    cursor: pointer;
+  }
   a {
     color: black;
     text-decoration: none;

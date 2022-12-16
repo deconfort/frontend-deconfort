@@ -3,7 +3,13 @@
     flex-wrap: wrap;
     flex-direction: column;
 }
-
+.linksLocals{
+    text-decoration: none;
+    color: black;
+}
+.linksLocals:hover{
+    color: #8f837d;
+}
 .container-title{
     display: flex;
     align-items: center;
