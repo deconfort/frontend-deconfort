@@ -144,6 +144,44 @@ export default function Payments() {
                   </div>
                 </div>
               </div>
+              <div class="card">
+                <div class="card-image">
+                  <img
+                    src="https://purepng.com/public/uploads/large/purepng.com-armchairarmchairarmchairsoffice-chairssofa-1701527920218mz7tp.png"
+                    alt=""
+                  />
+                </div>
+                <div class="card-details">
+                  <div class="card-name">Vintage Armchair</div>
+                  <div class="card-price">
+                    $80
+                  </div>
+                  <div class="card-wheel">
+                    <button>-</button>
+                    <span>1</span>
+                    <button>+</button>
+                  </div>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-image">
+                  <img
+                    src="https://purepng.com/public/uploads/large/purepng.com-armchairarmchairarmchairsoffice-chairssofa-1701527920218mz7tp.png"
+                    alt=""
+                  />
+                </div>
+                <div class="card-details">
+                  <div class="card-name">Vintage Armchair</div>
+                  <div class="card-price">
+                    $80
+                  </div>
+                  <div class="card-wheel">
+                    <button>-</button>
+                    <span>1</span>
+                    <button>+</button>
+                  </div>
+                </div>
+              </div>
             </div>
             <div class="checkout-total">
               <h6>Total</h6>
