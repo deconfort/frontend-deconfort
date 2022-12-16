@@ -20,7 +20,6 @@ const getFav = createAsyncThunk("getFav", async (id) => {
 
 const getUserFavs = createAsyncThunk("getUserFavs", async (id) => {
     try{
-        console.log(id)
     const response = await axios.get(`${apiUrl}api/favs?userId=${id}`);
     return {
         success: true,
@@ -48,10 +47,10 @@ const updateFavorite = createAsyncThunk("updateFavorite", async ( data ) => {
     }
 });
 
-const deleteFavs = createAsyncThunk("deleteFavs", async ( {id, token }) => {
+const deleteFavs = createAsyncThunk("deleteFavs", async ( {name, id, token }) => {
     let headers = { headers: { Authorization: `Bearer ${token}` } };
     try {
-        const response = await axios.put(`${apiUrl}api/favs/${id}`, null, headers);
+        const response = await axios.put(`${apiUrl}api/favs/${id}`, name, headers);
         return response.data.response;
     }
     catch (error) {
