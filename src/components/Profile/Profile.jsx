@@ -28,10 +28,12 @@ export default function Profile() {
             <p>{user.country}</p>
             <p>{user.mail}</p>
             <div className="footer">
+              <NavLink to="/myfavs" className="linkNav">
               <div>
                 <p className="num">🤍</p>
                 <p>My Favorites</p>
               </div>
+              </NavLink>
               <NavLink to="/editprofile"className="linkNav">
               <div>
                 <p className="num">📝</p>

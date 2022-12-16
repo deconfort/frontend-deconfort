@@ -31,7 +31,7 @@ import EditProfile from "./components/Profile/EditProfile"
 import Payments from './components/Payments/Payments';
 import Detail from './layouts/Detail/Detail';
 import AllProducts from './components/AllProducts/AllProducts';
-import BackToTop from './components/BackToTopButton';
+import MyFavs from './layouts/MyFavs';
 
    
 function App() {
@@ -51,7 +51,6 @@ function App() {
     {/* Este es el commit que si funciona, funciona de verdad */}
  <Header></Header>
  <AutoToTop></AutoToTop>
- <BackToTop/>
     <Routes>
       <Route path="/" element={<HomePage/>}/>
       <Route path="/allproducts" element={<AllProducts/>}/>
@@ -76,6 +75,7 @@ function App() {
       <Route path="/productMirrors" element={<ProductMirrors/>}/>
       <Route path="/productBlankets" element={<ProductBlankets/>}/>
       <Route path="/detail" element={<Detail/>}/>
+      <Route path="/myfavs" element={<MyFavs/>}/>
      </Routes>
     <Footer></Footer>
     </>
