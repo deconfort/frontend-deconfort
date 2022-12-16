@@ -17,6 +17,8 @@
 
 .selects-products{
     width: 190px;
+    border-radius: 9mm;
+    padding: 0.2rem;
 }
 @media screen and (max-width: 600px) {
     .filter-products{
@@ -25,5 +27,14 @@
         align-items: center;
         gap: 1rem;
     }
+    
+}
+.inputSearch{
+    margin-left: 1rem;
+    border-radius: 9mm;
+    padding: 0.2rem;
+}
+.inputSearch::placeholder{
+    padding-left: 1rem;
     
 }

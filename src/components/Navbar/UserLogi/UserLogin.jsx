@@ -54,7 +54,7 @@ export default function UserLogin() {
   return (
     <div className='containerLoginCartandUser'>
     <Link to='/payments'>
-        <img className="logoCart" src={cart} alt="logo cart" />
+        <img className="logoCart" src='https://cdn-icons-png.flaticon.com/512/107/107831.png' alt="logo cart" />
       </Link>
     <div className="containerUserLogin">
       {(user.role === "admin" || user.role === "user") && (
