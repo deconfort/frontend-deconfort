@@ -54,11 +54,11 @@ export default function Favorite(props) {
                     return (
                     res ? (
                         <>
-                        <img src={reaction.icon} name={reaction.name} alt={reaction.name} key={reaction._id} width='25px' onClick={likeEvent} />
+                        <img src={reaction.icon} name={reaction.name} alt={reaction.name} key={reaction._id} width='30px' onClick={likeEvent} />
                         </>
                     ) : (
                         <>
-                        <img src={reaction.iconBack} name={reaction.name} alt={reaction.name} key={reaction._id} width='25px' onClick={likeEvent} />
+                        <img src={reaction.iconBack} name={reaction.name} alt={reaction.name} key={reaction._id} width='30px' onClick={likeEvent} />
                         </>
                     ))
                 })

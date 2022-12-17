@@ -42,6 +42,8 @@ export default function AllProducts() {
           <div>
             <label for="site-search">Search the site: </label>
             <input
+            className="inputSearch"
+            placeholder="search your product"
               type="search"
               id="site-search"
               name="q"

@@ -4,21 +4,20 @@
   box-sizing: border-box;
 }
 
-
 .imgSocialFooter {
-    height: 113px;
-    width: 86px;
-    padding-bottom: 1.2rem;
+  height: 92px;
+  width: 66px;
+  padding-bottom: 2.1rem;
 }
-.imgSocialFooterPng{
-    width: 81px;
-    height: 119px;
-    padding-bottom: 2rem;
+.imgSocialFooterPng {
+  width: 61px;
+  height: 91px;
+  padding-bottom: 2rem;
 }
-.imgSocialFooterFace{
-    width: 98px;
-    margin-bottom: 1.4rem;
-    height: 84px;
+.imgSocialFooterFace {
+  width: 62px;
+  margin-bottom: 2.1rem;
+  height: 58px;
 }
 .imgContact {
   width: 40px;
@@ -40,8 +39,8 @@
 }
 .tittleFooter {
   text-align: center;
-    font-size: 27px;
-    font-family: auto;
+  font-size: 22px;
+  font-family: auto;
 }
 .containerContactFooter {
   display: flex;
@@ -51,50 +50,52 @@
   text-decoration: none;
   color: black;
   font-family: auto;
-    font-size: 17px;
+  font-size: 14px;
 }
 .links:hover {
   color: white;
 }
-.subttitleNavigation{
-    padding-top: 7px;
-    font-family: auto;
-    font-size: 17px;
+.subttitleNavigation {
+  padding-top: 7px;
+  font-family: auto;
+  font-size: 14px;
 }
-.subttitleNavigation:hover{
-    color: white;
+.subttitleNavigation:hover {
+  color: white;
 }
-.maps{
-    margin-bottom: 1rem;
-    border-radius: 9px;
+.maps {
+  margin-bottom: 1rem;
+  border-radius: 9px;
 }
-.subFooterLinkedin{
-    min-height: 6vh;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
+.subFooterLinkedin {
+  min-height: 6vh;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
 }
-.subtittleLinkedin{
-    padding: 3px;
-    font-size: 1.2rem;
-    margin-top: 5px;
+.subtittleLinkedin {
+  padding: 3px;
+  font-size: 1.2rem;
+  margin-top: 7px;
+  font-size: 16px;
 }
-.linkLinkedin{
-    padding: 5px;
-    text-decoration: none;
-    color: black;
+.linkLinkedin {
+  padding: 5px;
+  text-decoration: none;
+  color: black;
+  font-size: 14px;
 }
-.linkLinkedin:hover{
-    color: #52646a
+.linkLinkedin:hover {
+  color: #52646a;
 }
-.containerSubFooter{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    justify-content: space-evenly;
-    align-items: center;
+.containerSubFooter {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  justify-content: space-evenly;
+  align-items: center;
 }
-.copyrigth{
-    font-size: x-small;
-    padding-top: 15px;
+.copyrigth {
+  font-size: 9px;
+  padding-top: 16px;
 }
