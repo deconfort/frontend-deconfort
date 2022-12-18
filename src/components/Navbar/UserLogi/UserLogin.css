@@ -1,7 +1,7 @@
 .logoCart{
   width: 50px;
     height: 50px;
-    margin-top: 1.7rem;
+    margin-top: 2rem;
     margin-right: 0.7rem;
 }
 .containerLoginCartandUser{
@@ -10,14 +10,16 @@
   gap: 1rem;
 }
 
-@media screen and (max-width: 735px) {
-    .userLoginNav{
+@media screen and (max-width: 662px) {
+    .containerLoginCartandUser{
         display: flex;
         align-items: center;
         justify-content: center;
-        width: 99%;
+        width: 100%;
+        padding-left: 4rem;
     }
   }
+
   .linkNav{
     text-decoration: none;
     color: #000000b3;
@@ -72,13 +74,4 @@
 } */
 .containerUserLogin{
 margin-top: 2rem;
-}
-@media screen and (max-width: 585px){
-  .containerUserLogin{
-    display: flex;
-    align-content: center;
-    justify-content: center;
-    width: 100%;
-    padding-left: 4rem;
-  }
 }
