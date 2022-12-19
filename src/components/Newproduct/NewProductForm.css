@@ -24,6 +24,7 @@
   flex-direction: column;
   margin-bottom: 3rem;
   margin-top: 1.5rem;
+  width: 100%;
 }
 .labelRegister{
   display: flex;
