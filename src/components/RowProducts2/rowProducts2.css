@@ -1,0 +1,75 @@
+.row-contain2{
+    height: 320px;
+    margin: 50px 0px 0px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 1rem;
+}
+.container-item2{
+    color: white;
+    font-size: 34px;
+}
+
+.container-item2:hover{
+    opacity: 0.7;
+    cursor: pointer;
+    transform: scale(1.1);
+    transition: 0.5s ease-out;
+}
+
+.left-item2{
+    width: 400px;
+    height: 100%;
+    background-image: linear-gradient(rgba(189, 176, 176, 0.329), rgba(10, 10, 1, 0.5)),url('https://m.media-amazon.com/images/I/71X2PeauJML.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mid-item2{
+    width: 400px;
+    height: 100%;
+    background-image: linear-gradient(rgba(189, 176, 176, 0.329), rgba(10, 10, 1, 0.5)),url('https://www.pavilionbroadway.co.uk/blogs/wp-content/uploads/2021/01/geometric-wall-mirrors.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+}
+
+
+.right-item2{
+    width: 400px;
+    height: 100%;
+    background-image: linear-gradient(rgba(189, 176, 176, 0.329), rgba(10, 10, 1, 0.5)),url('https://www.jomalone.com.au/media/export/cms/smpp/home/SMPP_MOB_Banner_Diffusers_375x240@2x.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@media screen and (max-width:1290px){
+    .left-item2, .right-item2, .mid-item2{
+        width: 360px;
+    }
+}
+@media screen and (max-width:755px){
+    .row-contain2{
+        flex-direction: column;
+        height: auto;
+    }
+    .container-item2{
+        width: 100%;
+        height: 320px;
+    }
+    .left-item2, .mid-item2{
+        background-position: center;
+    }
+    .right-item2{
+        background-position: bottom;
+    }
+}

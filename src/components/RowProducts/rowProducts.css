@@ -1,11 +1,14 @@
 .row-contain{
-    width: 100%;
-    height: 414px;
-    margin: 50px 0px 30px;
+    height: 320px;
+    margin: 50px 0px 0px;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    gap: 2rem;
+    gap: 1rem;
+}
+.rowprod-list-style-none{
+    text-decoration: none;
+    color: white;
 }
 .container-item{
     color: white;
@@ -22,7 +25,7 @@
 .left-item{
     width: 400px;
     height: 100%;
-    background-image: linear-gradient(rgba(189, 176, 176, 0.329), rgba(10, 10, 1, 0.5)),url('https://crystalcomfort.co.uk/wp-content/uploads/2022/05/26019_watermarked-2.png');
+    background-image: linear-gradient(rgba(189, 176, 176, 0.329), rgba(10, 10, 1, 0.5)),url('https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/home-office-decor-ideas-1611764047.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     display: flex;
@@ -33,7 +36,7 @@
 .mid-item{
     width: 400px;
     height: 100%;
-    background-image: linear-gradient(rgba(189, 176, 176, 0.329), rgba(10, 10, 1, 0.5)),url('https://i.pinimg.com/564x/bb/d1/8e/bbd18e239fc5930f21ffb1b6a627e55c.jpg');
+    background-image: linear-gradient(rgba(189, 176, 176, 0.329), rgba(10, 10, 1, 0.5)),url('https://i5.walmartimages.com/asr/dbb9ef33-d59d-4d26-bec8-ecf95a255193.cf1f306be53e188c47860027ede849a9.jpeg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -46,15 +49,20 @@
 .right-item{
     width: 400px;
     height: 100%;
-    background-image: linear-gradient(rgba(189, 176, 176, 0.329), rgba(10, 10, 1, 0.5)),url('https://brownjordanoutdoorkitchens.com/wp-content/uploads/2021/11/Birmingham-outdoor-kitchen.jpg');
+    background-image: linear-gradient(rgba(189, 176, 176, 0.329), rgba(10, 10, 1, 0.5)),url('https://media.architecturaldigest.com/photos/5abbf4772589ce07049dd6a5/16:9/w_3456,h_1944,c_limit/Level%20Frames%20-%20online%20custom%20framing%20artwork%20and%20photos.jpeg');
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: center;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-
-@media screen and (max-width:780px){
+@media screen and (max-width:1290px){
+    .left-item, .right-item, .mid-item{
+        width: 360px;
+    }
+}
+@media screen and (max-width:755px){
     .row-contain{
         flex-direction: column;
         height: auto;
@@ -63,8 +71,11 @@
         width: 100%;
         height: 320px;
     }
-    .left-item, .mid-item , .right-item{
+    .left-item,  .right-item{
         background-position: bottom;
+    }
+    .mid-item{
+        background-position: center;   
     }
 }
 
