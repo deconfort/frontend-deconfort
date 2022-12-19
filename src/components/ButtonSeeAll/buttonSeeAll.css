@@ -3,6 +3,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-top: 45px;
 }
 .button-see-all{
     background-color: #c1b8ae;
