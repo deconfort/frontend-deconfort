@@ -9,6 +9,7 @@ import { Link as NavLink } from "react-router-dom";
 export default function Profile() {
   const dispatch = useDispatch();
   const { idUser, user } = useSelector((state) => state.user);
+  
   const { getUser } = usersAction;
 
   useEffect(() => {

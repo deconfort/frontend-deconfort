@@ -4,9 +4,9 @@ import { useDispatch, useSelector } from 'react-redux';
 import { useEffect } from 'react';
 import usersActions from './redux/actions/usersActions';
 import { Route, Routes } from "react-router-dom";
-import './style.css'
-import "@fontsource/abhaya-libre"
+
 import AutoToTop from './components/AutoToTop';
+
 import HomePage from './layouts/HomePage/HomePage';
 import Header from "./layouts/Header";
 import LoginLayout from "./layouts/LoginLayout";

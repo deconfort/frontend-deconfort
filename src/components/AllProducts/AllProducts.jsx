@@ -1,5 +1,4 @@
-import React, { useEffect, useState, useRef } from "react";
-import Checkboxes from "../Checkboxes/Checkboxes";
+import React, { useEffect, useRef } from "react";
 import CardChangeColor from "../CardChangeColor/CardChangeColor";
 import "./allProducts.css";
 import productAction from "../../redux/actions/productAction";
@@ -10,7 +9,7 @@ import Swal from "sweetalert2";
 
 
 export default function AllProducts() {
-  const { idUser } = useSelector((state) => state.user);
+  const { idUser, token } = useSelector((state) => state.user);
   const dispatch = useDispatch();
   const { getProducts, getProductsFilter } = productAction;
   const { products } = useSelector((state) => state.products);
@@ -104,7 +103,19 @@ export default function AllProducts() {
             }
             return (
               <CardChangeColor
-                onClick={addToCart}
+                onClick={() => {
+                  if (token) {
+                    addToCart();
+                  } else {
+                    Swal.fire({
+                      icon: "warning",
+                      confirmButtonColor: "#5c195d",
+                      iconColor: "#5c195d",
+                      title: "You have to registered to add this product to your cart",
+                      showConfirmButton: true,
+                    });
+                  }
+                }}
                 name={item.name}
                 photo={item.photo[0]}
                 category={item.category}
