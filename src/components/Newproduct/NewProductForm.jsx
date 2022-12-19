@@ -1,109 +1,119 @@
-import React,{ useState } from 'react'
+import React,{ useEffect,useRef } from 'react'
 import './NewProductForm.css'
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import Swal from 'sweetalert2'
 import apiUrl from "../../url";
+import { useDispatch, useSelector } from 'react-redux';
 
+import productAction from '../../redux/actions/productAction';
 
 export default function NewProductForm() {
-
+  const { idUser } = useSelector((state) => state.user);
   let navigate = useNavigate();
-  // const {token} = useSelector((state) => state.user)
-  const [category, setCategory] = useState("");
-  const [name, setName] = useState("");
-  const [photo, setPhoto] = useState("");
-  const [description, setDescription] = useState(0);
-  const [date, setDate] = useState("");
-  const [stock, setStock] = useState("");
-  const [price, setPrice] = useState("");
-  const [user, setUser] = useState("");
+  const {token} = useSelector((state) => state.user)
+
+  const { getProducts } = productAction;
+   const { products } = useSelector((state) => state.products);
+  const dispatch = useDispatch();
+
+     useEffect(() => {
+    dispatch(getProducts());
+
+    // eslint-disable-next-line
+  }, []);
+
+  let categories =products.map(product=>product.category)
+
+  let categoriesFilter = [...new Set(categories)]
+console.log(categoriesFilter);
   
-  
+let category = useRef()
+let name = useRef()
+let photo = useRef()
+let description = useRef()
+let date = useRef()
+let stock = useRef()
+let price = useRef()
+let information =useRef()
 
-  let dataNewProduct = {
+async function newProduct(e){
+  e.preventDefault()
+  let newProduct = {
 
-    category:"",
-    name: "",
-    photo: "",
-    description: "",
-    date: "",
-    stock:"",
-    price: "",
-    user:"",
-  };
+    category:category.current.value,
+    name: name.current.value,
+    photo: [photo.current.value],
+    description: description.current.value,
+    date: date.current.value,
+    stock: stock.current.value,
+    price: price.current.value,
+    userId: idUser,
+  }
+  let headers = { headers: { Authorization: `Bearer ${token}` } };
 
-  const handlerClickForm = (e) => {
-    e.preventDefault();
-
-    dataNewProduct = {
-
-      category:category,
-      name: name,
-      photo: photo,
-      description: description,
-      date: date,
-      stock: stock,
-      price: price,
-      userId: user,
-    };
-
-    axios({
-      method: "post",
-      url: `${apiUrl}api/products`,
-      data: dataNewProduct,
-      headers: { token: localStorage.getItem("token") },
-    })
-      .then((res) => {
-        console.log(res);
-        setCategory("");
-        if (res.data.success) {
-          Swal.fire("creado");
-          return navigate("/");
-        } else {
-          Swal.fire(res.data.message.join("  -    -   -    -   -"));
-        }
-      })
-      .catch((err) => console.log(err));
-  };
-
+  try {
+    let res= await axios.post(`${apiUrl}api/products`,newProduct,headers)
+    if (res.data.success) {
+      Swal.fire({
+        icon: "success",
+        title: res.data.message,
+        showConfirmButton: true,
+        iconColor: "#5c195d",
+        confirmButtonColor: "#5c195d",
+      }).then((result) => {
+        if (result.isConfirmed) {
+          navigate('/allproducts')
+        };
+      });
+      }    
+  } catch (error) {
+    Swal.fire({
+      icon: "error",
+      title: error.response.data.message.join('<br/>'),
+      showConfirmButton: true,
+      iconColor: "#5c195d",
+      confirmButtonColor: "#5c195d",
+    });
+  }
+  }
 
   return (
 
     <div className='containerForm'>
-        
-
     <div className='containerFormCreateProduct'>
-        <h3 className='tittleCreate'>Create Product</h3>
 
-        <form className='formRegister' onSubmit={handlerClickForm} >
+        <form className='formRegister' onSubmit={newProduct} ref={information} >
         <h3>Create Product</h3>
-            <label className='labelRegister'> Category
-                <input
-                 className='inputRegister' type="text" onChange={(e) => setCategory(e.target.value)} placeholder='Category' name='' />
+
+        <label className='labelRegister'>Category
+        <select ref={category} className="form-control form-sign">
+                      <option>Select The Category</option>
+                      {categoriesFilter.map(category=>  <option key = {category} value = {category}>{category} </option>)}
+                    </select>
+
             </label>
+
             <label className='labelRegister'>Name
-                <input className='inputRegister' type="text" onChange={(e) => setName(e.target.value)} placeholder='Name' name='' />
+                <input className='inputRegister' type="text" ref={name} placeholder='Name' name='' />
             </label>
             <label className='labelRegister'>Photo (URL)
-                <input className='inputRegister' type="text" onChange={(e) => setPhoto(e.target.value)} placeholder='Photo' name='' />
+                <input className='inputRegister' type="text" ref={photo} placeholder='Photo' name='' />
             </label>
             <label className='labelRegister'>Description
-                <input className='inputRegister' type="text" onChange={(e) => setDescription(e.target.value)}  placeholder='Description' name="" />
+                <input className='inputRegister' type="text" ref={description}  placeholder='Description' name="" />
             </label>
             <label className='labelRegister'>Date
-                <input className='inputRegister' type="date" onChange={(e) => setDate(e.target.value)} placeholder='Date' name="" />
+                <input className='inputRegister' type="date" ref={date} placeholder='Date' name="" />
             </label>
             <label className='labelRegister'>Stock
-                <input className='inputRegister' type="number" onChange={(e) => setStock(e.target.value)} placeholder='Stock' name="" />
+                <input className='inputRegister' type="number" ref={stock} placeholder='Stock' name="" />
             </label>
             <label className='labelRegister'>Price
-                <input className='inputRegister' type="number" onChange={(e) => setPrice(e.target.value)} placeholder='Price' name="" />
+                <input className='inputRegister' type="number" ref={price} placeholder='Price' name="" />
             </label>
 
-            <label className='labelRegister'>User Id
-                <input className='inputRegister' type="text" onChange={(e) => setUser(e.target.value)} placeholder='User Id' name="" />
-            </label>
+
 
             <button className="buttonRegister" type="submit"  >Create</button>
 
