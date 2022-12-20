@@ -4,6 +4,9 @@
   box-sizing: border-box;
 }
 
+.mp{
+  object-fit: fill;
+}
 .imgSocialFooter {
   height: 92px;
   width: 66px;

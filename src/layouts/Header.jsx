@@ -11,10 +11,7 @@ export default function Header() {
       <div>
         <div className="UserContainer">
             <Logo></Logo>
-          <UserLogin></UserLogin>
-        </div>
-      </div>
-      <div className="Navbar">
+            <div className="Navbar">
         <NavbarHambur
           title1="HOME"
           title2="PRODUCTS"
@@ -25,6 +22,10 @@ export default function Header() {
           title7="CONTACT US"
         ></NavbarHambur>
       </div>
+          <UserLogin></UserLogin>
+        </div>
+      </div>
+      
     </div>
   );
 }
