@@ -5,7 +5,51 @@
     overflow: hidden;
     box-shadow: 0 5px 15px rgba(50, 50, 50, 0.438);
 }
-
+.containerFavorits{
+    margin-bottom: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+    padding: 2.5rem;
+}
+.tittleMyFavs{
+    text-align: center;
+    font-family: emoji;
+}
+.containerButtonFavs{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.buttonMoreFavs{
+    padding: 10px 10px;
+    background: #31394e;
+    color: #fff;
+    border-radius: 6mm;
+    cursor: pointer;
+    border: none;
+}
+.link{
+    text-decoration: none;
+}
+.title-name:hover{
+    color: #15297c;
+}
+.buttonDeleteFavs{
+    padding: 0.2rem;
+    border-radius: 6mm;
+    margin-top: 0.5rem;
+    background-color: #c1b8ae;
+    border: none;
+    width: 27%;
+    font-size: 17px;
+}
+.containerButtonDelete{
+    display: flex;
+    justify-content: center;
+}
 .bg-watch {
     position: relative;
     height: 320px;
@@ -55,6 +99,7 @@
 
 .watch-img.show {
     opacity: 1;
+    object-fit: cover;
 }
 
 .info {

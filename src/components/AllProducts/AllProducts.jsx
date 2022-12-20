@@ -6,6 +6,7 @@ import productAction from "../../redux/actions/productAction";
 import { useDispatch, useSelector } from "react-redux";
 import axios from "axios";
 import apiUrl from "../../api/url";
+import { Link } from 'react-router-dom'
 import Swal from "sweetalert2";
 
 
@@ -14,6 +15,7 @@ export default function AllProducts() {
   const dispatch = useDispatch();
   const { getProducts, getProductsFilter } = productAction;
   const { products } = useSelector((state) => state.products);
+  const {role} = useSelector((state) => state.user)
 
   let search = useRef();
   let select = useRef();
@@ -63,6 +65,13 @@ export default function AllProducts() {
           </select>
         </div>
       </div>
+      {role === "admin" ? (
+        <div className="buttonNewProduct"> 
+        <Link to='/createproduct'>
+          <button className="more-and-buy">New product</button>
+        </Link>
+        </div>
+          ) : null}      
       <div className="check-filter-cards">
         {/* <Checkboxes /> */}
         <div className="cards-all-products">

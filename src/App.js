@@ -33,6 +33,7 @@ import Detail from './layouts/Detail/Detail';
 import AllProducts from './components/AllProducts/AllProducts';
 import MyFavs from './layouts/MyFavs';
 import BackToTop from './components/BackToTopButton';
+import AboutUs from './components/AboutUs/AboutUs';
 
    
 function App() {
@@ -59,6 +60,7 @@ function App() {
       <Route path="/faqs" element={<Faqs/>}/>
       <Route path="/locals" element={<Locals/>}/>
       <Route path="/contact" element={<Contact/>}/>
+      <Route path='/aboutus' element={<AboutUs/>}/>
       <Route path="/forum" element={<Forum/>}/>
       <Route path="/login" element={<LoginLayout/>}/>
       <Route path="/register" element={<Register/>}/>

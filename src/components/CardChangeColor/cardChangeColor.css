@@ -63,7 +63,8 @@
     height: 90%;
     width: 90%;
     position: absolute;
-    bottom: 2rem;
+    bottom: 3rem;
+    object-fit: cover;
 }
 
 .info {
@@ -108,6 +109,10 @@
     color: #fff;
     border-radius: 6mm;
     cursor: pointer;
+    border: none;
+}
+.more-and-buy:hover{
+background-color: #142157;
 }
 
 .icon-cart {
@@ -137,6 +142,10 @@
 }
 
 .list-style-none-cardChange {
+    color: white;
+    text-decoration: none;
+  }
+  .list-style-none-cardChange:hover {
     color: white;
     text-decoration: none;
   }
