@@ -69,6 +69,11 @@ function NavbarHambur(props) {
                 BLANKETS
                 </Link>
               </NavDropdown.Item>
+              <NavDropdown.Item href="" className="Li-Navbar desplegable-navbar">
+              <Link to={`productChairs`} className="list-style-none">
+                CHAIRS
+                </Link>
+              </NavDropdown.Item>
             </NavDropdown>
             <Nav.Link href="" className="Li-Navbar">
               <Link className='linkNav' to={"/locals"}>{title3}</Link>
