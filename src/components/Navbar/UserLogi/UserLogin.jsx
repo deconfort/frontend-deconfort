@@ -51,11 +51,32 @@ export default function UserLogin() {
       route: "/login",
     },
   ];
+  console.log(user)
   return (
     <div className='containerLoginCartandUser'>
-    <Link to='/payments'>
+      {user.role === "admin" || user.role === "user" && (
+      <Link to={'/payments'}>
         <img className="logoCart" src='https://cdn-icons-png.flaticon.com/512/107/107831.png' alt="logo cart" />
       </Link>
+      )}
+      {user.role !== "admin" && user.role !== "user" && (
+          <img className="logoCart" src='https://cdn-icons-png.flaticon.com/512/107/107831.png' alt="logo cart" onClick={()=> {
+          Swal.fire({
+            icon: "question",
+            title: "You must be logged in to access the cart",
+            showConfirmButton: true,
+            iconColor: "#5c195d",
+            confirmButtonColor: "#5c195d",
+            confirmButtonText: "Go to Login",
+            showCancelButton: true,
+          })
+          .then((result) => {
+            if (result.isConfirmed) {
+              navegation(`/login`);
+            }
+          });
+        }} />
+      )}
     <div className="containerUserLogin">
       {(user.role === "admin" || user.role === "user") && (
         <h3

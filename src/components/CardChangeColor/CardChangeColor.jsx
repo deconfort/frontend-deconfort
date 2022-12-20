@@ -7,7 +7,7 @@ import FilterProducts from "../FilterProducts/FilterProducts";
 export default function CardChangeColor(props) {
   let { name, photo, price, category, id, onClick } = props
   const {role} = useSelector((state) => state.user)
-  console.log('soy category', category);
+
 
 
 
