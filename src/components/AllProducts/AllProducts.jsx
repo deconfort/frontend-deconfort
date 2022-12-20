@@ -4,7 +4,7 @@ import "./allProducts.css";
 import productAction from "../../redux/actions/productAction";
 import { useDispatch, useSelector } from "react-redux";
 import axios from "axios";
-import apiUrl from "../../api/url";
+import apiUrl from "../../url";
 import { Link } from 'react-router-dom'
 import Swal from "sweetalert2";
 
