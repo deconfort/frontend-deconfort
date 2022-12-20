@@ -74,7 +74,7 @@ function NavbarHambur(props) {
               <Link className='linkNav' to={"/locals"}>{title3}</Link>
             </Nav.Link>
             <Nav.Link href="" className="Li-Navbar">
-              {title4}
+              <Link className='linkNav' to={'/aboutus'}>{title4}</Link>
             </Nav.Link>
             <Nav.Link href="" className="Li-Navbar">
               <Link className='linkNav' to={"/faqs"}>{title5}</Link>
