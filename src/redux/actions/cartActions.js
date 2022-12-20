@@ -27,7 +27,7 @@ const addToCart = createAsyncThunk("addToCart", async (datos) => {
       amount: data.amount,
       productId: data.productId
     }
-    console.log(datos);
+
     try {
       const res = await axios.put(url, datos, headers);
        console.log(res);

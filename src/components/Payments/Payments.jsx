@@ -2,11 +2,10 @@ import "./style.css";
 import "./Payments.css";
 import axios from "axios";
 import React, { useEffect, useRef, useState } from "react";
-import apiUrl from "../../api/url";
+import apiUrl from "../../url";
 import { useDispatch, useSelector } from "react-redux";
 import cartActions from "../../redux/actions/cartActions";
 import userActions from "../../redux/actions/usersActions"
-import Footer from "../../layouts/Footer";
 import paymentBanner from '../../image/PaymentsBanner.png'
 
 
@@ -24,11 +23,10 @@ export default function Payments() {
 
     // eslint-disable-next-line
   }, []);
-  console.log(products)
+
   async function getProducts() {
     try {
       let res = await axios.get(`${apiUrl}api/shopping?userId=${idUser}`);
-      console.log(res.data.productsCart)
       setProducts(res.data.productsCart);
     } catch (error) {
       
@@ -65,7 +63,7 @@ export default function Payments() {
 
   async function add(info) {
     try {
-      dispatch(changeAmount(info));
+      await dispatch(changeAmount(info));
       getProducts();
     } catch (error) {
       console.log(error)
@@ -74,7 +72,7 @@ export default function Payments() {
   }
   async function del(info) {
     try {
-      dispatch(changeAmount(info));
+      await dispatch(changeAmount(info));
       getProducts();
     } catch (error) {
       console.log(error)
