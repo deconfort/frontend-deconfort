@@ -11,7 +11,7 @@ export default function FooterPays() {
         <img className='imgPays' src="https://tentulogo.com/wp-content/uploads/VISA-Twitter.jpg" alt="Payment method" />
         </div>
         <div>
-        <img className='imgPays' src="https://cronicasfreelancer.com/wp-content/uploads/2019/11/brubank-principal-1280x720.png" alt="Payment method" />
+        <img className='imgPays footerPay' src="https://cronicasfreelancer.com/wp-content/uploads/2019/11/brubank-principal-1280x720.png" alt="Payment method" />
         <img className='imgPays' src="https://4.bp.blogspot.com/-oDAbn7pY67o/WrwYZVEVj8I/AAAAAAAAMFY/hV9iHsA0K7UTMVZvLI-xe072mEkzQrpXACLcBGAs/s1600/logo%2Bsantander%2Bnuevo2.jpg" alt="Payment method" />
         <img className='imgPays' src="https://http2.mlstatic.com/resources/frontend/landings-mp/images/mercadopago-og.jpg" alt="Payment method" />
         </div>

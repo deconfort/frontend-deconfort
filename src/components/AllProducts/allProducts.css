@@ -12,3 +12,9 @@
     margin-bottom: 3rem;
     justify-content: center;
 }
+.buttonNewProduct{
+    margin-bottom: 2rem;
+    display: flex;
+    justify-content: end;
+    margin-right: 5rem;
+}

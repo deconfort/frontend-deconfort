@@ -4,14 +4,13 @@ import { useSelector, useDispatch } from 'react-redux'
 import favoriteActions from '../redux/actions/favoriteActions'
 import '../components/Editproduct/EditProductForm'
 import Swal from 'sweetalert2'
+import '../components/CardChangeColor/CardEdit.css'
 
 export default function EditProduct() {
     const { getUserFavs, deleteFavs } = favoriteActions
     const dispatch = useDispatch()
     const { favorite } = useSelector((state) => state.favorites)
     const { idUser, token } = useSelector((state) => state.user)
-
-
 
     useEffect(() => {
         getProduct()
@@ -44,13 +43,15 @@ export default function EditProduct() {
     }
 
     return (
-        <>  
-            <h1>My Favorits (🚧 in progress! 🤷‍♀️🤦‍♂️🚧)</h1>
+        <div className=''>  
+            <h1 className='tittleMyFavs'>My Favourites</h1>
+            <div className='containerFavorits'>
             { favorite.map(favorite => {
                 return <CardMyFavs product={favorite.productId} key={favorite._id} name={favorite.name} id={favorite._id} onClick={pullReaction}/>
             })
             }
-        </>
+            </div>
+        </div>
     )
 
 }
