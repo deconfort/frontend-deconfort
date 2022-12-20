@@ -4,7 +4,7 @@ import { useSelector } from 'react-redux'
 import { NavLink } from "react-router-dom";
 import Favorite from "../Favorite";
 export default function CardChangeColor(props) {
-  let { name, photo, price, category, id, onClick, clasess } = props
+  let { name, photo, price, category, id, onClick, clasess, onClick2 } = props
   const {role} = useSelector((state) => state.user)
 
 
@@ -31,7 +31,7 @@ export default function CardChangeColor(props) {
           </NavLink>
           {role === "admin" ? (
             <>
-            <button className='more-and-buy icon-cart list-style-none-cardChange'>Delete</button>
+            <button className='more-and-buy icon-cart list-style-none-cardChange' onClick={onClick2}>Delete</button>
             <NavLink
               to={`/editproduct/${id}`}
               className="more-and-buy icon-cart list-style-none-cardChange"

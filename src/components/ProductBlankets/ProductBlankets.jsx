@@ -1,9 +1,9 @@
-import React, {  useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import CardChangeColor from "../CardChangeColor/CardChangeColor";
 import axios from "axios";
 import apiUrl from "../../url";
 import "../ProductCategory/ProductCategory"
-import {useSelector } from "react-redux";
+import { useSelector } from "react-redux";
 import Swal from "sweetalert2";
 
 
@@ -29,15 +29,44 @@ export default function ProductCategory() {
     try {
       let res = await axios.get(`${apiUrl}api/shopping?userId=${idUser}`);
       setCartProduct(res.data.productsCart);
-    } catch (error) {      
+    } catch (error) {
     }
   }
 
+  async function deleteProduct(id) {
+    try {
+      let res = await axios.delete(`${apiUrl}api/products/${id}`, {
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
+      });
+      console.log(res)
+      if (res.data.success) {
+        Swal.fire({
+          icon: "warning",
+          confirmButtonColor: "#5c195d",
+          iconColor: "#5c195d",
+          title: res.data.message,
+          showConfirmButton: true,
+        });
+        setReload(!reload)
+      }
+    } catch (error) { 
+      Swal.fire({
+        icon: "warning",
+        confirmButtonColor: "#5c195d",
+        iconColor: "#5c195d",
+        title: "You must be the creator of this product to delete it",
+        showConfirmButton: true,
+      });
+      console.log(error);
+    }
+  }
 
   return (
     <div className="cards-all-products">
       {products?.map((item) => {
-         async function addToCart() {
+        async function addToCart() {
           let product = {
             name: item.name,
             photo: item.photo[0],
@@ -49,7 +78,7 @@ export default function ProductCategory() {
           try {
             let res = await axios.post(`${apiUrl}api/shopping`, product);
             console.log(res);
-            if(res.data.success){
+            if (res.data.success) {
               Swal.fire({
                 icon: "warning",
                 confirmButtonColor: "#5c195d",
@@ -66,7 +95,7 @@ export default function ProductCategory() {
               iconColor: "#5c195d",
               title: error.response.data.message,
               showConfirmButton: true,
-            });   
+            });
             console.log(error);
           }
         }
@@ -74,22 +103,25 @@ export default function ProductCategory() {
         return (
           <CardChangeColor
             onClick={() => {
-            if (token) {
-              addToCart();
-            } else {
-              Swal.fire({
-                icon: "warning",
-                confirmButtonColor: "#5c195d",
-                iconColor: "#5c195d",
-                title: "You have to registered to add this product to your cart",
-                showConfirmButton: true,
-              });
-            }
-          }}
+              if (token) {
+                addToCart();
+              } else {
+                Swal.fire({
+                  icon: "warning",
+                  confirmButtonColor: "#5c195d",
+                  iconColor: "#5c195d",
+                  title: "You have to registered to add this product to your cart",
+                  showConfirmButton: true,
+                });
+              }
+            }}
             clasess={
               cart ? ('more-and-buy-off icon-cart')
-              : ('more-and-buy icon-cart')
+                : ('more-and-buy icon-cart')
             }
+            onClick2={()=>{
+              deleteProduct(item._id)
+            }}
             name={item.name}
             photo={item.photo}
             category={item.category}

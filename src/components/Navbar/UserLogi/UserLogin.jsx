@@ -50,7 +50,7 @@ export default function UserLogin() {
       route: "/login",
     },
   ];
-  console.log(user)
+
   return (
     <div className='containerLoginCartandUser'>
       {user.role === "admin" || user.role === "user" && (
