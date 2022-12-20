@@ -1,0 +1,40 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+.imgAboutUs{
+    width: 45%;
+    height: 90%;
+    object-fit: contain;
+}
+.containerAbout{
+    display: flex;
+    width: 80%;
+    align-items: center;
+    background-color: #f5f5f1;
+    padding: 1rem;
+    height: auto;
+    /* flex-wrap: wrap; */
+}
+.containerAllAbout{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 3rem;
+    margin-bottom: 3rem;
+    flex-wrap: wrap;
+}
+.aboutUsText{
+    padding: 3rem;
+    width: auto;
+    height: auto;
+}
+@media screen and (max-width: 900px) {
+    .containerAbout{
+        flex-direction: column;
+        height: auto;
+    }
+}

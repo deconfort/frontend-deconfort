@@ -21,6 +21,7 @@
     width: 100%;
     gap: 1.5rem;
     flex-wrap: wrap;
+    margin-bottom: 1rem;
 }
 
 .foto-detail{
@@ -46,4 +47,5 @@
 .texto{
     display: flex;
     flex-direction: column;
+    gap: 1rem;
 }

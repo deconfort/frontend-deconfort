@@ -47,7 +47,7 @@ export default function Favorite(props) {
     }
 
     return (
-        <>
+        <div>
             {favs.success &&
                 favs.data.map((reaction) => {
                     let res = reaction.userId.find(user => user._id === idUser)
@@ -63,6 +63,6 @@ export default function Favorite(props) {
                     ))
                 })
             }
-        </>
+        </div>
     )
 }
