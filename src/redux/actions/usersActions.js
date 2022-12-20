@@ -68,7 +68,7 @@ const getUser = createAsyncThunk("getUser", async (id) => {
       response: res.data.response,
     };
   } catch (error) {
-    console.log(error);
+
     return {
       success: false,
       response: "ocurrió un error",

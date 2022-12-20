@@ -2,18 +2,16 @@ import "./style.css";
 import "./Payments.css";
 import axios from "axios";
 import React, { useEffect, useRef, useState } from "react";
-import apiUrl from "../../api/url";
+import apiUrl from "../../url";
 import { useDispatch, useSelector } from "react-redux";
 import cartActions from "../../redux/actions/cartActions";
 import userActions from "../../redux/actions/usersActions"
-import Footer from "../../layouts/Footer";
 import paymentBanner from '../../image/PaymentsBanner.png'
 
 
 export default function Payments() {
   const { changeAmount } = cartActions;
   const {getUser}= userActions
-  const [reload, setReload] = useState(false);
   const [products, setProducts] = useState([]);
 
   const { idUser, token, user } = useSelector((state) => state.user);
@@ -24,19 +22,22 @@ export default function Payments() {
     dispatch(getUser(idUser));
 
     // eslint-disable-next-line
-  }, [reload]);
+  }, []);
 
   async function getProducts() {
-    await axios
-      .get(`${apiUrl}api/shopping?userId=${idUser}`)
-      .then((res) => setProducts(res.data.productsCart));
-    setReload(!reload);
+    try {
+      let res = await axios.get(`${apiUrl}api/shopping?userId=${idUser}`);
+      setProducts(res.data.productsCart);
+    } catch (error) {
+      
+    }
   }
 
   async function deleteProduct(id) {
     let headers = { headers: { Authorization: `Bearer ${token}` } };
     try {
       await axios.delete(`${apiUrl}api/shopping/${id}`, headers);
+      getProducts()
     } catch (error) {
       console.log(error);
     }
@@ -60,15 +61,22 @@ export default function Payments() {
     initialprice
   );
 
-  function add(info) {
-    dispatch(changeAmount(info));
-    getProducts();
-    setReload(!reload);
+  async function add(info) {
+    try {
+      await dispatch(changeAmount(info));
+      getProducts();
+    } catch (error) {
+      console.log(error)
+    }
+    
   }
-  function del(info) {
-    dispatch(changeAmount(info));
-    getProducts();
-    setReload(!reload);
+  async function del(info) {
+    try {
+      await dispatch(changeAmount(info));
+      getProducts();
+    } catch (error) {
+      console.log(error)
+    }
   }
   async function sendForm(event) {
     event.preventDefault();
