@@ -1,4 +1,4 @@
-.card-change-color {
+    .card-change-color {
     position: relative;
     width: 320px;
     height: 480px;
@@ -106,6 +106,14 @@
 .more-and-buy {
     padding: 10px 10px;
     background: #31394e;
+    color: #fff;
+    border-radius: 6mm;
+    cursor: pointer;
+    border: none;
+}
+.more-and-buy-off {
+    padding: 10px 10px;
+    background: #6b6e77;
     color: #fff;
     border-radius: 6mm;
     cursor: pointer;

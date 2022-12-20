@@ -10,6 +10,8 @@ import Swal from "sweetalert2";
 export default function ProductCategory() {
   const { idUser, token } = useSelector((state) => state.user);
   let [products, setProducts] = useState([]);
+  const [cartProduct, setCartProduct] = useState([]);
+  const [reload, setReload] = useState(false);
 
 
   useEffect(() => {
@@ -17,6 +19,19 @@ export default function ProductCategory() {
       .get(`${apiUrl}api/products?category=blankets`)
       .then((res) => setProducts(res.data.response));
   }, []);
+
+  useEffect(() => {
+    getCartProduct();
+    // eslint-disable-next-line
+  }, [reload]);
+
+  async function getCartProduct() {
+    try {
+      let res = await axios.get(`${apiUrl}api/shopping?userId=${idUser}`);
+      setCartProduct(res.data.productsCart);
+    } catch (error) {      
+    }
+  }
 
 
   return (
@@ -42,9 +57,8 @@ export default function ProductCategory() {
                 title: res.data.message,
                 showConfirmButton: true,
               });
+              setReload(!reload)
             }
-              
-            console.log(res);
           } catch (error) {
             Swal.fire({
               icon: "warning",
@@ -52,14 +66,14 @@ export default function ProductCategory() {
               iconColor: "#5c195d",
               title: error.response.data.message,
               showConfirmButton: true,
-            });
-          
+            });   
             console.log(error);
           }
         }
+        let cart = cartProduct.find((cart) => cart.productId === item._id);
         return (
           <CardChangeColor
-           onClick={() => {
+            onClick={() => {
             if (token) {
               addToCart();
             } else {
@@ -72,6 +86,10 @@ export default function ProductCategory() {
               });
             }
           }}
+            clasess={
+              cart ? ('more-and-buy-off icon-cart')
+              : ('more-and-buy icon-cart')
+            }
             name={item.name}
             photo={item.photo}
             category={item.category}
