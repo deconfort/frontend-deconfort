@@ -32,7 +32,7 @@ export default function Profile() {
               <NavLink to="/myfavs" className="linkNav">
               <div>
                 <p className="num">🤍</p>
-                <p>My Favorites</p>
+                <p>My Favourites</p>
               </div>
               </NavLink>
               <NavLink to="/editprofile"className="linkNav">
