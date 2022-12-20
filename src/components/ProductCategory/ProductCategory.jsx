@@ -1,4 +1,4 @@
-import React, { useRef, useEffect, useState } from "react";
+import React, {  useEffect, useState } from "react";
 import CardChangeColor from "../CardChangeColor/CardChangeColor";
 import axios from "axios";
 import apiUrl from "../../url";
@@ -7,7 +7,7 @@ import {useSelector } from "react-redux";
 import Swal from "sweetalert2";
 
 export default function ProductCategory() {
-   const { idUser } = useSelector((state) => state.user);
+   const { idUser, token } = useSelector((state) => state.user);
   let [products, setProducts] = useState([]);
 
   useEffect(() => {
@@ -58,7 +58,19 @@ export default function ProductCategory() {
 
         return (
           <CardChangeColor
-            onClick={addToCart}
+            onClick={() => {
+              if (token) {
+                addToCart();
+              } else {
+                Swal.fire({
+                  icon: "warning",
+                  confirmButtonColor: "#5c195d",
+                  iconColor: "#5c195d",
+                  title: "You have to registered to add this product to your cart",
+                  showConfirmButton: true,
+                });
+              }
+            }}
             name={item.name}
             photo={item.photo}
             category={item.category}

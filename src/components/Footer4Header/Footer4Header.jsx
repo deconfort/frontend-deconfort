@@ -7,7 +7,7 @@ export default function Footer4Header() {
         <div className='button-catalogue'>View all catalogue</div>
         <div className='column'>
           <h2>Furniture for your home</h2>
-          <p>make your home the most comfortable place in the world</p>
+          <p>Make your home the most comfortable place in the world</p>
         </div>
     </div>
   )
