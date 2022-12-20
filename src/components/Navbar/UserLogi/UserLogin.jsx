@@ -6,7 +6,6 @@ import { useSelector, useDispatch } from "react-redux";
 import usersActions from "../../../redux/actions/usersActions";
 import Swal from "sweetalert2";
 import { useNavigate } from 'react-router-dom';
-import cart from '../../../image/logoCarrito.png'
 import { Link } from 'react-router-dom'
 
 export default function UserLogin() {
