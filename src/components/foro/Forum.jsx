@@ -10,7 +10,6 @@ export default function Forum() {
 
   const [open2, setOpen2] = useState(false);
   const { idUser, token } = useSelector((state) => state.user);
-console.log(token);
   const dispatch = useDispatch();
   let [reload, setReload] = useState(true);
   const { getComment, deleteComment, editComment } = commentsAction;
@@ -69,7 +68,6 @@ console.log(token);
       }
     });
   }
-  console.log(comments);
   async function getMyComments() {
     let res = await dispatch(getComment());
     setComments(res.payload.comments);

@@ -37,6 +37,36 @@ export default function AllProducts() {
     }
   }
 
+  async function deleteProduct(id) {
+    try {
+      let res = await axios.delete(`${apiUrl}api/products/${id}`, {
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
+      });
+      console.log(res)
+      if (res.data.success) {
+        Swal.fire({
+          icon: "warning",
+          confirmButtonColor: "#5c195d",
+          iconColor: "#5c195d",
+          title: res.data.message,
+          showConfirmButton: true,
+        });
+        setReload(!reload)
+      }
+    } catch (error) { 
+      Swal.fire({
+        icon: "warning",
+        confirmButtonColor: "#5c195d",
+        iconColor: "#5c195d",
+        title: "You must be the creator of this product to delete it",
+        showConfirmButton: true,
+      });
+      console.log(error);
+    }
+  }
+
   let filter = () => {
     let text = search.current.value;
     let selectFil = select.current.value;
@@ -145,6 +175,9 @@ export default function AllProducts() {
                   cart ? ('more-and-buy-off icon-cart')
                   : ('more-and-buy icon-cart')
                 }
+                onClick2={()=>{
+                  deleteProduct(item._id)
+                }}
                 name={item.name}
                 photo={item.photo[0]}
                 category={item.category}
