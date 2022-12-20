@@ -101,8 +101,8 @@ export default function Payments() {
       <main>
         <section class="checkout-form">
           <form onSubmit={sendForm} ref={information}>
-            <h6>Contact information</h6>
             <div class="form-control">
+            <h6>Contact information</h6>
               <label for="checkout-name">Name</label>
               <div>
                 <span class="fa fa-user-circle"></span>
@@ -114,8 +114,8 @@ export default function Payments() {
                   ref={name}
                 />
               </div>
-            </div>
-            <div class="form-control">
+           {/*  </div> */}
+           {/*  <div class="form-control"> */}
               <label for="checkout-email">Last Name</label>
               <div>
                 <span class="fa fa-envelope"></span>
@@ -127,8 +127,8 @@ export default function Payments() {
                   ref={lastName}
                 />
               </div>
-            </div>
-            <div class="form-control">
+           {/*  </div> */}
+           {/*  <div class="form-control"> */}
               <label for="checkout-phone">Phone</label>
               <div>
                 <span class="fa fa-phone"></span>
@@ -140,10 +140,10 @@ export default function Payments() {
                   ref={phone}
                 />
               </div>
-            </div>
+            {/* </div> */}
             <br />
             <h6>Shipping address</h6>
-            <div class="form-control">
+            {/* <div class="form-control"> */}
               <label for="checkout-address">Address</label>
               <div>
                 <span class="fa fa-home"></span>
@@ -155,8 +155,8 @@ export default function Payments() {
                   ref={adress}
                 />
               </div>
-            </div>
-            <div class="form-control">
+            {/* </div> */}
+            {/* <div class="form-control"> */}
               <label for="checkout-city">State</label>
               <div>
                 <span class="fa fa-building"></span>
@@ -168,9 +168,9 @@ export default function Payments() {
                   ref={state}
                 />
               </div>
-            </div>
-            <div class="form-group">
-              <div class="form-control">
+           {/*  </div> */}
+           {/*  <div class="form-group"> */}
+              {/* <div class="form-control"> */}
                 <label for="checkout-country">Country</label>
                 <div>
                   <span class="fa fa-globe"></span>
@@ -182,7 +182,7 @@ export default function Payments() {
                     ref={country}
                   />
                 </div>
-              </div>
+            {/*   </div> */}
             </div>
             <div class="form-control-btn">
             <button
@@ -229,6 +229,13 @@ export default function Payments() {
                       <img src={item.photo} alt="" />
                     </div>
                     <div class="card-details">
+                    <button className="buttonDeletePayments"
+                        onClick={() => {
+                          deleteProduct(item._id);
+                        }}
+                      >
+                      <img className="imgDeletePayments" src="https://cdn-icons-png.flaticon.com/128/665/665304.png" alt="delete" />
+                      </button>
                       <div class="card-name">{item.name}</div>
                       <div class="card-price">${item.price * item.amount}</div>
                       <div class="card-wheel">
@@ -262,13 +269,7 @@ export default function Payments() {
                           +
                         </button>
                       </div>
-                      <button className="buttonDeletePayments"
-                        onClick={() => {
-                          deleteProduct(item._id);
-                        }}
-                      >
-                       Delete
-                      </button>
+                      
                     </div>
                   </div>
                 );
