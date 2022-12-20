@@ -2,7 +2,7 @@ import Details from '../../components/Details/Details'
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import apiUrl from '../../api/url';
+import apiUrl from '../../url';
 import Swal from "sweetalert2";
 import { useSelector } from 'react-redux';
 
