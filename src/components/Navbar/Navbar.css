@@ -85,3 +85,7 @@ margin-right: 1rem;
   color: black;
   text-decoration: none;
 }
+
+.back-transparent-navbar{
+  background-color: rgba(250, 247, 247, 0.623) !important;
+}
