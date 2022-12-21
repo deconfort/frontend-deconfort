@@ -1,0 +1,75 @@
+.row-contain3{
+    height: 320px;
+    margin: 50px 0px 0px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 1rem;
+}
+.container-item3{
+    color: white;
+    font-size: 34px;
+}
+
+.container-item3:hover{
+    opacity: 0.7;
+    cursor: pointer;
+    transform: scale(1.1);
+    transition: 0.5s ease-out;
+}
+
+.left-item3{
+    width: 400px;
+    height: 100%;
+    background-image: linear-gradient(rgba(189, 176, 176, 0.329), rgba(10, 10, 1, 0.5)),url('https://www.comfortfurniture.com.sg/blog/wp-content/uploads/2022/09/how-to-choose-the-right-dining-table-comfort-furniture-singapore.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mid-item3{
+    width: 400px;
+    height: 100%;
+    background-image: linear-gradient(rgba(189, 176, 176, 0.329), rgba(10, 10, 1, 0.5)),url('https://ctl.s6img.com/society6/img/GGWdFGqXsJFth0nH6TBdyksbo2I/w_1500/throw-blankets/small/lifestyle/~artwork,fw_5534,fh_6504,fx_551,fy_435,iw_4422,ih_5628/s6-original-art-uploads/society6/uploads/misc/08a80916633741f7a7c81d729299cd39/~~/live-laugh-love444723-throw-blankets.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+}
+
+
+.right-item3{
+    width: 400px;
+    height: 100%;
+    background-image: linear-gradient(rgba(189, 176, 176, 0.329), rgba(10, 10, 1, 0.5)),url('https://cdn.shopify.com/s/files/1/0082/3679/3907/products/0001164_bray-rust_1200x1200.png?v=1662810930');
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@media screen and (max-width:1290px){
+    .left-item3, .right-item3, .mid-item3{
+        width: 360px;
+    }
+}
+@media screen and (max-width:755px){
+    .row-contain3{
+        flex-direction: column;
+        height: auto;
+    }
+    .container-item3{
+        width: 100%;
+        height: 320px;
+    }
+    .left-item3, .mid-item3{
+        background-position: center;
+    }
+    .right-item3{
+        background-position: bottom;
+    }
+}

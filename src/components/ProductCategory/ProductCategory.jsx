@@ -102,7 +102,18 @@ export default function ProductCategory() {
           <CardChangeColor
             onClick={() => {
               if (token) {
-                addToCart();
+                if (item.stock > 0) {
+                  addToCart();
+                } else {
+                  Swal.fire({
+                    icon: "warning",
+                    confirmButtonColor: "#5c195d",
+                    iconColor: "#5c195d",
+                    title:
+                      "At the moment we do not have stock of this product",
+                    showConfirmButton: true,
+                  });
+                }
               } else {
                 Swal.fire({
                   icon: "warning",

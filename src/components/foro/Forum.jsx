@@ -8,6 +8,11 @@ import Swal from "sweetalert2";
 import ComponentModal from "../Modal/Modal";
 
 /* import 'boostrap/dist/css/bootsrap.css' */
+import apiUrl from "../../url";
+import axios from "axios";
+import { Link } from "react-router-dom";
+
+// import Reaction from "../Reaction/Reaction"
 
 export default function Forum() {
   const [open2, setOpen2] = useState(false);
@@ -21,7 +26,7 @@ export default function Forum() {
     open2 ? setOpen2(false) : setOpen2(true);
   };
   useEffect(() => {
-    getMyComments();
+    getComments();
     // eslint-disable-next-line
   }, [reload]);
 
@@ -38,7 +43,9 @@ export default function Forum() {
       comment: comment.current.value,
       photo: photo.current.value,
       date: new Date(),
+      date: new Date(),
     };
+
     Swal.fire({
       icon: "question",
       title: " Do you want to post a comment?",
@@ -71,7 +78,7 @@ export default function Forum() {
       photo.current.value = "";
     });
   }
-  async function getMyComments() {
+  async function getComments() {
     let res = await dispatch(getComment());
     setComments(res.payload.comments);
   }
@@ -117,6 +124,43 @@ export default function Forum() {
     });
   }
 
+  async function reportComment(id) {
+    let headers = { headers: { Authorization: `Bearer ${token}` } };
+    Swal.fire({
+      icon: "question",
+      title: "Are you sure?",
+      showConfirmButton: true,
+      iconColor: "#5c195d",
+      confirmButtonColor: "#5c195d",
+      confirmButtonText: "Yes",
+      showCancelButton: true,
+    }).then(async (result) => {
+      if (result.isConfirmed) {
+        try {
+          let res = await axios.put(
+            `${apiUrl}api/comments/reports/${id}`,
+            null,
+            headers
+          );
+          if (res.data.success) {
+            Swal.fire({
+              icon: "success",
+              title: "Reported",
+              iconColor: "#5c195d",
+              confirmButtonColor: "#5c195d",
+              text: res.data.message,
+              showConfirmButton: false,
+              timer: 2000,
+            });
+            setReload(!reload);
+          }
+        } catch (error) {
+          console.log(error);
+        }
+      }
+    });
+  }
+
   return (
     
     <div className="containerAllForum">
@@ -146,8 +190,12 @@ export default function Forum() {
           Send comment
         </button>
       </form>
-
+      <Link to="/forum/commentsreported">
+      <button>view comments reported</button>
+      </Link>
+      
       <div className="containerAllCards">
+        
         {comments?.map((item) => {
           function deleteFunc() {
             Swal.fire({
@@ -165,10 +213,17 @@ export default function Forum() {
               setReload(!reload);
             });
           }
+          console.log(comments);
+          let commentReported = item.reports.find((report) =>
+            report.includes(idUser)
+          );
+          console.log(commentReported);
           return (
             <div className="containerCardsComments">
               <p className="dateForum">{`${new Date(
+                
                 item.date
+              
               ).toLocaleDateString()}`}</p>
               <img className="imgForum" src={item.photo} alt="Happy" />
               <p className="textForum">{item.comment}</p>
@@ -221,7 +276,14 @@ export default function Forum() {
                     </div>
                   </>
                 ) : (
-                  <ComponentModal name={item._id}/>
+                  <button
+                    className="buttonForum"
+                    onClick={() => {
+                      reportComment(item._id);
+                    }}
+                  >
+                    {commentReported ? "Removed reported" : "Report comment"}
+                  </button>
                 )}
               </div>
             </div>
