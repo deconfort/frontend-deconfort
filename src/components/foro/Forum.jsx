@@ -276,15 +276,17 @@ export default function Forum() {
                     </div>
                   </>
                 ) : (
-                  <button
+                  <ComponentModal name={item._id}/>
+                  )}
+                  {/* <ComponentModal
                     className="buttonForum"
                     onClick={() => {
                       reportComment(item._id);
                     }}
                   >
                     {commentReported ? "Removed reported" : "Report comment"}
-                  </button>
-                )}
+                  </ComponentModal> */}
+               
               </div>
             </div>
           );

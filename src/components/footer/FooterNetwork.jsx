@@ -2,7 +2,7 @@ import React from 'react'
 import './footer.css'
 import logoinst from '../../image/logoinst.png'
 import logowsp from '../../image/logowsp.png'
-import logoface from '../../image/logoFace.png'
+import logoface from '../../image/logoface.png'
 
 
 export default function FooterNtework() {
