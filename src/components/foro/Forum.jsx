@@ -272,7 +272,7 @@ export default function Forum() {
                     </div>
                   </>
                 ) : (
-                  <ComponentModal name={item._id}/>
+                  <ComponentModal name={item.comment}/>
                   )}
                   {/* <ComponentModal
                     className="buttonForum"
