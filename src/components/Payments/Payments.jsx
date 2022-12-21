@@ -218,6 +218,7 @@ export default function Payments() {
                     },
                   }
                 );
+                console.log(response);
                 window.open(response.data.init_point, "_blank");
               }}
             >
