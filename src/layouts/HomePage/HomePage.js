@@ -10,7 +10,7 @@ import Footer4Header from '../../components/Footer4Header/Footer4Header'
 function HomePage() {
   return (
     <div className="main-home-page">
-      <div className="test"></div>
+      <div className="background-home"></div>
       <div className="container-homepage">
         <Footer4Header />
         <div className="container-home-main">

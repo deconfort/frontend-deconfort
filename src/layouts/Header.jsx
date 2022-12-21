@@ -25,7 +25,6 @@ export default function Header() {
           <UserLogin></UserLogin>
         </div>
       </div>
-      
     </div>
   );
 }
