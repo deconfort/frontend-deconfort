@@ -190,9 +190,9 @@ export default function Forum() {
           Send comment
         </button>
       </form>
-      <Link to="/forum/commentsreported">
+      {/* <Link to="/forum/commentsreported">
       <button>view comments reported</button>
-      </Link>
+      </Link> */}
       
       <div className="containerAllCards">
         
@@ -220,11 +220,7 @@ export default function Forum() {
           console.log(commentReported);
           return (
             <div className="containerCardsComments">
-              <p className="dateForum">{`${new Date(
-                
-                item.date
-              
-              ).toLocaleDateString()}`}</p>
+              <p className="dateForum">{`${new Date(item.date).toLocaleDateString()}`}</p>
               <img className="imgForum" src={item.photo} alt="Happy" />
               <p className="textForum">{item.comment}</p>
               {/* <Reaction commentId={item.comment._id}/> */}
