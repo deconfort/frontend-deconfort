@@ -9,6 +9,24 @@
     justify-content: center;
     align-items: center;
 }
+.tittleComentToReport{
+    margin-bottom: 0;
+    padding-top: 0;
+    text-align: center;
+    font-weight: bolder;
+}
+.commentToReport{
+    text-align: center;
+    margin-top: 0;
+    padding-top: 0;
+    margin-bottom: 0;
+}
+.textAreaModalComment{
+    width: 100%;
+    min-height: auto;
+    border: none;
+    text-align: center;
+}
 .spaceModal{
     border-bottom: 1px solid #c6c6c6;
     width: 100%;
