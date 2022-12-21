@@ -66,6 +66,8 @@ export default function Forum() {
           });
         }
       }
+      comment.current.value="";
+      photo.current.value=""
     });
   }
   async function getMyComments() {
