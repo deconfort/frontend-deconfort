@@ -46,14 +46,15 @@ export default function AllProducts() {
       });
       console.log(res);
       if (res.data.success) {
+        deleteFavs(id)
         Swal.fire({
           icon: "warning",
           confirmButtonColor: "#5c195d",
           iconColor: "#5c195d",
           title: res.data.message,
           showConfirmButton: true,
-        });
-        setReload(!reload);
+        });       
+        setReload(!reload);   
       }
     } catch (error) {
       Swal.fire({
@@ -64,6 +65,16 @@ export default function AllProducts() {
         showConfirmButton: true,
       });
       console.log(error);
+    }
+  }
+
+  async function deleteFavs(id){
+    console.log(id)
+    try {
+      let res = await axios.put(`${apiUrl}api/favs/delete/${id}`)
+      console.log(res.data)
+    } catch (error) {
+      console.log(error)
     }
   }
 
