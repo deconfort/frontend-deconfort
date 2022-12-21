@@ -5,6 +5,9 @@ import { useState, useEffect, useRef } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import commentsAction from "../../redux/actions/commentAction";
 import Swal from "sweetalert2";
+import ComponentModal from "../Modal/Modal";
+
+/* import 'boostrap/dist/css/bootsrap.css' */
 import apiUrl from "../../url";
 import axios from "axios";
 import { Link } from "react-router-dom";
@@ -40,8 +43,9 @@ export default function Forum() {
       comment: comment.current.value,
       photo: photo.current.value,
       date: new Date(),
+      date: new Date(),
     };
-    console.log(newComment.date);
+
     Swal.fire({
       icon: "question",
       title: " Do you want to post a comment?",
@@ -70,8 +74,8 @@ export default function Forum() {
           });
         }
       }
-      comment.current.value="";
-      photo.current.value=""
+      comment.current.value = "";
+      photo.current.value = "";
     });
   }
   async function getComments() {
@@ -158,6 +162,7 @@ export default function Forum() {
   }
 
   return (
+    
     <div className="containerAllForum">
       <img className="forumBanner" src={ForumBanner} alt="Forum banner" />
       <form className="formForum" onSubmit={newComment} ref={information}>
@@ -181,13 +186,13 @@ export default function Forum() {
             ref={comment}
           />
         </label>
-        <button className="ButtonCommentForm" type="submit">
+        <button className="ButtonSendCommentForm" type="submit">
           Send comment
         </button>
       </form>
-      <Link to="/forum/commentsreported">
+      {/* <Link to="/forum/commentsreported">
       <button>view comments reported</button>
-      </Link>
+      </Link> */}
       
       <div className="containerAllCards">
         
@@ -215,9 +220,7 @@ export default function Forum() {
           console.log(commentReported);
           return (
             <div className="containerCardsComments">
-              <p className="dateForum">{`${new Date(
-                item.date
-              ).toLocaleDateString()}`}</p>
+              <p className="dateForum">{`${new Date(item.date).toLocaleDateString()}`}</p>
               <img className="imgForum" src={item.photo} alt="Happy" />
               <p className="textForum">{item.comment}</p>
               {/* <Reaction commentId={item.comment._id}/> */}
@@ -269,15 +272,17 @@ export default function Forum() {
                     </div>
                   </>
                 ) : (
-                  <button
+                  <ComponentModal name={item._id}/>
+                  )}
+                  {/* <ComponentModal
                     className="buttonForum"
                     onClick={() => {
                       reportComment(item._id);
                     }}
                   >
                     {commentReported ? "Removed reported" : "Report comment"}
-                  </button>
-                )}
+                  </ComponentModal> */}
+               
               </div>
             </div>
           );
