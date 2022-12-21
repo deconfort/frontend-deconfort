@@ -38,6 +38,7 @@
   height: 50px;
   object-fit: contain;
   border-radius: 50%;
+  background-color: black;
 }
 .userForum {
   display: flex;
