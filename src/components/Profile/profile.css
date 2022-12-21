@@ -82,7 +82,7 @@
 
 }
 .photo-user{
-    object-fit: cover;
+    object-fit: contain;
 }
 .labelProfile{
     font-size: 13px;

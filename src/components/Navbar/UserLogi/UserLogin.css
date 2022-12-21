@@ -48,11 +48,11 @@
   gap: 5px;
 }
 .photo-user{
-  width: 40px;
-  height: 40px;
+  width: 43px;
+  height: 43px;
   border-radius: 50%;
-  object-fit: cover;
- 
+  object-fit: contain;
+  background-color: black;
 }
 
 .btnDespl {
