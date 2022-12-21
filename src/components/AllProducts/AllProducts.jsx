@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import CardChangeColor from "../CardChangeColor/CardChangeColor";
 import "./allProducts.css";
+import "../FilterProducts/filterProducts.css"
 import productAction from "../../redux/actions/productAction";
 import { useDispatch, useSelector } from "react-redux";
 import axios from "axios";

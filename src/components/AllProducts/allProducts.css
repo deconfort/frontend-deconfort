@@ -18,3 +18,19 @@
     justify-content: end;
     margin-right: 5rem;
 }
+.filter-products{
+    width: 88%;
+    padding: 22px 16px;
+    border-top:1px solid rgb(101,76,59);
+    border-bottom:1px solid rgb(101,76,59);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px 0px;
+    flex-wrap: wrap;
+}
+.container-filters{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}

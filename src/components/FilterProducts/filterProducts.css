@@ -6,8 +6,8 @@
 .filter-products{
     width: 88%;
     padding: 22px 16px;
-    border-top:1px solid rgb(101,76,59);
-    border-bottom:1px solid rgb(101,76,59);
+    border-top:1px solid #15297c;
+    border-bottom:1px solid #15297c;;
     display: flex;
     justify-content: space-between;
     align-items: center;
