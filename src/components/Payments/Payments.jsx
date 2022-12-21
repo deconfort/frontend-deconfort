@@ -218,6 +218,7 @@ export default function Payments() {
                         };
                       }),
                     };
+
                     let response = await axios.post(
                       "https://api.mercadopago.com/checkout/preferences",
                       preference,
@@ -236,6 +237,7 @@ export default function Payments() {
               </div>
             </form>
           </section>
+
 
           <section class="checkout-details">
             <div class="checkout-details-inner">
