@@ -101,7 +101,7 @@ export default function UserLogin() {
       )}
       {mostrar ? (
         <>
-          <div className="userLoginNav flex column justify-center align-center p-absolute btnDespl">
+          <div className="userLoginNav flex column justify-center align-center p-absolute btnDespl userlogin-position">
             {(user.role === "admin" || user.role === "user") && (
               <>
                 <NavLink to="/profile" className="linkNav style-profile-center">
@@ -118,7 +118,7 @@ export default function UserLogin() {
               user.role !== "user" &&
               noLogged.map((route) => (
                 <NavLink to={route.route} className="linkNav" key={route.name}>
-                  <h3 className="registerStyle Li-Navbar ">{route.name}</h3>
+                  <h3 className="registerStyle Li-Navbar">{route.name}</h3>
                 </NavLink>
               ))}
           </div>
