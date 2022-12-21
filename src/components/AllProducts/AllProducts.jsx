@@ -9,6 +9,7 @@ import apiUrl from "../../url";
 import { Link } from 'react-router-dom'
 import Swal from "sweetalert2";
 import { useNavigate } from "react-router-dom";
+import CardNotFound from "../CardChangeColor/CardNotFound/CardNotFound";
 
 
 export default function AllProducts() {
@@ -116,8 +117,8 @@ export default function AllProducts() {
           ) : null}      
       <div className="check-filter-cards">
         {/* <Checkboxes /> */}
-        <div className="cards-all-products">
-          {products?.map((item) => {
+        <div className="cards-all-products">        
+          {products.length > 0 ? (products?.map((item) => {
             async function addToCart() {
               let product = {
                 name: item.name,
@@ -185,9 +186,11 @@ export default function AllProducts() {
                 price={item.price}
                 id={item._id}
                 key={item._id}
-              />
+              /> 
             );
-          })}
+          })) : <CardNotFound/>
+          
+          } 
         </div>
       </div>
     </div>
