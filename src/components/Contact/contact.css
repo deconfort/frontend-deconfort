@@ -39,6 +39,15 @@
     height: 30px;
     margin-top: 0.5rem;
 }
+.textAreaMessagge{
+    width: 100%;
+    height: 5rem;
+    margin-top: 0.5rem;
+}
+.textAreaMessagge::placeholder{
+    color: #52646a;
+    padding: 0.5rem;
+}
 .inputContact::placeholder{
     color: #52646a;
     padding: 0.5rem;
@@ -61,6 +70,7 @@
 }
 .buttonContactForm:hover{
     background-color:  #c3acbe;
+    border: none;
 }
 @media screen and (max-width: 800px) {
     .formContact {
