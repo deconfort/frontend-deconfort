@@ -6,7 +6,6 @@ import { useSelector, useDispatch } from "react-redux";
 import usersActions from "../../../redux/actions/usersActions";
 import Swal from "sweetalert2";
 import { useNavigate } from 'react-router-dom';
-import cart from '../../../image/logoCarrito.png'
 import { Link } from 'react-router-dom'
 
 export default function UserLogin() {
@@ -51,11 +50,32 @@ export default function UserLogin() {
       route: "/login",
     },
   ];
+
   return (
     <div className='containerLoginCartandUser'>
-    <Link to='/payments'>
+      {user.role === "admin" || user.role === "user" && (
+      <Link to={'/payments'}>
         <img className="logoCart" src='https://cdn-icons-png.flaticon.com/512/107/107831.png' alt="logo cart" />
       </Link>
+      )}
+      {user.role !== "admin" && user.role !== "user" && (
+          <img className="logoCart" src='https://cdn-icons-png.flaticon.com/512/107/107831.png' alt="logo cart" onClick={()=> {
+          Swal.fire({
+            icon: "question",
+            title: "You must be logged in to access the cart",
+            showConfirmButton: true,
+            iconColor: "#5c195d",
+            confirmButtonColor: "#5c195d",
+            confirmButtonText: "Go to Login",
+            showCancelButton: true,
+          })
+          .then((result) => {
+            if (result.isConfirmed) {
+              navegation(`/login`);
+            }
+          });
+        }} />
+      )}
     <div className="containerUserLogin">
       {(user.role === "admin" || user.role === "user") && (
         <h3

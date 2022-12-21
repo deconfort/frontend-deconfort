@@ -1,29 +1,32 @@
 .logoCart{
-  width: 50px;
-    height: 50px;
-    margin-top: 1.7rem;
+  width: 48px;
+    height: 48px;
+    margin-top: 2rem;
     margin-right: 0.7rem;
 }
 .containerLoginCartandUser{
   display: flex;
   flex-wrap: wrap;
   gap: 1rem;
+  margin-top: 1.5rem;
 }
 
-@media screen and (max-width: 735px) {
-    .userLoginNav{
+@media screen and (max-width: 662px) {
+    .containerLoginCartandUser{
         display: flex;
         align-items: center;
         justify-content: center;
-        width: 99%;
+        width: 100%;
+        padding-left: 4rem;
     }
   }
+
   .linkNav{
     text-decoration: none;
     color: #000000b3;
   }
   .linkNav:hover{
-    color: rgb(101,76,59);
+    color: #15297c;
   }
   
   .flex{
@@ -72,13 +75,4 @@
 } */
 .containerUserLogin{
 margin-top: 2rem;
-}
-@media screen and (max-width: 585px){
-  .containerUserLogin{
-    display: flex;
-    align-content: center;
-    justify-content: center;
-    width: 100%;
-    padding-left: 4rem;
-  }
 }

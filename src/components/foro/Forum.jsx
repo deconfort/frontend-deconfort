@@ -10,7 +10,6 @@ export default function Forum() {
 
   const [open2, setOpen2] = useState(false);
   const { idUser, token } = useSelector((state) => state.user);
-console.log(token);
   const dispatch = useDispatch();
   let [reload, setReload] = useState(true);
   const { getComment, deleteComment, editComment } = commentsAction;
@@ -36,8 +35,9 @@ console.log(token);
       userId: idUser,
       comment: comment.current.value,
       photo: photo.current.value,
-      date: new Date(),
+      date: new Date()
     };
+    console.log(newComment.date)
     Swal.fire({
       icon: "question",
       title: " Do you want to post a comment?",
@@ -68,7 +68,6 @@ console.log(token);
       }
     });
   }
-  console.log(comments);
   async function getMyComments() {
     let res = await dispatch(getComment());
     setComments(res.payload.comments);
@@ -82,7 +81,7 @@ console.log(token);
       photo: photo.current.value,
       date: new Date(),
     };
-
+    console.log(edit.date)
     Swal.fire({
       icon: "question",
       title: " Do you want to edit this comment?",
@@ -114,6 +113,7 @@ console.log(token);
       }
     });
   }
+
   return (
     <div className="containerAllForum">
       <img className="forumBanner" src={ForumBanner} alt="Forum banner" />
@@ -163,7 +163,7 @@ console.log(token);
           }
           return (
             <div className="containerCardsComments">
-              <p className="dateForum">{item.date}</p>
+              <p className="dateForum">{`${new Date(item.date).toLocaleDateString()}`}</p>
               <img className="imgForum" src={item.photo} alt="Happy" />
               <p className="textForum">{item.comment}</p>
               {/* <Reaction commentId={item.comment._id}/> */}

@@ -27,12 +27,14 @@ import ProductCushions from "./components/ProductCushions/ProductCushions";
 import ProductDiffuser from "./components/ProductDiffuser/ProductDiffuser";
 import ProductMirrors from "./components/ProductsMirrors/ProductMirrors";
 import ProductBlankets from './components/ProductBlankets/ProductBlankets';
+import ProductChairs from './components/ProductChairs/ProductChairs';
 import EditProfile from "./components/Profile/EditProfile"
 import Payments from './components/Payments/Payments';
 import Detail from './layouts/Detail/Detail';
 import AllProducts from './components/AllProducts/AllProducts';
 import MyFavs from './layouts/MyFavs';
 import BackToTop from './components/BackToTopButton';
+import AboutUs from './components/AboutUs/AboutUs';
 
    
 function App() {
@@ -59,6 +61,7 @@ function App() {
       <Route path="/faqs" element={<Faqs/>}/>
       <Route path="/locals" element={<Locals/>}/>
       <Route path="/contact" element={<Contact/>}/>
+      <Route path='/aboutus' element={<AboutUs/>}/>
       <Route path="/forum" element={<Forum/>}/>
       <Route path="/login" element={<LoginLayout/>}/>
       <Route path="/register" element={<Register/>}/>
@@ -76,6 +79,7 @@ function App() {
       <Route path="/productDiffuser" element={<ProductDiffuser/>}/>
       <Route path="/productMirrors" element={<ProductMirrors/>}/>
       <Route path="/productBlankets" element={<ProductBlankets/>}/>
+      <Route path="/productChairs" element={<ProductChairs/>}/>
       <Route path="/products/:id" element={<Detail/>}/>
       <Route path="/detail" element={<Detail/>}/>
       <Route path="/myfavs" element={<MyFavs/>}/>

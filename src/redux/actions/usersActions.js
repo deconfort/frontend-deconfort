@@ -26,7 +26,6 @@ const reEnter = createAsyncThunk("reEnter", async (token) => {
   let headers = { headers: { Authorization: `Bearer ${token}` } };
   try {
     let user = await axios.post(url, null, headers);
-
     return {
       success: true,
       response: user.data.response,
@@ -68,7 +67,7 @@ const getUser = createAsyncThunk("getUser", async (id) => {
       response: res.data.response,
     };
   } catch (error) {
-    console.log(error);
+
     return {
       success: false,
       response: "ocurrió un error",

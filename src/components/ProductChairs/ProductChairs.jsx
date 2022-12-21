@@ -7,7 +7,7 @@ import { useSelector } from "react-redux";
 import Swal from "sweetalert2";
 
 
-export default function ProductCategory() {
+export default function ProductChairs() {
   const { idUser, token } = useSelector((state) => state.user);
   let [products, setProducts] = useState([]);
   const [cartProduct, setCartProduct] = useState([]);
@@ -16,7 +16,7 @@ export default function ProductCategory() {
 
   useEffect(() => {
     axios
-      .get(`${apiUrl}api/products?category=blankets`)
+      .get(`${apiUrl}api/products?category=chairs`)
       .then((res) => setProducts(res.data.response));
   }, []);
 

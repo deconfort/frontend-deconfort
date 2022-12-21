@@ -22,6 +22,7 @@ main .checkout-form form h6 {
 }
 main .checkout-form form .form-control {
   margin: 10px 0px;
+  padding: 1rem;
 }
 main .checkout-form form .form-control label:not([for=checkout-checkbox]) {
   display: block;
@@ -47,7 +48,7 @@ main .checkout-form form .form-control input:not([type=checkbox]):-ms-input-plac
   font-weight: 500;
 }
 main .checkout-form form .form-control input:not([type=checkbox])::placeholder {
-  font-size: 10px;
+  font-size: 12px;
   font-weight: 500;
 }
 main .checkout-form form .form-control label[for=checkout-checkbox] {
@@ -87,14 +88,14 @@ main .checkout-form form .form-control-btn button {
   cursor: pointer;
 }
 main .checkout-details {
-  width: 40%;
+  width: 60%;
 }
 main .checkout-details .checkout-details-inner {
   background: #F2F2F2;
   border-radius: 10px;
   padding: 20px;
   overflow-y: scroll;
-  height: 475px;
+  height: 402px;
 }
 main .checkout-details .checkout-details-inner .checkout-lists {
   display: flex;
@@ -105,36 +106,39 @@ main .checkout-details .checkout-details-inner .checkout-lists {
 main .checkout-details .checkout-details-inner .checkout-lists .card {
   width: 100%;
   display: flex;
-  -moz-column-gap: 15px;
-       column-gap: 15px;
+  -moz-column-gap: 25px;
+       column-gap: 25px;
        display: flex;
             justify-content: center;
             align-items: center;
             padding: 1rem;
                 width: 100%;
+                flex-direction: row;
     
-    column-gap: 15px;
+    column-gap: 25px;
 }
 main .checkout-details .checkout-details-inner .checkout-lists .card .card-image {
-  width: 35%;
+  width: 41%;
 }
 main .checkout-details .checkout-details-inner .checkout-lists .card .card-image img {
   width: 100%;
-  -o-object-fit: fill;
-     object-fit: fill;
+  height: 210px;
+  object-fit: cover;
   border-radius: 10px;
 }
 main .checkout-details .checkout-details-inner .checkout-lists .card .card-details {
   display: flex;
   flex-direction: column;
-  align-items: center
+  align-items: center;
+  width: 33%;
 }
 main .checkout-details .checkout-details-inner .checkout-lists .card .card-details .card-name {
-  font-size: 14px;
+  font-size: 19px;
   font-weight: 500;
+  text-align: center;
 }
 main .checkout-details .checkout-details-inner .checkout-lists .card .card-details .card-price {
-  font-size: 12px;
+  font-size: 16px;
   font-weight: 500;
   color: #F2994A;
   margin-top: 5px;
@@ -150,7 +154,7 @@ main .checkout-details .checkout-details-inner .checkout-lists .card .card-detai
   width: 90px;
   padding: 8px 8px;
   border-radius: 10px;
-  font-size: 12px;
+  font-size: 13px;
   display: flex;
   justify-content: space-between;
 }

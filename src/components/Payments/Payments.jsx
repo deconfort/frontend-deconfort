@@ -2,18 +2,16 @@ import "./style.css";
 import "./Payments.css";
 import axios from "axios";
 import React, { useEffect, useRef, useState } from "react";
-import apiUrl from "../../api/url";
+import apiUrl from "../../url";
 import { useDispatch, useSelector } from "react-redux";
 import cartActions from "../../redux/actions/cartActions";
 import userActions from "../../redux/actions/usersActions"
-import Footer from "../../layouts/Footer";
 import paymentBanner from '../../image/PaymentsBanner.png'
 
 
 export default function Payments() {
   const { changeAmount } = cartActions;
   const {getUser}= userActions
-  const [reload, setReload] = useState(false);
   const [products, setProducts] = useState([]);
 
   const { idUser, token, user } = useSelector((state) => state.user);
@@ -24,19 +22,22 @@ export default function Payments() {
     dispatch(getUser(idUser));
 
     // eslint-disable-next-line
-  }, [reload]);
+  }, []);
 
   async function getProducts() {
-    await axios
-      .get(`${apiUrl}api/shopping?userId=${idUser}`)
-      .then((res) => setProducts(res.data.productsCart));
-    setReload(!reload);
+    try {
+      let res = await axios.get(`${apiUrl}api/shopping?userId=${idUser}`);
+      setProducts(res.data.productsCart);
+    } catch (error) {
+      
+    }
   }
 
   async function deleteProduct(id) {
     let headers = { headers: { Authorization: `Bearer ${token}` } };
     try {
       await axios.delete(`${apiUrl}api/shopping/${id}`, headers);
+      getProducts()
     } catch (error) {
       console.log(error);
     }
@@ -60,15 +61,22 @@ export default function Payments() {
     initialprice
   );
 
-  function add(info) {
-    dispatch(changeAmount(info));
-    getProducts();
-    setReload(!reload);
+  async function add(info) {
+    try {
+      await dispatch(changeAmount(info));
+      getProducts();
+    } catch (error) {
+      console.log(error)
+    }
+    
   }
-  function del(info) {
-    dispatch(changeAmount(info));
-    getProducts();
-    setReload(!reload);
+  async function del(info) {
+    try {
+      await dispatch(changeAmount(info));
+      getProducts();
+    } catch (error) {
+      console.log(error)
+    }
   }
   async function sendForm(event) {
     event.preventDefault();
@@ -101,8 +109,8 @@ export default function Payments() {
       <main>
         <section class="checkout-form">
           <form onSubmit={sendForm} ref={information}>
-            <h6>Contact information</h6>
             <div class="form-control">
+            <h6>Contact information</h6>
               <label for="checkout-name">Name</label>
               <div>
                 <span class="fa fa-user-circle"></span>
@@ -114,8 +122,8 @@ export default function Payments() {
                   ref={name}
                 />
               </div>
-            </div>
-            <div class="form-control">
+           {/*  </div> */}
+           {/*  <div class="form-control"> */}
               <label for="checkout-email">Last Name</label>
               <div>
                 <span class="fa fa-envelope"></span>
@@ -127,8 +135,8 @@ export default function Payments() {
                   ref={lastName}
                 />
               </div>
-            </div>
-            <div class="form-control">
+           {/*  </div> */}
+           {/*  <div class="form-control"> */}
               <label for="checkout-phone">Phone</label>
               <div>
                 <span class="fa fa-phone"></span>
@@ -140,10 +148,10 @@ export default function Payments() {
                   ref={phone}
                 />
               </div>
-            </div>
+            {/* </div> */}
             <br />
             <h6>Shipping address</h6>
-            <div class="form-control">
+            {/* <div class="form-control"> */}
               <label for="checkout-address">Address</label>
               <div>
                 <span class="fa fa-home"></span>
@@ -155,8 +163,8 @@ export default function Payments() {
                   ref={adress}
                 />
               </div>
-            </div>
-            <div class="form-control">
+            {/* </div> */}
+            {/* <div class="form-control"> */}
               <label for="checkout-city">State</label>
               <div>
                 <span class="fa fa-building"></span>
@@ -168,9 +176,9 @@ export default function Payments() {
                   ref={state}
                 />
               </div>
-            </div>
-            <div class="form-group">
-              <div class="form-control">
+           {/*  </div> */}
+           {/*  <div class="form-group"> */}
+              {/* <div class="form-control"> */}
                 <label for="checkout-country">Country</label>
                 <div>
                   <span class="fa fa-globe"></span>
@@ -182,7 +190,7 @@ export default function Payments() {
                     ref={country}
                   />
                 </div>
-              </div>
+            {/*   </div> */}
             </div>
             <div class="form-control-btn">
             <button
@@ -229,6 +237,13 @@ export default function Payments() {
                       <img src={item.photo} alt="" />
                     </div>
                     <div class="card-details">
+                    <button className="buttonDeletePayments"
+                        onClick={() => {
+                          deleteProduct(item._id);
+                        }}
+                      >
+                      <img className="imgDeletePayments" src="https://cdn-icons-png.flaticon.com/128/665/665304.png" alt="delete" />
+                      </button>
                       <div class="card-name">{item.name}</div>
                       <div class="card-price">${item.price * item.amount}</div>
                       <div class="card-wheel">
@@ -262,13 +277,7 @@ export default function Payments() {
                           +
                         </button>
                       </div>
-                      <button className="buttonDeletePayments"
-                        onClick={() => {
-                          deleteProduct(item._id);
-                        }}
-                      >
-                       Delete
-                      </button>
+                      
                     </div>
                   </div>
                 );

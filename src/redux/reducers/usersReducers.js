@@ -47,7 +47,7 @@ const usersReducers = createReducer(initialState, (builder) => {
       const { success, response, token } = action.payload;
       if (success) {
         let { user } = response;
-        console.log(user.id)
+
         let newState = {
           ...state,
           name: user.name,

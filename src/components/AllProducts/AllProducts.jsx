@@ -1,27 +1,71 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import CardChangeColor from "../CardChangeColor/CardChangeColor";
 import "./allProducts.css";
 import productAction from "../../redux/actions/productAction";
 import { useDispatch, useSelector } from "react-redux";
 import axios from "axios";
-import apiUrl from "../../api/url";
+import apiUrl from "../../url";
+import { Link } from 'react-router-dom'
 import Swal from "sweetalert2";
+import { useNavigate } from "react-router-dom";
 
 
 export default function AllProducts() {
+  let navegation = useNavigate()
   const { idUser, token } = useSelector((state) => state.user);
   const dispatch = useDispatch();
   const { getProducts, getProductsFilter } = productAction;
   const { products } = useSelector((state) => state.products);
+  const {role} = useSelector((state) => state.user)
+  const [cartProduct, setCartProduct] = useState([]);
+  const [reload, setReload] = useState(false);
 
   let search = useRef();
   let select = useRef();
 
   useEffect(() => {
     dispatch(getProducts());
-
+    getCartProduct()
     // eslint-disable-next-line
-  }, []);
+  }, [reload]);
+
+  async function getCartProduct() {
+    try {
+      let res = await axios.get(`${apiUrl}api/shopping?userId=${idUser}`);
+      setCartProduct(res.data.productsCart);
+    } catch (error) {      
+    }
+  }
+
+  async function deleteProduct(id) {
+    try {
+      let res = await axios.delete(`${apiUrl}api/products/${id}`, {
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
+      });
+      console.log(res)
+      if (res.data.success) {
+        Swal.fire({
+          icon: "warning",
+          confirmButtonColor: "#5c195d",
+          iconColor: "#5c195d",
+          title: res.data.message,
+          showConfirmButton: true,
+        });
+        setReload(!reload)
+      }
+    } catch (error) { 
+      Swal.fire({
+        icon: "warning",
+        confirmButtonColor: "#5c195d",
+        iconColor: "#5c195d",
+        title: "You must be the creator of this product to delete it",
+        showConfirmButton: true,
+      });
+      console.log(error);
+    }
+  }
 
   let filter = () => {
     let text = search.current.value;
@@ -62,6 +106,13 @@ export default function AllProducts() {
           </select>
         </div>
       </div>
+      {role === "admin" ? (
+        <div className="buttonNewProduct"> 
+        <Link to='/createproduct'>
+          <button className="more-and-buy">New product</button>
+        </Link>
+        </div>
+          ) : null}      
       <div className="check-filter-cards">
         {/* <Checkboxes /> */}
         <div className="cards-all-products">
@@ -74,10 +125,8 @@ export default function AllProducts() {
                 productId: item._id,
                 userId: idUser,
               };
-              console.log(product);
               try {
                 let res = await axios.post(`${apiUrl}api/shopping`, product);
-                console.log(res);
                 if(res.data.success){
                   Swal.fire({
                     icon: "warning",
@@ -86,9 +135,8 @@ export default function AllProducts() {
                     title: res.data.message,
                     showConfirmButton: true,
                   });
+                  setReload(!reload)
                 }
-                  
-                console.log(res);
               } catch (error) {
                 Swal.fire({
                   icon: "warning",
@@ -96,13 +144,13 @@ export default function AllProducts() {
                   iconColor: "#5c195d",
                   title: error.response.data.message,
                   showConfirmButton: true,
-                });
-              
+                });   
                 console.log(error);
               }
             }
+            let cart = cartProduct.find((cart) => cart.productId === item._id);
             return (
-              <CardChangeColor
+              <CardChangeColor         
                 onClick={() => {
                   if (token) {
                     addToCart();
@@ -113,8 +161,22 @@ export default function AllProducts() {
                       iconColor: "#5c195d",
                       title: "You have to registered to add this product to your cart",
                       showConfirmButton: true,
+                      confirmButtonText: "Go to Login",
+                      showCancelButton: true,
+                    })
+                    .then((result) => {
+                      if (result.isConfirmed) {
+                        navegation(`/login`);
+                      }
                     });
                   }
+                }}
+                clasess={
+                  cart ? ('more-and-buy-off icon-cart')
+                  : ('more-and-buy icon-cart')
+                }
+                onClick2={()=>{
+                  deleteProduct(item._id)
                 }}
                 name={item.name}
                 photo={item.photo[0]}

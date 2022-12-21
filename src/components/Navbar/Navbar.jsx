@@ -69,12 +69,17 @@ function NavbarHambur(props) {
                 BLANKETS
                 </Link>
               </NavDropdown.Item>
+              <NavDropdown.Item href="" className="Li-Navbar desplegable-navbar">
+              <Link to={`productChairs`} className="list-style-none">
+                CHAIRS
+                </Link>
+              </NavDropdown.Item>
             </NavDropdown>
             <Nav.Link href="" className="Li-Navbar">
               <Link className='linkNav' to={"/locals"}>{title3}</Link>
             </Nav.Link>
             <Nav.Link href="" className="Li-Navbar">
-              {title4}
+              <Link className='linkNav' to={'/aboutus'}>{title4}</Link>
             </Nav.Link>
             <Nav.Link href="" className="Li-Navbar">
               <Link className='linkNav' to={"/faqs"}>{title5}</Link>
@@ -84,9 +89,6 @@ function NavbarHambur(props) {
             </Nav.Link>
             <Nav.Link href="" className="Li-Navbar">
               <Link className='linkNav' to={"/contact"}>{title7}</Link>
-            </Nav.Link>
-            <Nav.Link href="" className="Li-Navbar">
-              <Link className='linkNav' to={"/payments"}>CART</Link>
             </Nav.Link>
           </Nav>
         

@@ -12,10 +12,12 @@ function HomePage() {
       <div className="test"></div>
       <div className="container-homepage">
         <Footer4Header />
+        <div className="container-home-main">
         <Services />
         <RowProducts />
         <RowProducts2 />
         <ButtonSeeAll />
+        </div>
       </div>
     </div>
   );

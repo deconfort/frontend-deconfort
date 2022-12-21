@@ -1,4 +1,4 @@
-.card-change-color {
+    .card-change-color {
     position: relative;
     width: 320px;
     height: 480px;
@@ -63,7 +63,8 @@
     height: 90%;
     width: 90%;
     position: absolute;
-    bottom: 2rem;
+    bottom: 3rem;
+    object-fit: cover;
 }
 
 .info {
@@ -99,7 +100,7 @@
 
 .color-container {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around
 }
 
 .more-and-buy {
@@ -108,6 +109,18 @@
     color: #fff;
     border-radius: 6mm;
     cursor: pointer;
+    border: none;
+}
+.more-and-buy-off {
+    padding: 10px 10px;
+    background: #6b6e77;
+    color: #fff;
+    border-radius: 6mm;
+    cursor: pointer;
+    border: none;
+}
+.more-and-buy:hover{
+background-color: #142157;
 }
 
 .icon-cart {
@@ -137,6 +150,10 @@
 }
 
 .list-style-none-cardChange {
+    color: white;
+    text-decoration: none;
+  }
+  .list-style-none-cardChange:hover {
     color: white;
     text-decoration: none;
   }
