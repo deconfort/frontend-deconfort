@@ -5,9 +5,11 @@ import { useState, useEffect, useRef } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import commentsAction from "../../redux/actions/commentAction";
 import Swal from "sweetalert2";
-// import Reaction from "../Reaction/Reaction"
-export default function Forum() {
+import ComponentModal from "../Modal/Modal";
 
+/* import 'boostrap/dist/css/bootsrap.css' */
+
+export default function Forum() {
   const [open2, setOpen2] = useState(false);
   const { idUser, token } = useSelector((state) => state.user);
   const dispatch = useDispatch();
@@ -35,9 +37,8 @@ export default function Forum() {
       userId: idUser,
       comment: comment.current.value,
       photo: photo.current.value,
-      date: new Date()
+      date: new Date(),
     };
-    console.log(newComment.date)
     Swal.fire({
       icon: "question",
       title: " Do you want to post a comment?",
@@ -66,8 +67,8 @@ export default function Forum() {
           });
         }
       }
-      comment.current.value="";
-      photo.current.value=""
+      comment.current.value = "";
+      photo.current.value = "";
     });
   }
   async function getMyComments() {
@@ -83,7 +84,7 @@ export default function Forum() {
       photo: photo.current.value,
       date: new Date(),
     };
-    console.log(edit.date)
+    console.log(edit.date);
     Swal.fire({
       icon: "question",
       title: " Do you want to edit this comment?",
@@ -117,6 +118,7 @@ export default function Forum() {
   }
 
   return (
+    
     <div className="containerAllForum">
       <img className="forumBanner" src={ForumBanner} alt="Forum banner" />
       <form className="formForum" onSubmit={newComment} ref={information}>
@@ -140,7 +142,7 @@ export default function Forum() {
             ref={comment}
           />
         </label>
-        <button className="ButtonCommentForm" type="submit">
+        <button className="ButtonSendCommentForm" type="submit">
           Send comment
         </button>
       </form>
@@ -165,7 +167,9 @@ export default function Forum() {
           }
           return (
             <div className="containerCardsComments">
-              <p className="dateForum">{`${new Date(item.date).toLocaleDateString()}`}</p>
+              <p className="dateForum">{`${new Date(
+                item.date
+              ).toLocaleDateString()}`}</p>
               <img className="imgForum" src={item.photo} alt="Happy" />
               <p className="textForum">{item.comment}</p>
               {/* <Reaction commentId={item.comment._id}/> */}
@@ -183,7 +187,7 @@ export default function Forum() {
                     </button>
                     <div>
                       {open2 ? (
-                        <form class=" textarea" >
+                        <form class=" textarea">
                           <div className="div-edit">
                             <input
                               defaultValue={item.comment}
@@ -209,7 +213,7 @@ export default function Forum() {
                               onClick={editComments}
                               name={item._id}
                             >
-                             Edit comment
+                              Edit comment
                             </button>
                           </div>
                         </form>
@@ -217,7 +221,7 @@ export default function Forum() {
                     </div>
                   </>
                 ) : (
-                  <button className="buttonForum">Report comment</button>
+                  <ComponentModal name={item._id}/>
                 )}
               </div>
             </div>
