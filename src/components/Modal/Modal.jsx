@@ -5,7 +5,9 @@ import Modal from 'react-bootstrap/Modal';
 import emailjs from "@emailjs/browser";
 import Swal from "sweetalert2";
 
-function ComponentModal() {
+function ComponentModal(props) {
+    let name = props
+    console.log('soy name', name);
     let form = useRef();
   const [show, setShow] = useState(false);
 
@@ -45,6 +47,16 @@ function ComponentModal() {
             type="text"
             name="user_name"
             placeholder="Name"
+          />
+        </labe>
+        <labe className="labelContact">
+          Id del comentario
+          <input
+            className="inputContact"
+            type="text"
+            name="comment_report"
+            placeholder="Name"
+            defaultValue={name.name}
           />
         </labe>
         <labe className="labelContact">

@@ -44,6 +44,16 @@
     color: white;
     text-shadow: 2px 2px 6px #000000;
 }
+
+@media screen and (max-width:1001px){
+    .button-catalogue{
+        margin-left: 0px;
+    }
+    .column{
+        margin-right: 0px;
+    }
+}
+
 @media screen and (max-width:931px){
     .button-catalogue{
         margin-left: 0px;
@@ -80,11 +90,11 @@
     }
 }
 
-@media screen and (max-width:585px){
+/* @media screen and (max-width:585px){
     .footer-banner{
         margin-top: -210px;
     }
-}
+} */
 
 
 @media screen and (max-width:586px) {

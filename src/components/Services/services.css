@@ -34,61 +34,14 @@
 .right{
     margin-right: 15px;
 }
-
-@media screen and (max-width:884px){
-    .service{
-        gap: 4rem;
-    }
-    .services-text{
-        padding-right: 40px;
-    }
-    .services-text h6{
-        font-size: 18px;
-    }
-    .services-text p{
-        font-size: 14px;
-    }
-}
-@media screen and (max-width:684px){
+@media screen and (max-width:1239px){
     .container-services{
-        margin-top: 50px;   
+        margin-top: 0px;   
     }
 }
 
-@media screen and (max-width:680px){
-    .service{
-        gap: 2rem;
-    }
-    .services-text{
-        padding-right: 40px;
-    }
-    .services-text h6{
-        font-size: 18px;
-    }
-    .services-text p{
-        font-size: 14px;
-    }
-}
-
-
-
-@media screen and (max-width:576px){
-    .service{
-        gap: 1.5rem;
-    }
-    .services-text{
-        padding-right: 20px;
-    }
-    .services-text h6{
-        font-size: 14px;
-    }
-    .services-text p{
-        font-size: 12px;
-    }
-}
-
-@media screen and (max-width:375px){
-    .mid{
-        display: none;
+@media screen and (max-width:1001px){
+    .container-services{
+        display: none;   
     }
 }
