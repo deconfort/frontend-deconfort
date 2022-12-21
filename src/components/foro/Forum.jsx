@@ -5,9 +5,13 @@ import { useState, useEffect, useRef } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import commentsAction from "../../redux/actions/commentAction";
 import Swal from "sweetalert2";
-// import Reaction from "../Reaction/Reaction"
-export default function Forum() {
+import apiUrl from "../../url";
+import axios from "axios";
+import { Link } from "react-router-dom";
 
+// import Reaction from "../Reaction/Reaction"
+
+export default function Forum() {
   const [open2, setOpen2] = useState(false);
   const { idUser, token } = useSelector((state) => state.user);
   const dispatch = useDispatch();
@@ -19,7 +23,7 @@ export default function Forum() {
     open2 ? setOpen2(false) : setOpen2(true);
   };
   useEffect(() => {
-    getMyComments();
+    getComments();
     // eslint-disable-next-line
   }, [reload]);
 
@@ -35,9 +39,9 @@ export default function Forum() {
       userId: idUser,
       comment: comment.current.value,
       photo: photo.current.value,
-      date: new Date()
+      date: new Date(),
     };
-    console.log(newComment.date)
+    console.log(newComment.date);
     Swal.fire({
       icon: "question",
       title: " Do you want to post a comment?",
@@ -70,7 +74,7 @@ export default function Forum() {
       photo.current.value=""
     });
   }
-  async function getMyComments() {
+  async function getComments() {
     let res = await dispatch(getComment());
     setComments(res.payload.comments);
   }
@@ -83,7 +87,7 @@ export default function Forum() {
       photo: photo.current.value,
       date: new Date(),
     };
-    console.log(edit.date)
+    console.log(edit.date);
     Swal.fire({
       icon: "question",
       title: " Do you want to edit this comment?",
@@ -111,6 +115,43 @@ export default function Forum() {
             title: error.response.data.message.join("<br/>"),
             showConfirmButton: true,
           });
+        }
+      }
+    });
+  }
+
+  async function reportComment(id) {
+    let headers = { headers: { Authorization: `Bearer ${token}` } };
+    Swal.fire({
+      icon: "question",
+      title: "Are you sure?",
+      showConfirmButton: true,
+      iconColor: "#5c195d",
+      confirmButtonColor: "#5c195d",
+      confirmButtonText: "Yes",
+      showCancelButton: true,
+    }).then(async (result) => {
+      if (result.isConfirmed) {
+        try {
+          let res = await axios.put(
+            `${apiUrl}api/comments/reports/${id}`,
+            null,
+            headers
+          );
+          if (res.data.success) {
+            Swal.fire({
+              icon: "success",
+              title: "Reported",
+              iconColor: "#5c195d",
+              confirmButtonColor: "#5c195d",
+              text: res.data.message,
+              showConfirmButton: false,
+              timer: 2000,
+            });
+            setReload(!reload);
+          }
+        } catch (error) {
+          console.log(error);
         }
       }
     });
@@ -144,8 +185,12 @@ export default function Forum() {
           Send comment
         </button>
       </form>
-
+      <Link to="/forum/commentsreported">
+      <button>view comments reported</button>
+      </Link>
+      
       <div className="containerAllCards">
+        
         {comments?.map((item) => {
           function deleteFunc() {
             Swal.fire({
@@ -163,9 +208,16 @@ export default function Forum() {
               setReload(!reload);
             });
           }
+          console.log(comments);
+          let commentReported = item.reports.find((report) =>
+            report.includes(idUser)
+          );
+          console.log(commentReported);
           return (
             <div className="containerCardsComments">
-              <p className="dateForum">{`${new Date(item.date).toLocaleDateString()}`}</p>
+              <p className="dateForum">{`${new Date(
+                item.date
+              ).toLocaleDateString()}`}</p>
               <img className="imgForum" src={item.photo} alt="Happy" />
               <p className="textForum">{item.comment}</p>
               {/* <Reaction commentId={item.comment._id}/> */}
@@ -183,7 +235,7 @@ export default function Forum() {
                     </button>
                     <div>
                       {open2 ? (
-                        <form class=" textarea" >
+                        <form class=" textarea">
                           <div className="div-edit">
                             <input
                               defaultValue={item.comment}
@@ -209,7 +261,7 @@ export default function Forum() {
                               onClick={editComments}
                               name={item._id}
                             >
-                             Edit comment
+                              Edit comment
                             </button>
                           </div>
                         </form>
@@ -217,7 +269,14 @@ export default function Forum() {
                     </div>
                   </>
                 ) : (
-                  <button className="buttonForum">Report comment</button>
+                  <button
+                    className="buttonForum"
+                    onClick={() => {
+                      reportComment(item._id);
+                    }}
+                  >
+                    {commentReported ? "Removed reported" : "Report comment"}
+                  </button>
                 )}
               </div>
             </div>

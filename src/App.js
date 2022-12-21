@@ -35,6 +35,7 @@ import AllProducts from './components/AllProducts/AllProducts';
 import MyFavs from './layouts/MyFavs';
 import BackToTop from './components/BackToTopButton';
 import AboutUs from './components/AboutUs/AboutUs';
+import CommentsReported from './layouts/CommentsReported';
 
    
 function App() {
@@ -83,6 +84,7 @@ function App() {
       <Route path="/products/:id" element={<Detail/>}/>
       <Route path="/detail" element={<Detail/>}/>
       <Route path="/myfavs" element={<MyFavs/>}/>
+      <Route path="/forum/commentsreported" element={<CommentsReported/>}/>
      </Routes>
     <Footer></Footer>
     </>
