@@ -1,4 +1,4 @@
-.contain-details{
+.contain-details {
     width: 70%;
     min-height: 50vh;
     padding: 30px;
@@ -8,24 +8,26 @@
     box-shadow: 0 5px 15px rgba(50, 50, 50, 0.438);
     justify-content: space-around;
 }
-.detailLayout{
+
+.detailLayout {
     display: flex;
     align-content: center;
     align-items: center;
     justify-content: center;
     margin-bottom: 3rem;
 }
-.foto-detail{
+
+.foto-detail {
     height: 350px;
     object-fit: cover;
     margin-right: 5%;
 }
 
-.texto-witch{
+.texto-witch {
     width: 400px;
 }
 
-.addcart-detail{
+.addcart-detail {
     width: 160px;
     padding: 0.2rem;
     border-radius: 6mm;
@@ -35,7 +37,7 @@
 }
 
 
-.texto{
+.texto {
     display: flex;
     flex-direction: column;
     gap: 1rem;
