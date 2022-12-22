@@ -2,14 +2,15 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-  }
-  
-.imgAboutUs{
+}
+
+.imgAboutUs {
     width: 45%;
     height: 90%;
     object-fit: contain;
 }
-.containerAbout{
+
+.containerAbout {
     display: flex;
     width: 80%;
     align-items: center;
@@ -18,7 +19,8 @@
     height: auto;
     /* flex-wrap: wrap; */
 }
-.containerAllAbout{
+
+.containerAllAbout {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -27,13 +29,15 @@
     margin-bottom: 3rem;
     flex-wrap: wrap;
 }
-.aboutUsText{
+
+.aboutUsText {
     padding: 3rem;
     width: auto;
     height: auto;
 }
+
 @media screen and (max-width: 900px) {
-    .containerAbout{
+    .containerAbout {
         flex-direction: column;
         height: auto;
     }
