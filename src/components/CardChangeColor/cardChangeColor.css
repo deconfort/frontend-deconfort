@@ -1,164 +1,164 @@
+.card-change-color {
+    position: relative;
+    width: 320px;
+    height: 480px;
+    background: #fff;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(50, 50, 50, 0.438);
+}
+
+.card-change-color:hover {
+    cursor: pointer;
+    transform: scale(0.9);
+    transition: 0.5s;
+}
+
+.bg-watch {
+    position: relative;
+    height: 320px;
+}
+
+.watch {
+    position: absolute;
+    top: 299px;
+    left: -45px;
+    font-size: 6rem;
+    opacity: 0.5;
+    color: #dcbadb;
+    transform: rotate(-63deg);
+}
+
+.share {
+    position: absolute;
+    text-decoration: none;
+    width: 40px;
+    height: 40px;
+    top: 15px;
+    left: 15px;
+    background: #fff;
+    color: #31394e;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 1.3rem;
+    line-height: 50px;
+    transition: .5s;
+    padding: 1px;
+    z-index: 2;
+}
+
+.share:hover {
+    transform: scale(1.1);
+}
+
+.watch-img {
+    max-width: 100%;
+    position: absolute;
+    width: 250px;
+    left: 100px;
+    opacity: 0;
+    z-index: 2;
+    border-radius: 10% 0% 50% 70%;
+}
+
+.watch-img.show {
+    opacity: 1;
+    height: 90%;
+    width: 90%;
+    position: absolute;
+    bottom: 3rem;
+    object-fit: cover;
+}
+
+.info {
+    position: relative;
+    padding: 1px 20px;
+    z-index: 3;
+}
+
+.watch-name {
+    padding: 0 0 10px 0;
+}
+
+.title-name {
+    margin-bottom: 6px;
+    font-size: 23px;
+    color: #303030;
+}
+
+.watch-name .new {
+    padding: 3px 10px;
+    background: #31394e;
+    color: #fff;
+    border-radius: 6mm;
+    cursor: pointer;
+}
+
+.h3-color {
+    /* font-size: 1.5; */
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #333;
+}
+
+.color-container {
+    display: flex;
+    justify-content: space-around
+}
+
+.more-and-buy {
+    padding: 10px 10px;
+    background: #31394e;
+    color: #fff;
+    border-radius: 6mm;
+    cursor: pointer;
+    border: none;
+}
+
+.more-and-buy-off {
+    padding: 10px 10px;
+    background: #6b6e77;
+    color: #fff;
+    border-radius: 6mm;
+    cursor: pointer;
+    border: none;
+}
+
+.more-and-buy:hover {
+    background-color: #142157;
+}
+
+.icon-cart {
+    display: flex;
+    align-items: center;
+}
+
+.cont-reactions {
+    display: flex;
+    align-items: center;
+    height: 2em;
+    padding-left: 2rem;
+    padding-top: 2rem;
+}
+
+.cont-reactions :hover {
+    cursor: pointer;
+    transform: scale(0.9);
+    transition: 0.5s;
+}
+
+@media screen and (max-width:1197px) {
     .card-change-color {
-        position: relative;
-        width: 320px;
+        width: 300px;
         height: 480px;
-        background: #fff;
-        overflow: hidden;
-        box-shadow: 0 5px 15px rgba(50, 50, 50, 0.438);
     }
+}
 
-    .card-change-color:hover {
-        cursor: pointer;
-        transform: scale(0.9);
-        transition: 0.5s;
-    }
+.list-style-none-cardChange {
+    color: white;
+    text-decoration: none;
+}
 
-    .bg-watch {
-        position: relative;
-        height: 320px;
-    }
-
-    .watch {
-        position: absolute;
-        top: 299px;
-        left: -45px;
-        font-size: 6rem;
-        opacity: 0.5;
-        color: #dcbadb;
-        transform: rotate(-63deg);
-    }
-
-    .share {
-        position: absolute;
-        text-decoration: none;
-        width: 40px;
-        height: 40px;
-        top: 15px;
-        left: 15px;
-        background: #fff;
-        color: #31394e;
-        border-radius: 50%;
-        text-align: center;
-        font-size: 1.3rem;
-        line-height: 50px;
-        transition: .5s;
-        padding: 1px;
-        z-index: 2;
-    }
-
-    .share:hover {
-        transform: scale(1.1);
-    }
-
-    .watch-img {
-        max-width: 100%;
-        position: absolute;
-        width: 250px;
-        left: 100px;
-        opacity: 0;
-        z-index: 2;
-        border-radius: 10% 0% 50% 70%;
-    }
-
-    .watch-img.show {
-        opacity: 1;
-        height: 90%;
-        width: 90%;
-        position: absolute;
-        bottom: 3rem;
-        object-fit: cover;
-    }
-
-    .info {
-        position: relative;
-        padding: 1px 20px;
-        z-index: 3;
-    }
-
-    .watch-name {
-        padding: 0 0 10px 0;
-    }
-
-    .title-name {
-        margin-bottom: 6px;
-        font-size: 23px;
-        color: #303030;
-    }
-
-    .watch-name .new {
-        padding: 3px 10px;
-        background: #31394e;
-        color: #fff;
-        border-radius: 6mm;
-        cursor: pointer;
-    }
-
-    .h3-color {
-        /* font-size: 1.5; */
-        font-weight: 600;
-        text-transform: uppercase;
-        color: #333;
-    }
-
-    .color-container {
-        display: flex;
-        justify-content: space-around
-    }
-
-    .more-and-buy {
-        padding: 10px 10px;
-        background: #31394e;
-        color: #fff;
-        border-radius: 6mm;
-        cursor: pointer;
-        border: none;
-    }
-
-    .more-and-buy-off {
-        padding: 10px 10px;
-        background: #6b6e77;
-        color: #fff;
-        border-radius: 6mm;
-        cursor: pointer;
-        border: none;
-    }
-
-    .more-and-buy:hover {
-        background-color: #142157;
-    }
-
-    .icon-cart {
-        display: flex;
-        align-items: center;
-    }
-
-    .cont-reactions {
-        display: flex;
-        align-items: center;
-        height: 2em;
-        padding-left: 2rem;
-        padding-top: 2rem;
-    }
-
-    .cont-reactions :hover {
-        cursor: pointer;
-        transform: scale(0.9);
-        transition: 0.5s;
-    }
-
-    @media screen and (max-width:1197px) {
-        .card-change-color {
-            width: 300px;
-            height: 480px;
-        }
-    }
-
-    .list-style-none-cardChange {
-        color: white;
-        text-decoration: none;
-    }
-
-    .list-style-none-cardChange:hover {
-        color: white;
-        text-decoration: none;
-    }
+.list-style-none-cardChange:hover {
+    color: white;
+    text-decoration: none;
+}
