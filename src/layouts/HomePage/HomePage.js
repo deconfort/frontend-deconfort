@@ -14,11 +14,11 @@ function HomePage() {
       <div className="container-homepage">
         <Footer4Header />
         <div className="container-home-main">
-        <Services />
-        <RowProducts />
-        <RowProducts2 />
-        <RowProducts3 />
-        <ButtonSeeAll />
+          <Services />
+          <RowProducts />
+          <RowProducts2 />
+          <RowProducts3 />
+          <ButtonSeeAll />
         </div>
       </div>
     </div>
