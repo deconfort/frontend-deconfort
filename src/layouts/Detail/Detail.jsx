@@ -60,6 +60,7 @@ export default function Detail() {
         description={product.description}
         category={product.category}
         photo={product.photo}
+        id={id}
         />
     </div>
   )
