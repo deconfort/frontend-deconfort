@@ -38,8 +38,8 @@ export default function ProductCategory() {
           Authorization: `Bearer ${token}`,
         },
       });
-      console.log(res)
       if (res.data.success) {
+        deleteFavs(id)
         Swal.fire({
           icon: "warning",
           confirmButtonColor: "#5c195d",
@@ -58,6 +58,16 @@ export default function ProductCategory() {
         showConfirmButton: true,
       });
       console.log(error);
+    }
+  }
+
+  async function deleteFavs(id){
+    console.log(id)
+    try {
+      let res = await axios.put(`${apiUrl}api/favs/delete/${id}`)
+      console.log(res.data)
+    } catch (error) {
+      console.log(error)
     }
   }
 
