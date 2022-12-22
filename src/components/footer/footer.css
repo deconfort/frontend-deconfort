@@ -38,6 +38,7 @@
   padding: 8px;
 }
 
+
 .footerContainer {
   display: flex;
   flex-wrap: wrap;
@@ -45,6 +46,24 @@
   justify-content: space-evenly;
   background-color: #c1b8ae;
   min-height: 25vh;
+}
+
+.footerContainer > div > h3{
+  font-family: 'Lato', sans-serif;
+}
+
+.footerContainer > div > a > p{
+  font-family: 'Lato', sans-serif;
+}
+
+.containerContactFooter > a{
+  font-family: 'Lato', sans-serif;
+}
+
+.subFooterLinkedin > a{
+  font-family: 'Lato', sans-serif;
+  border-right:2px solid #303030;
+  line-height: 4px; 
 }
 
 .tittleFooter {
