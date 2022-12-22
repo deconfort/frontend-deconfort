@@ -61,7 +61,7 @@ export default function Profile() {
     <div className="main-body">
       <div className="containerProfile">
         <div className="wrapper">
-          <img className="img-banner-profile" src={user.photo} alt="" />
+          <img className="img-banner-profile" src={user.photo} alt="Banner Profile" />
           <div className="content ">
             <img className="photo-user" src={user.photo} alt="user" />
             <form

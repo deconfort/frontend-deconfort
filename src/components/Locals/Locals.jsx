@@ -16,7 +16,7 @@ export default function Locals() {
           <a className="linksLocals" href="https://goo.gl/maps/UDf79zFBQGqVARW67" target="_blank" rel="noopener noreferrer">60 E Broadway, Bloomington, MN 55425, Estados Unidos</a>
           <a className="linksLocals" href="tel:+3516532134">3516532134</a>
           <div className="container-locals">
-            <img className="img-locals" src={local1} alt="" />
+            <img className="img-locals" src={local1} alt="Picture local" />
           </div>
         </div>
         <div className="texto-locals">
@@ -24,7 +24,7 @@ export default function Locals() {
           <p> Monday - Friday: 9 - 18Hs</p>
           <p>Saturday: 9 - 14Hs</p>
           <div className="container-locals">
-            <img className="img-locals" src={Local2} alt="" />
+            <img className="img-locals" src={Local2} alt="Picture local" />
           </div>
         </div>
       </div>
@@ -34,7 +34,7 @@ export default function Locals() {
           <a className="linksLocals" href="https://goo.gl/maps/mRaMUqmyspUUNphZ9" target="_blank" rel="noopener noreferrer">2414 E Sunrise Blvd, Fort Lauderdale, FL 33304, Estados Unidos</a>
           <a className="linksLocals" href="tel:+3516532134">3516532134</a>
           <div className="container-locals">
-            <img className="img-locals" src={Local3} alt="" />
+            <img className="img-locals" src={Local3} alt="Picture local" />
           </div>
         </div>
         <div className="texto-locals">
@@ -42,7 +42,7 @@ export default function Locals() {
           <p> Monday - Friday: 9 - 18Hs</p>
           <p>Saturday: 9 - 14Hs</p>
           <div className="container-locals">
-            <img className="img-locals" src={Local4} alt="" />
+            <img className="img-locals" src={Local4} alt="Picture local" />
           </div>
         </div>
       </div>
