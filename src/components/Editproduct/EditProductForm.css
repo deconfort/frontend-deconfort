@@ -4,18 +4,19 @@
   box-sizing: border-box;
 }
 
-.formEditProduct{
+.formEditProduct {
   display: flex;
   flex-direction: column;
   border-radius: 10px;
   width: 40%;
-  box-shadow: 5px 5px 5px 5px hsl(32, 13%, 72%); 
+  box-shadow: 5px 5px 5px 5px hsl(32, 13%, 72%);
   justify-content: center;
   align-items: center;
   padding: 1rem;
 
 }
-.containerForm{
+
+.containerForm {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -24,32 +25,37 @@
   margin-top: 1.5rem;
   justify-content: space-evenly;
 }
-.labelRegister{
+
+.labelRegister {
   display: flex;
   flex-direction: column;
   width: 60%;
   padding-bottom: 0.5rem;
   padding-top: 0.3rem;
 }
-.inputRegister{
+
+.inputRegister {
   width: 100%;
   height: 30px;
   margin-top: 0.15rem;
   border-radius: 8px;
   border: 1px solid #52646a;
 }
-.inputRegister::placeholder{
+
+.inputRegister::placeholder {
   color: #52646a;
   padding: 0.5rem;
 }
-.registerP{
+
+.registerP {
   margin-top: 4px;
   margin-bottom: 7px;
 }
-.buttonRegister{
+
+.buttonRegister {
   padding: 0.5rem;
   border-radius: 9px;
-  background-color:  #5c195d;
+  background-color: #5c195d;
   font-size: medium;
   color: #f9f9f9;
   border: none;
@@ -58,15 +64,18 @@
   justify-content: center;
   align-items: center;
 }
-.buttonRegister:hover{
-  background-color:  #c3acbe;
+
+.buttonRegister:hover {
+  background-color: #c3acbe;
 }
+
 @media screen and (max-width:750px) {
   .containerForm {
-      flex-direction: column;
-      gap: 2rem;
+    flex-direction: column;
+    gap: 2rem;
   }
-  .formEditProduct{
+
+  .formEditProduct {
     width: 70%;
   }
 }
