@@ -13,6 +13,7 @@
     justify-content: center;
     align-items: center;
     padding: 2.5rem;
+    min-height: 50vh;
 }
 .tittleMyFavs{
     text-align: center;
