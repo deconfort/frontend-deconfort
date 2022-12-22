@@ -7,16 +7,16 @@ export default function Navegacion() {
     <div>
       <h3 className="tittleFooter">Navigation</h3>
       <Link className="linksFooter" to='/faqs'>
-      <p className="subttitleNavigation">Faqs</p>
+        <p className="subttitleNavigation">Faqs</p>
       </Link>
       <Link className="linksFooter" to='/contact'>
-      <p className="subttitleNavigation">Contact</p>
+        <p className="subttitleNavigation">Contact</p>
       </Link>
       <Link className="linksFooter" to='/locals'>
-      <p className="subttitleNavigation">Locals</p>
+        <p className="subttitleNavigation">Shops</p>
       </Link>
       <Link className="linksFooter" to='/aboutus'>
-      <p className="subttitleNavigation">About us</p>
+        <p className="subttitleNavigation">About us</p>
       </Link>
     </div>
   );

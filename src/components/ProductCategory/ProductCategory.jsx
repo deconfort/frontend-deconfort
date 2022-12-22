@@ -1,13 +1,13 @@
-import React, {  useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import CardChangeColor from "../CardChangeColor/CardChangeColor";
 import axios from "axios";
 import apiUrl from "../../url";
 import "./ProductCategory.css"
-import {useSelector } from "react-redux";
+import { useSelector } from "react-redux";
 import Swal from "sweetalert2";
 
 export default function ProductCategory() {
-   const { idUser, token } = useSelector((state) => state.user);
+  const { idUser, token } = useSelector((state) => state.user);
   let [products, setProducts] = useState([]);
   const [cartProduct, setCartProduct] = useState([]);
   const [reload, setReload] = useState(false);
@@ -27,7 +27,7 @@ export default function ProductCategory() {
     try {
       let res = await axios.get(`${apiUrl}api/shopping?userId=${idUser}`);
       setCartProduct(res.data.productsCart);
-    } catch (error) {      
+    } catch (error) {
     }
   }
 
@@ -49,7 +49,7 @@ export default function ProductCategory() {
         });
         setReload(!reload)
       }
-    } catch (error) { 
+    } catch (error) {
       Swal.fire({
         icon: "warning",
         confirmButtonColor: "#5c195d",
@@ -61,7 +61,7 @@ export default function ProductCategory() {
     }
   }
 
-  async function deleteFavs(id){
+  async function deleteFavs(id) {
     console.log(id)
     try {
       let res = await axios.put(`${apiUrl}api/favs/delete/${id}`)
@@ -74,7 +74,7 @@ export default function ProductCategory() {
   return (
     <div className="cards-all-products">
       {products?.map((item) => {
-         async function addToCart() {
+        async function addToCart() {
           let product = {
             name: item.name,
             photo: item.photo[0],
@@ -86,7 +86,7 @@ export default function ProductCategory() {
           try {
             let res = await axios.post(`${apiUrl}api/shopping`, product);
             console.log(res);
-            if(res.data.success){
+            if (res.data.success) {
               Swal.fire({
                 icon: "success",
                 confirmButtonColor: "#5c195d",
@@ -103,7 +103,7 @@ export default function ProductCategory() {
               iconColor: "#5c195d",
               title: error.response.data.message,
               showConfirmButton: true,
-            });         
+            });
             console.log(error);
           }
         }
@@ -136,9 +136,9 @@ export default function ProductCategory() {
             }}
             clasess={
               cart ? ('more-and-buy-off icon-cart')
-              : ('more-and-buy icon-cart')
+                : ('more-and-buy icon-cart')
             }
-            onClick2={()=>{
+            onClick2={() => {
               deleteProduct(item._id)
             }}
             name={item.name}

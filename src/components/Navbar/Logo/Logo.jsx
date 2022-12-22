@@ -8,7 +8,7 @@ export default function Logo() {
   return (
     <div className="containerLogo">
       <Link to='/'>
-      <img className="LogoSize" src={logoDeconfort} alt="Decomfort Logo"/>
+        <img className="LogoSize" src={logoDeconfort} alt="Decomfort Logo" />
       </Link>
     </div>
   );

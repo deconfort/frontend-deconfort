@@ -2,53 +2,61 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-  }
-.formModal{
+}
+
+.formModal {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
-.tittleComentToReport{
+
+.tittleComentToReport {
     margin-bottom: 0;
     padding-top: 0;
     text-align: center;
     font-weight: bolder;
 }
-.commentToReport{
+
+.commentToReport {
     text-align: center;
     margin-top: 0;
     padding-top: 0;
     margin-bottom: 0;
 }
-.textAreaModalComment{
+
+.textAreaModalComment {
     width: 100%;
     min-height: auto;
     border: none;
     text-align: center;
 }
-.spaceModal{
+
+.spaceModal {
     border-bottom: 1px solid #c6c6c6;
     width: 100%;
     margin-bottom: 1rem;
     margin-top: .5rem;
 }
-.buttonModalForm{
+
+.buttonModalForm {
     padding: 0.5rem;
     border-radius: 9px;
-    background-color:  #5c195d;
+    background-color: #5c195d;
     font-size: medium;
     color: #f9f9f9;
     border: none;
 }
-.buttonSendFormModal{
+
+.buttonSendFormModal {
     display: flex;
     align-items: flex-end;
     width: 100%;
     justify-content: flex-end;
     padding-right: 1rem;
 }
-.buttonModalForm:hover{
-    background-color:  #c3acbe;
+
+.buttonModalForm:hover {
+    background-color: #c3acbe;
     border: none;
 }

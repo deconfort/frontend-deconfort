@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
 
 
-.main-body{
+.main-body {
     font-family: 'Kumbh Sans',
         sans-serif;
     display: flex;
@@ -13,13 +13,13 @@
         left 45vw top 44vh;
 }
 
-.img-banner-profile{
+.img-banner-profile {
     width: 500px;
     height: 250px;
     margin-top: 2px;
     border-radius: 9px;
     object-fit: cover;
-    object-position:top;
+    object-position: top;
 }
 
 .containerProfile {
@@ -81,23 +81,27 @@
     margin-bottom: 5px;
 
 }
-.photo-user{
+
+.photo-user {
     object-fit: contain;
 }
-.labelProfile{
+
+.labelProfile {
     font-size: 13px;
     width: 75%;
     flex-direction: column;
     display: flex;
     justify-content: center;
     align-items: center;
-    
+
 }
-.buttonRegister{
-margin-top: 25px;
+
+.buttonRegister {
+    margin-top: 25px;
 }
+
 @media screen and (max-width:750px) {
-    .containerProfile{
-      width: 70%;
+    .containerProfile {
+        width: 70%;
     }
-  }
+}

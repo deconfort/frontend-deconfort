@@ -34,7 +34,7 @@ export default function AllProducts() {
     try {
       let res = await axios.get(`${apiUrl}api/shopping?userId=${idUser}`);
       setCartProduct(res.data.productsCart);
-    } catch (error) {}
+    } catch (error) { }
   }
 
   async function deleteProduct(id) {
@@ -53,8 +53,8 @@ export default function AllProducts() {
           iconColor: "#5c195d",
           title: res.data.message,
           showConfirmButton: true,
-        });       
-        setReload(!reload);   
+        });
+        setReload(!reload);
       }
     } catch (error) {
       Swal.fire({
@@ -68,7 +68,7 @@ export default function AllProducts() {
     }
   }
 
-  async function deleteFavs(id){
+  async function deleteFavs(id) {
     console.log(id)
     try {
       let res = await axios.put(`${apiUrl}api/favs/delete/${id}`)
@@ -126,7 +126,7 @@ export default function AllProducts() {
       ) : null}
       <div className="check-filter-cards">
         {/* <Checkboxes /> */}
-        <div className="cards-all-products">        
+        <div className="cards-all-products">
           {products.length > 0 ? (products?.map((item) => {
             async function addToCart() {
               let product = {
@@ -205,11 +205,11 @@ export default function AllProducts() {
                 price={item.price}
                 id={item._id}
                 key={item._id}
-              /> 
+              />
             );
-          })) : <CardNotFound/>
-          
-          } 
+          })) : <CardNotFound />
+
+          }
         </div>
       </div>
     </div>

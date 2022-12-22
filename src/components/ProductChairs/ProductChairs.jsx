@@ -51,7 +51,7 @@ export default function ProductChairs() {
         });
         setReload(!reload)
       }
-    } catch (error) { 
+    } catch (error) {
       Swal.fire({
         icon: "warning",
         confirmButtonColor: "#5c195d",
@@ -63,7 +63,7 @@ export default function ProductChairs() {
     }
   }
 
-  async function deleteFavs(id){
+  async function deleteFavs(id) {
     console.log(id)
     try {
       let res = await axios.put(`${apiUrl}api/favs/delete/${id}`)
@@ -140,7 +140,7 @@ export default function ProductChairs() {
               cart ? ('more-and-buy-off icon-cart')
                 : ('more-and-buy icon-cart')
             }
-            onClick2={()=>{
+            onClick2={() => {
               deleteProduct(item._id)
             }}
             name={item.name}

@@ -1,23 +1,27 @@
-.locals-main{
+.locals-main {
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
 }
-.linksLocals{
+
+.linksLocals {
     text-decoration: none;
     color: black;
 }
-.linksLocals:hover{
+
+.linksLocals:hover {
     color: #8f837d;
 }
-.container-title{
+
+.container-title {
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
     flex-wrap: wrap;
 }
-.container-locals{
+
+.container-locals {
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -27,13 +31,15 @@
     width: 99%;
     margin-bottom: 2rem;
 }
-.img-locals{
+
+.img-locals {
     width: 100%;
     height: 360px;
     box-shadow: 5px 5px 5px 5px #c1b8ae;
     border-radius: 10px;
 }
-.texto-locals{
+
+.texto-locals {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -41,29 +47,35 @@
     margin-top: 1rem;
     width: 40%;
 }
-.Name-Local{
+
+.Name-Local {
     font-size: 30px;
     font-weight: bold;
     color: #8f837d;
 
 }
-.LocalsBanner{
+
+.LocalsBanner {
     max-width: 100%;
 }
-.localsBanner{
+
+.localsBanner {
     width: 100%;
 }
+
 @media screen and (max-width: 850px) {
-    .texto-locals{
+    .texto-locals {
         width: 58%;
     }
-    .container-locals{
+
+    .container-locals {
         flex-direction: column;
     }
-  }
-  @media screen and (max-width: 600px) {
-    .img-locals{
+}
+
+@media screen and (max-width: 600px) {
+    .img-locals {
         height: 250px;
         width: 80%;
     }
-  }
+}
