@@ -24,10 +24,7 @@ export default function BackToTop() {
       {backToTopButton && (
         <>
           <button className="buttonScrollToTop" onClick={scrollUp}></button>
-          <a
-            href="https://api.whatsapp.com/send?phone=3516532134"
-            target="_blank"
-          >
+          <a href="https://api.whatsapp.com/send?phone=3516532134" target="_blank">
             <button className="btn-wsp"></button>
           </a>
         </>
