@@ -90,15 +90,15 @@ export default function Payments() {
   async function sendForm(event) {
     event.preventDefault();
     let form = {
+      mail: user.mail,
       name: name.current.value,
       lastName: lastName.current.value,
-      adress: adress.current.value,
-      state: state.current.value,
-      phone: phone.current.value,
       country: country.current.value,
+      state: state.current.value,
+      adress: adress.current.value,
+      phone: phone.current.value,
       productName: nameAllProducts,
       productPrice: sumWithInitial,
-      mail: user.mail,
     };
 
     try {
@@ -127,7 +127,7 @@ export default function Payments() {
                   <span class="fa fa-user-circle"></span>
                   <input
                     type="text"
-                    id="name"
+                    id="checkout-name"
                     name="name"
                     placeholder="Enter you name..."
                     ref={name}
@@ -135,12 +135,12 @@ export default function Payments() {
                 </div>
                 {/*  </div> */}
                 {/*  <div class="form-control"> */}
-                <label for="checkout-email">Last Name</label>
+                <label for="checkout-lastName">Last Name</label>
                 <div>
                   <span class="fa fa-envelope"></span>
                   <input
                     type="text"
-                    id="lastName"
+                    id="checkout-lastName"
                     name="lastName"
                     placeholder="Enter your last Name..."
                     ref={lastName}
@@ -154,7 +154,7 @@ export default function Payments() {
                   <input
                     type="tel"
                     name="phone"
-                    id="phone"
+                    id="checkout-phone"
                     placeholder="Enter you phone..."
                     ref={phone}
                   />
@@ -169,7 +169,7 @@ export default function Payments() {
                   <input
                     type="text"
                     name="adress"
-                    id="adress"
+                    id="checkout-address"
                     placeholder="Your address..."
                     ref={adress}
                   />
@@ -182,7 +182,7 @@ export default function Payments() {
                   <input
                     type="text"
                     name="state"
-                    id="state"
+                    id="checkout-city"
                     placeholder="Enter your state..."
                     ref={state}
                   />
@@ -196,7 +196,7 @@ export default function Payments() {
                   <input
                     type="text"
                     name="country"
-                    id="country"
+                    id="checkout-country"
                     placeholder="Enter your country..."
                     ref={country}
                   />
