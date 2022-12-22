@@ -15,7 +15,7 @@ export default function Header() {
         <NavbarHambur
           title1="HOME"
           title2="PRODUCTS"
-          title3="LOCALS"
+          title3="STORES"
           title4="ABOUT US"
           title5="FAQS"
           title6="FORUM"

@@ -1,19 +1,21 @@
-.LogoSize{
+.LogoSize {
     max-width: 100%;
     height: 170px;
     width: 190px;
 }
-.containerLogo{
+
+.containerLogo {
     padding-left: 3rem;
     padding-top: 0.5rem;
 }
 
 @media screen and (max-width:720px) {
-    .LogoSize{
+    .LogoSize {
         width: 120px;
         height: 120px;
     }
-    .containerLogo{
+
+    .containerLogo {
         padding-left: 1rem;
     }
 }

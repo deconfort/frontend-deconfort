@@ -1,18 +1,21 @@
-.footer-banner{
+.footer-banner {
     width: 100%;
     display: flex;
     justify-content: space-between;
     z-index: 2;
     margin-top: -100px;
 }
-.linkCatalogue{
+
+.linkCatalogue {
     text-decoration: none;
 }
-.linkCatalogue:hover{
+
+.linkCatalogue:hover {
     text-decoration: none;
     color: white;
 }
-.button-catalogue{
+
+.button-catalogue {
     padding: 0px 20px;
     border: 1.5px solid white;
     border-radius: 6mm;
@@ -27,84 +30,82 @@
     padding-top: .8rem;
 }
 
-.column{
+.column {
     display: flex;
     flex-direction: column;
     margin-right: 40px;
 }
 
-.column > h2{
+.column>h2 {
     font-size: 28px;
     color: white;
     text-shadow: 2px 2px 2px #000000;
 }
 
-.column > p{
+.column>p {
     font-size: 16px;
     color: white;
     text-shadow: 2px 2px 6px #000000;
 }
 
-@media screen and (max-width:1001px){
-    .button-catalogue{
+@media screen and (max-width:1001px) {
+    .button-catalogue {
         margin-left: 0px;
     }
-    .column{
+
+    .column {
         margin-right: 0px;
     }
 }
 
-@media screen and (max-width:931px){
-    .button-catalogue{
+@media screen and (max-width:931px) {
+    .button-catalogue {
         margin-left: 0px;
     }
-    .column{
+
+    .column {
         margin-right: 0px;
     }
 }
 
-@media screen and (max-width:760px){
-    .column h2{
-        font-size: 20px;    
+@media screen and (max-width:760px) {
+    .column h2 {
+        font-size: 20px;
     }
-    .column p{
+
+    .column p {
         font-size: 14px;
     }
-    .button-catalogue{
+
+    .button-catalogue {
         padding: 10px;
     }
 }
 
-@media screen and (max-width:684px){
-    .footer-banner{
-        margin-top: -50px;    
+@media screen and (max-width:684px) {
+    .footer-banner {
+        margin-top: -50px;
     }
-    .column{
-       display: none;
+
+    .column {
+        display: none;
     }
 }
 
-@media screen and (max-width:659px){
-    .footer-banner{
+@media screen and (max-width:659px) {
+    .footer-banner {
         margin-top: -120px;
     }
 }
 
-/* @media screen and (max-width:585px){
-    .footer-banner{
-        margin-top: -210px;
-    }
-} */
-
-
 @media screen and (max-width:586px) {
-    .column h2{
-        font-size: 16px;    
+    .column h2 {
+        font-size: 16px;
     }
-    .column p{
+    .column p {
         font-size: 12px;
     }
-    .button-catalogue{
+    .button-catalogue {
         padding: 6px;
     }
 }

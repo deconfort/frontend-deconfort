@@ -9,7 +9,7 @@ import { Link as NavLink } from "react-router-dom";
 export default function Profile() {
   const dispatch = useDispatch();
   const { idUser, user } = useSelector((state) => state.user);
-  
+
   const { getUser } = usersAction;
 
   useEffect(() => {
@@ -25,21 +25,21 @@ export default function Profile() {
             <img className="photo-user" src={user.photo} alt="user" />
             <h2>
               {user.name} {user.lastName}<span>, {user.age}</span>
-            </h2> 
+            </h2>
             <p>{user.country}</p>
             <p>{user.mail}</p>
             <div className="footer">
               <NavLink to="/myfavs" className="linkNav">
-              <div>
-                <p className="num">🤍</p>
-                <p>My Favourites</p>
-              </div>
+                <div>
+                  <p className="num">🤍</p>
+                  <p>My Favourites</p>
+                </div>
               </NavLink>
-              <NavLink to="/editprofile"className="linkNav">
-              <div>
-                <p className="num">📝</p>
-                <p>Edit Profile</p>
-              </div>
+              <NavLink to="/editprofile" className="linkNav">
+                <div>
+                  <p className="num">📝</p>
+                  <p>Edit Profile</p>
+                </div>
               </NavLink>
             </div>
           </div>

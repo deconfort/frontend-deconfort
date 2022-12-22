@@ -6,13 +6,9 @@ import { useDispatch, useSelector } from "react-redux";
 import commentsAction from "../../redux/actions/commentAction";
 import Swal from "sweetalert2";
 import ComponentModal from "../Modal/Modal";
-
-/* import 'boostrap/dist/css/bootsrap.css' */
 import apiUrl from "../../url";
 import axios from "axios";
 import { Link } from "react-router-dom";
-
-// import Reaction from "../Reaction/Reaction"
 
 export default function Forum() {
   const [open2, setOpen2] = useState(false);
@@ -162,7 +158,7 @@ export default function Forum() {
   }
 
   return (
-    
+
     <div className="containerAllForum">
       <img className="forumBanner" src={ForumBanner} alt="Forum banner" />
       <form className="formForum" onSubmit={newComment} ref={information}>
@@ -193,9 +189,9 @@ export default function Forum() {
       {/* <Link to="/forum/commentsreported">
       <button>view comments reported</button>
       </Link> */}
-      
+
       <div className="containerAllCards">
-        
+
         {comments?.map((item) => {
           function deleteFunc() {
             Swal.fire({
@@ -272,9 +268,9 @@ export default function Forum() {
                     </div>
                   </>
                 ) : (
-                  <ComponentModal name={item.comment}/>
-                  )}
-                  {/* <ComponentModal
+                  <ComponentModal name={item.comment} />
+                )}
+                {/* <ComponentModal
                     className="buttonForum"
                     onClick={() => {
                       reportComment(item._id);
@@ -282,7 +278,7 @@ export default function Forum() {
                   >
                     {commentReported ? "Removed reported" : "Report comment"}
                   </ComponentModal> */}
-               
+
               </div>
             </div>
           );

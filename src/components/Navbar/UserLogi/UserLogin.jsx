@@ -54,12 +54,12 @@ export default function UserLogin() {
   return (
     <div className='containerLoginCartandUser'>
       {user.role === "admin" || user.role === "user" && (
-      <Link to={'/payments'}>
-        <img className="logoCart" src='https://cdn-icons-png.flaticon.com/512/107/107831.png' alt="logo cart" />
-      </Link>
+        <Link to={'/payments'}>
+          <img className="logoCart" src='https://cdn-icons-png.flaticon.com/512/107/107831.png' alt="logo cart" />
+        </Link>
       )}
       {user.role !== "admin" && user.role !== "user" && (
-          <img className="logoCart" src='https://cdn-icons-png.flaticon.com/512/107/107831.png' alt="logo cart" onClick={()=> {
+        <img className="logoCart" src='https://cdn-icons-png.flaticon.com/512/107/107831.png' alt="logo cart" onClick={() => {
           Swal.fire({
             icon: "question",
             title: "You must be logged in to access the cart",
@@ -69,64 +69,64 @@ export default function UserLogin() {
             confirmButtonText: "Go to Login",
             showCancelButton: true,
           })
-          .then((result) => {
-            if (result.isConfirmed) {
-              navegation(`/login`);
-            }
-          });
+            .then((result) => {
+              if (result.isConfirmed) {
+                navegation(`/login`);
+              }
+            });
         }} />
       )}
-    <div className="containerUserLogin">
-      {(user.role === "admin" || user.role === "user") && (
-        <h3
-          className="bt-nav flex column justify-center align-center g-5 text-black"
-          onClick={cualquierNombre}
-        >
-          <img src={photo} className="photo-user" alt="img-user" />
-          {name}
-        </h3>
-      )}
-      {user.role !== "admin" && user.role !== "user" && (
-        <h3
-          className="bt-nav flex column justify-center align-center g-5"
-          onClick={cualquierNombre}
-        >
-          <img
-            src="../images/user.png"
-            className="photo-user"
-            alt="img-user"
+      <div className="containerUserLogin">
+        {(user.role === "admin" || user.role === "user") && (
+          <h3
+            className="bt-nav flex column justify-center align-center g-5 text-black"
             onClick={cualquierNombre}
-          />
-        </h3>
-      )}
-      {mostrar ? (
-        <>
-          <div className="userLoginNav flex column justify-center align-center p-absolute btnDespl userlogin-position">
-            {(user.role === "admin" || user.role === "user") && (
-              <>
-                <NavLink to="/profile" className="linkNav style-profile-center">
-                  <h3 className="registerStyle Li-Navbar">My Profile</h3>
-                </NavLink>
-                <div to="/login" className="linkNav style-profile-center">
-                  <h3 className="registerStyle Li-Navbar" onClick={signout}>
-                    Sign Off
-                  </h3>
-                </div>
-              </>
-            )}
-            {user.role !== "admin" &&
-              user.role !== "user" &&
-              noLogged.map((route) => (
-                <NavLink to={route.route} className="linkNav" key={route.name}>
-                  <h3 className="registerStyle Li-Navbar">{route.name}</h3>
-                </NavLink>
-              ))}
-          </div>
-        </>
-      ) : (
-        <></>
-      )}
-    </div>
+          >
+            <img src={photo} className="photo-user" alt="img-user" />
+            {name}
+          </h3>
+        )}
+        {user.role !== "admin" && user.role !== "user" && (
+          <h3
+            className="bt-nav flex column justify-center align-center g-5"
+            onClick={cualquierNombre}
+          >
+            <img
+              src="../images/user.png"
+              className="photo-user"
+              alt="img-user"
+              onClick={cualquierNombre}
+            />
+          </h3>
+        )}
+        {mostrar ? (
+          <>
+            <div className="userLoginNav flex column justify-center align-center p-absolute btnDespl userlogin-position">
+              {(user.role === "admin" || user.role === "user") && (
+                <>
+                  <NavLink to="/profile" className="linkNav style-profile-center">
+                    <h3 className="registerStyle Li-Navbar">My Profile</h3>
+                  </NavLink>
+                  <div to="/login" className="linkNav style-profile-center">
+                    <h3 className="registerStyle Li-Navbar" onClick={signout}>
+                      Sign Off
+                    </h3>
+                  </div>
+                </>
+              )}
+              {user.role !== "admin" &&
+                user.role !== "user" &&
+                noLogged.map((route) => (
+                  <NavLink to={route.route} className="linkNav" key={route.name}>
+                    <h3 className="registerStyle Li-Navbar">{route.name}</h3>
+                  </NavLink>
+                ))}
+            </div>
+          </>
+        ) : (
+          <></>
+        )}
+      </div>
     </div>
   );
 }

@@ -10,7 +10,7 @@ import { useDispatch } from "react-redux";
 export default function LoginForm() {
   let mail = useRef();
   let dispatch = useDispatch()
-  let {enter} = usersActions
+  let { enter } = usersActions
   let password = useRef();
   let form = useRef();
   let navegation = useNavigate()
@@ -23,7 +23,7 @@ export default function LoginForm() {
       password: password.current.value,
     };
     try {
-      let res = await dispatch(enter (datos));
+      let res = await dispatch(enter(datos));
       if (res.payload.success) {
         Swal.fire({
           icon: "success",
@@ -36,7 +36,7 @@ export default function LoginForm() {
             navegation(`/`);
           }
         });
-      }else{
+      } else {
         Swal.fire({
           icon: "error",
           confirmButtonColor: "#5c195d",
@@ -80,7 +80,7 @@ export default function LoginForm() {
             </button>
             <p className="text-center">Don't you have an account yet?</p>
             <NavLink to="/register" className="linkNav">
-            <button className="buttonLoginForm">Sign Up</button>
+              <button className="buttonLoginForm">Sign Up</button>
             </NavLink>
           </div>
         </form>

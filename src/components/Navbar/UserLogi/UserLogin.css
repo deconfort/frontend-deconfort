@@ -1,10 +1,11 @@
-.logoCart{
+.logoCart {
   width: 48px;
-    height: 48px;
-    margin-top: 2rem;
-    margin-right: 0.7rem;
+  height: 48px;
+  margin-top: 2rem;
+  margin-right: 0.7rem;
 }
-.containerLoginCartandUser{
+
+.containerLoginCartandUser {
   display: flex;
   flex-wrap: wrap;
   gap: 1rem;
@@ -12,42 +13,47 @@
 }
 
 @media screen and (max-width: 662px) {
-    .containerLoginCartandUser{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 100%;
-        padding-left: 4rem;
-    }
-  }
-
-  .linkNav{
-    text-decoration: none;
-    color: #000000b3;
-  }
-  .linkNav:hover{
-    color: #15297c;
-  }
-  
-  .flex{
+  .containerLoginCartandUser {
     display: flex;
-  }
-  .column{
-    flex-direction: column;
-  }
-  .align-center{
     align-items: center;
-    align-content: center;
+    justify-content: center;
+    width: 100%;
+    padding-left: 4rem;
   }
-  .bt-nav{
-    color: white;
-    font-size: 15px;
-  }
-  
+}
+
+.linkNav {
+  text-decoration: none;
+  color: #000000b3;
+}
+
+.linkNav:hover {
+  color: #15297c;
+}
+
+.flex {
+  display: flex;
+}
+
+.column {
+  flex-direction: column;
+}
+
+.align-center {
+  align-items: center;
+  align-content: center;
+}
+
+.bt-nav {
+  color: white;
+  font-size: 15px;
+}
+
 .g-5 {
   gap: 5px;
 }
-.photo-user{
+
+.photo-user {
   width: 43px;
   height: 43px;
   border-radius: 50%;
@@ -60,38 +66,43 @@
   opacity: 0.9;
   border-radius: 6px;
 }
-.justify-center{
+
+.justify-center {
   justify-content: center;
 }
-.gap-0-5{
+
+.gap-0-5 {
   gap: 0.5;
 }
-.text-black{
+
+.text-black {
   color: black;
 }
+
 /* .style-profile-center{
   border: solid 1px black;
   
 } */
-.containerUserLogin{
-margin-top: 2rem;
+.containerUserLogin {
+  margin-top: 2rem;
 }
 
-.userlogin-position{
+.userlogin-position {
   background-color: rgba(255, 255, 255, 0);
   position: absolute;
   right: -2.3rem;
 }
 
-.userlogin-position > a > h3{
+.userlogin-position>a>h3 {
   padding: 2px 10px !important;
 }
 
 @media screen and (max-width:931px) {
-  .userlogin-position{
+  .userlogin-position {
     position: relative;
   }
-  .userlogin-position > a > h3{
+
+  .userlogin-position>a>h3 {
     padding: 0px !important;
   }
 }

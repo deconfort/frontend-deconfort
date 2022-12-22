@@ -4,34 +4,40 @@
   box-sizing: border-box;
 }
 
-.mp{
+.mp {
   object-fit: fill;
 }
+
 .imgSocialFooter {
   height: 92px;
   width: 66px;
   padding-bottom: 2.1rem;
 }
+
 .imgSocialFooterPng {
   width: 61px;
   height: 91px;
   padding-bottom: 2rem;
 }
+
 .imgSocialFooterFace {
   width: 62px;
   margin-bottom: 2.1rem;
   height: 58px;
 }
+
 .imgContact {
   width: 40px;
   height: 40px;
   padding: 5px;
 }
+
 .imgPays {
   width: 70px;
   height: 50px;
   padding: 8px;
 }
+
 .footerContainer {
   display: flex;
   flex-wrap: wrap;
@@ -40,60 +46,73 @@
   background-color: #c1b8ae;
   min-height: 25vh;
 }
+
 .tittleFooter {
   text-align: center;
   font-size: 22px;
   font-family: auto;
 }
+
 .containerContactFooter {
   display: flex;
   align-items: center;
 }
+
 .links {
   text-decoration: none;
   color: black;
   font-family: auto;
   font-size: 14px;
 }
-.linksFooter{
+
+.linksFooter {
   text-decoration: none;
   color: black;
 }
+
 .links:hover {
   color: white;
 }
+
 .subttitleNavigation {
   font-family: auto;
   font-size: 14px;
 }
+
 .subttitleNavigation:hover {
   color: white;
 }
+
 .maps {
   margin-bottom: 1rem;
   border-radius: 9px;
 }
+
 .subFooterLinkedin {
   min-height: 6vh;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
 }
+
 .subtittleLinkedin {
   padding: 3px;
   font-size: 1.2rem;
   margin-top: 7px;
   font-size: 16px;
 }
+
 .linkLinkedin {
   padding: 5px;
   text-decoration: none;
   color: black;
   font-size: 14px;
 }
+
 .linkLinkedin:hover {
   color: #52646a;
 }
+
 .containerSubFooter {
   display: flex;
   flex-wrap: wrap;
@@ -102,6 +121,7 @@
   align-items: center;
   background-color: #c1b8ae;
 }
+
 .copyrigth {
   font-size: 9px;
   padding-top: 16px;
