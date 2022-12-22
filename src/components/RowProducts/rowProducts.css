@@ -21,7 +21,7 @@
 .container-item:hover{
     opacity: 0.7;
     cursor: pointer;
-    transform: scale(1.1);
+    transform: scale(1.05);
     transition: 0.5s ease-out;
 }
 
@@ -65,20 +65,24 @@
         width: 360px;
     }
 }
-@media screen and (max-width:755px){
+@media screen and (max-width:1118px){
+    .left-item, .right-item, .mid-item{
+        width: 100%;
+    }
     .row-contain{
         flex-direction: column;
         height: auto;
+        width: 100%;
     }
     .container-item{
         width: 100%;
         height: 320px;
     }
-    .left-item,  .right-item{
-        background-position: bottom;
+    .left-item, .mid-item{
+        background-position: center;
     }
-    .mid-item{
-        background-position: center;   
+    .right-item{
+        background-position: bottom;
     }
 }
 
