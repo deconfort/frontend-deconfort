@@ -14,7 +14,7 @@ export default function Favorite(props) {
 
     useEffect(() => {
         reactioness()
-
+        // eslint-disable-next-line
     }, [like])
 
     async function reactioness() {
