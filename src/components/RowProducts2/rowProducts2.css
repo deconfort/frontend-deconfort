@@ -14,7 +14,7 @@
 .container-item2:hover{
     opacity: 0.7;
     cursor: pointer;
-    transform: scale(1.1);
+    transform: scale(1.05);
     transition: 0.5s ease-out;
 }
 
@@ -57,10 +57,14 @@
         width: 360px;
     }
 }
-@media screen and (max-width:755px){
+@media screen and (max-width:1118px){
+    .left-item2, .right-item2, .mid-item2{
+        width: 100%;
+    }
     .row-contain2{
         flex-direction: column;
         height: auto;
+        width: 100%;
     }
     .container-item2{
         width: 100%;
