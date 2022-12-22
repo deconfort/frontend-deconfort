@@ -48,7 +48,7 @@ export default function AllProducts() {
       if (res.data.success) {
         deleteFavs(id)
         Swal.fire({
-          icon: "warning",
+          icon: "success",
           confirmButtonColor: "#5c195d",
           iconColor: "#5c195d",
           title: res.data.message,
@@ -140,7 +140,7 @@ export default function AllProducts() {
                 let res = await axios.post(`${apiUrl}api/shopping`, product);
                 if (res.data.success) {
                   Swal.fire({
-                    icon: "warning",
+                    icon: "success",
                     confirmButtonColor: "#5c195d",
                     iconColor: "#5c195d",
                     title: res.data.message,
