@@ -7,3 +7,13 @@
     padding-left: 3rem;
     padding-top: 0.5rem;
 }
+
+@media screen and (max-width:720px) {
+    .LogoSize{
+        width: 120px;
+        height: 120px;
+    }
+    .containerLogo{
+        padding-left: 1rem;
+    }
+}
