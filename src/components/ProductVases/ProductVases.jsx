@@ -42,7 +42,7 @@ export default function ProductCategory() {
       if (res.data.success) {
         deleteFavs(id)
         Swal.fire({
-          icon: "warning",
+          icon: "success",
           confirmButtonColor: "#5c195d",
           iconColor: "#5c195d",
           title: res.data.message,
@@ -89,7 +89,7 @@ export default function ProductCategory() {
             console.log(res);
             if (res.data.success) {
               Swal.fire({
-                icon: "warning",
+                icon: "success",
                 confirmButtonColor: "#5c195d",
                 iconColor: "#5c195d",
                 title: res.data.message,

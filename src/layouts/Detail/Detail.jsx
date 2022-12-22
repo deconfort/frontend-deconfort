@@ -32,7 +32,7 @@ export default function Detail() {
       console.log(res);
       if(res.data.success){
         Swal.fire({
-          icon: "warning",
+          icon: "success",
           confirmButtonColor: "#5c195d",
           iconColor: "#5c195d",
           title: res.data.message,
