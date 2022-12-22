@@ -18,10 +18,12 @@
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    width: 100%;
+    width: 50%;
     gap: 1.5rem;
     flex-wrap: wrap;
     margin-bottom: 1rem;
+    margin-left: 25%;
+    box-shadow: 0 5px 15px rgba(50, 50, 50, 0.438);
 }
 
 .foto-detail{
