@@ -8,7 +8,6 @@ import Swal from "sweetalert2";
 import ComponentModal from "../Modal/Modal";
 import apiUrl from "../../url";
 import axios from "axios";
-import { Link } from "react-router-dom";
 
 export default function Forum() {
   const [open2, setOpen2] = useState(false);
@@ -38,7 +37,6 @@ export default function Forum() {
       userId: idUser,
       comment: comment.current.value,
       photo: photo.current.value,
-      date: new Date(),
       date: new Date(),
     };
 
