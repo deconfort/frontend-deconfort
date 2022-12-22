@@ -1,21 +1,28 @@
-.container-services{
+.container-services {
     display: flex;
     justify-content: space-around;
-    width: 100%;
-    margin-top: 90px;   
+    /* width: 80%; */
+    margin-top: 90px;
+    align-items: center;
+    justify-content: center;
+    padding-right: 2.2rem;
 }
+
 
 .service{
     display: flex;
     gap: 6rem;
 }
 
-.services-text{
+.services-text {
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
-    padding-right: 60px;
+    padding: 2rem;
+    border-right: 1px solid #303030;
+    height: 9rem;
+    /* padding-right: 4.8rem; */
 }
 .services-text h6{
     font-size: 22px;
@@ -24,15 +31,11 @@
     font-size: 16px;
 }
 
-.left{
-    margin-left: 15px;
-    border-right: 1px solid #303030;
-}
-.mid{
-    border-right: 1px solid #303030;
+.middle{
+    width: 38%;
 }
 .right{
-    margin-right: 15px;
+    border: none;
 }
 @media screen and (max-width:1239px){
     .container-services{
