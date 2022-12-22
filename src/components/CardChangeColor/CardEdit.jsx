@@ -13,8 +13,8 @@ export default function CardChangeColor(props) {
       <div className="info">
         <div className="watch-name">
           <h1 className='title-name'>{name}</h1>
-            <h3 className='h3-color'>$ {price}</h3>
-            <p>{description}</p>        
+          <h3 className='h3-color'>$ {price}</h3>
+          <p>{description}</p>
         </div>
       </div>
     </div>
