@@ -51,7 +51,7 @@ export default function Detail() {
     }
   }
   return (
-    <div>
+    <div className='detailLayout'>
 
         <Details
         onClick={addToCart}

@@ -9,16 +9,9 @@ export default function Details(props) {
 
   return (
     <div className="contain-details">
-      <div className="nametitle-andsvg">
-        <div className="svgs">
-        </div>
-      </div>
-      <div className="contain-info-item">
         <div className="texto">
-          <div>
             <h2>{name}</h2>
             <h4>{category}</h4>
-          </div>
           <p className="texto-witch">
             {description}
           </p>
@@ -31,7 +24,6 @@ export default function Details(props) {
           className="foto-detail"
           alt="x"
         ></img>
-      </div>
     </div>
   );
 }
