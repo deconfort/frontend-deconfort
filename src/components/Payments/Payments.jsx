@@ -28,7 +28,7 @@ export default function Payments() {
     try {
       let res = await axios.get(`${apiUrl}api/shopping?userId=${idUser}`);
       setProducts(res.data.productsCart);
-    } catch (error) {}
+    } catch (error) { }
   }
 
   async function deleteProduct(id) {
@@ -59,10 +59,11 @@ export default function Payments() {
     initialprice
   );
 
-  async function add(info) {
-    if (products.stock > 0) {
+  async function add(info, stock) {
+    console.log(info, stock)
+    if (stock > 0) {
       try {
-       await dispatch(changeAmount(info));
+        await dispatch(changeAmount(info));
         getProducts();
       } catch (error) {
         console.log(error);
@@ -271,7 +272,7 @@ export default function Payments() {
                               let info = {
                                 id: item._id,
                                 amount: item.amount,
-                                productId: item.productId,
+                                productId: item.productId._id,
                                 change: "del",
                                 token,
                               };
@@ -283,14 +284,15 @@ export default function Payments() {
                           <span>{item.amount}</span>
                           <button
                             onClick={() => {
+                              let stock = item.productId.stock;
                               let info = {
                                 id: item._id,
                                 amount: item.amount,
-                                productId: item.productId,
+                                productId: item.productId._id,
                                 change: "add",
                                 token,
                               };
-                              add(info);
+                              add(info, stock);
                             }}
                           >
                             +
