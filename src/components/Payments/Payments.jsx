@@ -246,7 +246,7 @@ export default function Payments() {
                   return (
                     <div class="card">
                       <div class="card-image">
-                        <img src={item.photo} alt="" />
+                        <img src={item.photo} alt="Photo Product" />
                       </div>
                       <div class="card-details">
                         <button

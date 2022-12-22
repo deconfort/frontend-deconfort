@@ -1,14 +1,16 @@
 import React from "react";
 import "./aboutUs.css";
+import bannerAbout from '../../image/bannerAbout.png'
 
 export default function AboutUs() {
   return (
     <div className="containerAllAbout">
+      <img className="imgBannerContact" src={bannerAbout} alt="Banner About Us" />
       <div className="containerAbout">
         <img
           className="imgAboutUs"
           src="https://images-negozona-argentina.s3.amazonaws.com/uploads/picture/image/35443/IMG-4715.webp"
-          alt=""
+          alt="About us"
         />
         <div className="aboutUsText">
           <h3>Mission</h3>
@@ -36,14 +38,14 @@ export default function AboutUs() {
         <img
           className="imgAboutUs"
           src="https://cdn.shopify.com/s/files/1/0259/4835/6663/files/About_us_3x2_1_600x_09285351-ea72-48d0-a08a-ab5ca7d1b6ca.png?v=1659443205"
-          alt=""
+          alt="About us"
         />
       </div>
       <div className="containerAbout">
         <img
           className="imgAboutUs"
           src="https://cdn.shopify.com/s/files/1/0259/4835/6663/files/About_us_3x2_2_600x_4ca1de18-eada-4b24-8370-0d699fc996c7.png?v=1659443209"
-          alt=""
+          alt="About us"
         />
         <div className="aboutUsText">
           <h3>Our philosophy</h3>

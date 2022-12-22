@@ -89,7 +89,6 @@ export default function Faqs() {
           YOU CAN CALL US AT <a href="tel:+54 9 3516532314">3516532314</a> SO WE
           CAN HELP YOU
         </h5>
-        <img src="" alt="" />
       </div>
     </div>
   );
