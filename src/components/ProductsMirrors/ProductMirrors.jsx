@@ -109,7 +109,7 @@ export default function ProductCategory() {
             console.log(error);
           }
         }
-        let cart = cartProduct.find((cart) => cart.productId === item._id);
+        let cart = cartProduct.find((cart) => cart.productId._id === item._id);
         return (
           <CardChangeColor
             onClick={() => {

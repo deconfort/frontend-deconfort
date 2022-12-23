@@ -233,7 +233,7 @@ export default function Payments() {
                     window.open(response.data.init_point, "_blank");
                   }}
                 >
-                  Continue
+                  CHECKOUT
                 </button>
               </div>
             </form>
