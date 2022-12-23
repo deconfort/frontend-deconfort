@@ -98,7 +98,6 @@ export default function AllProducts() {
             <input
               className="inputSearch"
               placeholder="search your product"
-              type="search"
               id="site-search"
               name="q"
               ref={search}
